@@ -1,0 +1,23 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "entities.describe",
+  "sessionToken": null,
+  "payload": {
+    "revision": "r1",
+    "descriptions": [
+      {
+        "kind": "item",
+        "resourceId": "create:mechanical_press",
+        "translationKey": "block.create.mechanical_press",
+        "displayName": "Mechanical Press"
+      }
+    ],
+    "missing": [
+      { "kind": "block", "resourceId": "minecraft:crafting_table" }
+    ]
+  },
+  "error": null
+}

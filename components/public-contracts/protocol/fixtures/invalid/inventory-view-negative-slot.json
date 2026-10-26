@@ -1,0 +1,65 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "inventory.view",
+  "sessionToken": null,
+  "payload": {
+    "capturedAt": "2026-10-14T00:00:00Z",
+    "status": "complete",
+    "sources": [
+      "player"
+    ],
+    "selectedSlot": 2,
+    "slots": [
+      {
+        "slotId": "player:hotbar:2",
+        "source": "player",
+        "area": "hotbar",
+        "index": -1,
+        "legacySlot": 2,
+        "containerSlot": null,
+        "status": "item",
+        "item": {
+          "itemId": "minecraft:diamond_sword",
+          "displayName": "我的剑 · 左手?",
+          "count": 1,
+          "damage": 5,
+          "maxDamage": 1561,
+          "durabilityStatus": "known",
+          "enchantments": [
+            {
+              "id": "minecraft:sharpness",
+              "displayName": "锋利 II",
+              "level": 2
+            }
+          ],
+          "detailsStatus": "complete"
+        },
+        "failureCode": null
+      }
+    ],
+    "equipment": [
+      {
+        "location": "mainhand",
+        "slotId": "player:hotbar:2",
+        "status": "item"
+      },
+      {
+        "location": "offhand",
+        "slotId": "player:offhand:0",
+        "status": "empty"
+      }
+    ],
+    "details": {
+      "slotId": "player:hotbar:2",
+      "status": "complete",
+      "tooltipLines": [
+        "我的剑 · 左手?",
+        "锋利 II"
+      ]
+    }
+  },
+  "error": null
+}

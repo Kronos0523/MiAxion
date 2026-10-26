@@ -1,0 +1,256 @@
+{
+  "fixtures": [
+    {
+      "path": "raw/dotnet-json-depth-limit-minus-one.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit-1",
+      "sha256": "ad0857bb1db8ed66e209fbcec151572c54f1503a0fff4d81f0375e5b9b21d4c7"
+    },
+    {
+      "path": "raw/dotnet-json-depth-limit-plus-one.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit+1",
+      "sha256": "b7972498c5521563ec9baf0fb3c3398ebf6b1eb0ac4382c84dd44cf3c237bb8a"
+    },
+    {
+      "path": "raw/dotnet-json-depth-limit.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit",
+      "sha256": "cba174e69d7f8bd3d74fc262f6e3539fdc03948f6fcbe775965c1eb4bcabbc21"
+    },
+    {
+      "path": "raw/dotnet-json-number-ascii-bytes-limit-minus-one.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit-1",
+      "sha256": "1a81c2abe25e5dfcf3519e441fe0cfcaaf777d6bc66d4ebd84e82fdca688fb69"
+    },
+    {
+      "path": "raw/dotnet-json-number-ascii-bytes-limit-plus-one.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit+1",
+      "sha256": "ad0cd099b9a70413f5497c72e806b366dbda157c4f6792405bd2aa1a3c03c855"
+    },
+    {
+      "path": "raw/dotnet-json-number-ascii-bytes-limit.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit",
+      "sha256": "eff50b924f01086c6081bf5fa7603d4487518b4508f08749167b494145af9031"
+    },
+    {
+      "path": "raw/dotnet-raw-json-string-utf16-units-limit-minus-one.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit-1",
+      "sha256": "e65f1a8e71266ff506af5e2f2b390191d46fe750a81c19ee43c850ca99ba6ce7"
+    },
+    {
+      "path": "raw/dotnet-raw-json-string-utf16-units-limit-plus-one.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit+1",
+      "sha256": "a32fdd7dec62b16856042e30f200664537c25b57f9b88d00bc41770f4aaa6f8e"
+    },
+    {
+      "path": "raw/dotnet-raw-json-string-utf16-units-limit.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit",
+      "sha256": "e2ab4257d402b6df9c85c7a8588978b2a2f98f41125d77aa7a6cf9f415bfc0cf"
+    },
+    {
+      "path": "raw/dotnet-semantic-json-string-scalars-limit-minus-one.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit-1",
+      "sha256": "a0519063af54f48b1c41b846f07232a800d0aba8530ab1840f5e4aa31806e894"
+    },
+    {
+      "path": "raw/dotnet-semantic-json-string-scalars-limit-plus-one.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit+1",
+      "sha256": "46911f18f4fb9517ac473d9b4bfaf46eb7d1d6b3aeed8b91cec55b2902348584"
+    },
+    {
+      "path": "raw/dotnet-semantic-json-string-scalars-limit.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit",
+      "sha256": "5ae95c19ff7716f279198c1fdab5c46a58b83d8ad238d575107125feaaf82d22"
+    },
+    {
+      "path": "raw/dotnet-server-to-desktop-message-bytes-limit-minus-one.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit-1",
+      "sha256": "ebce4eab04f8c4d98ff1b6eb55f2da2930399a6daedde299fce0d8ec7d96a292"
+    },
+    {
+      "path": "raw/dotnet-server-to-desktop-message-bytes-limit-plus-one.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit+1",
+      "sha256": "dbc740b61eeded78b9332df6af08957581b54997078f7c82cc969d90bdbf553c"
+    },
+    {
+      "path": "raw/dotnet-server-to-desktop-message-bytes-limit.json.bin",
+      "role": "dotnet-client",
+      "expected": "boundary-limit",
+      "sha256": "fea078e55451ba90bc532968c724b12b7684ddb3c0c624efa7a509a1f5614e36"
+    },
+    {
+      "path": "raw/duplicate-key.json.bin",
+      "role": "shared-raw",
+      "expected": "reject-duplicate-key",
+      "sha256": "248539509854e842c97758b98db88807a7974a14f20a500dc84e1d0d4be0b831"
+    },
+    {
+      "path": "raw/invalid-utf8.bin",
+      "role": "shared-raw",
+      "expected": "reject-invalid-utf8",
+      "sha256": "2249fcbd824dd0fd6a271d00c2593bb755682a71345c8141ed19ffe1d3d102cc"
+    },
+    {
+      "path": "raw/java-canonical-inbound-bytes-limit-minus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit-1",
+      "sha256": "c832c50cddb33bcb871e010a77f1c9c8e946a379d1b0a6c37f3ff8409070b8ec"
+    },
+    {
+      "path": "raw/java-canonical-inbound-bytes-limit-plus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit+1",
+      "sha256": "864cd491ecc645180b108af522f8d68619343a913767bf5e5adcff657461814a"
+    },
+    {
+      "path": "raw/java-canonical-inbound-bytes-limit.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit",
+      "sha256": "f6b7b18a1ac9c42ac4998828e79dbe616d685a14d52b48bf9090a99a64409c79"
+    },
+    {
+      "path": "raw/java-client-to-server-message-bytes-limit-minus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit-1",
+      "sha256": "c832c50cddb33bcb871e010a77f1c9c8e946a379d1b0a6c37f3ff8409070b8ec"
+    },
+    {
+      "path": "raw/java-client-to-server-message-bytes-limit-plus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit+1",
+      "sha256": "864cd491ecc645180b108af522f8d68619343a913767bf5e5adcff657461814a"
+    },
+    {
+      "path": "raw/java-client-to-server-message-bytes-limit.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit",
+      "sha256": "f6b7b18a1ac9c42ac4998828e79dbe616d685a14d52b48bf9090a99a64409c79"
+    },
+    {
+      "path": "raw/java-hud-text-scalars-limit-minus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit-1",
+      "sha256": "e0d10715ac616ee94ceed193bc7d29e048c541816ab59733163aad1ca11041e2"
+    },
+    {
+      "path": "raw/java-hud-text-scalars-limit-plus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit+1",
+      "sha256": "91066d21fa8b10ca875276a3b469a820adc18583dc271e0e95a48070f39adec2"
+    },
+    {
+      "path": "raw/java-hud-text-scalars-limit.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit",
+      "sha256": "7642c482a83f31ce32e68ad0378c417e7a1a398026c3663e9fca134419415fe0"
+    },
+    {
+      "path": "raw/java-json-depth-limit-minus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit-1",
+      "sha256": "412c154926ef5cc09d717313bf946894de5476e1a0bb17d54178610568e37910"
+    },
+    {
+      "path": "raw/java-json-depth-limit-plus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit+1",
+      "sha256": "e2a5a4c7b04c7002c37add88bae86bc86d1135cd568c65e0c790b99cf6699b79"
+    },
+    {
+      "path": "raw/java-json-depth-limit.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit",
+      "sha256": "8da49ed905829ef547fa178dfb1096ea04e07530e1049445f7e4d5d8f1d85cdc"
+    },
+    {
+      "path": "raw/java-json-number-ascii-bytes-limit-minus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit-1",
+      "sha256": "002ba56fc4e756d00e19d8dd7a1f75ef39dbcfdc7d7f02295998b24cd7b9b55c"
+    },
+    {
+      "path": "raw/java-json-number-ascii-bytes-limit-plus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit+1",
+      "sha256": "ed062874d99676929ad90aeb25df0aae9f5ec7167812122ef475ff0f4830d140"
+    },
+    {
+      "path": "raw/java-json-number-ascii-bytes-limit.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit",
+      "sha256": "e6abf19d15489a7b1bf08d5b98f0f93e7862e5bfd2f25bee3cbfc066700c4dfc"
+    },
+    {
+      "path": "raw/java-raw-json-string-utf16-units-limit-minus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit-1",
+      "sha256": "14f9efe43e7521bae7ded342f90cae520717c6e06a5eb8fa8f7bc9213ee425ad"
+    },
+    {
+      "path": "raw/java-raw-json-string-utf16-units-limit-plus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit+1",
+      "sha256": "9ad47cd5cd0cfe2ec935d2394c4de7bbeaed8207c40299a040d673e6a3d7d68a"
+    },
+    {
+      "path": "raw/java-raw-json-string-utf16-units-limit.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit",
+      "sha256": "9c84bcdb8e414f14412b86d89737b0b5c94e10f045d2447caf133196392e95bd"
+    },
+    {
+      "path": "raw/java-semantic-json-string-scalars-limit-minus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit-1",
+      "sha256": "a01e1eb9119d16003d9059d16735835482ad843cde7f3db79df6bd6d90a89285"
+    },
+    {
+      "path": "raw/java-semantic-json-string-scalars-limit-plus-one.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit+1",
+      "sha256": "8638b7f3baae098cf76655cae790ae2f6b77969dd94876f8a095a80d9149a9d8"
+    },
+    {
+      "path": "raw/java-semantic-json-string-scalars-limit.json.bin",
+      "role": "java-session",
+      "expected": "boundary-limit",
+      "sha256": "89f7be238de491a290747c22783c527c7d1ec4774cc186952c768dba6ef435f9"
+    },
+    {
+      "path": "raw/trailing-token.json.bin",
+      "role": "shared-raw",
+      "expected": "reject-trailing-token",
+      "sha256": "2801364f800366c9fbe0a70a7d0df02809837a36d5f058bca262557da106095b"
+    },
+    {
+      "path": "traces/dotnet-client/receive-and-cancel.json",
+      "role": "dotnet-client",
+      "expected": "replay-dotnet-client",
+      "sha256": "2845ba3ad71cce33d5f75749891887565dd147ea02728054372bde58eabf2a23"
+    },
+    {
+      "path": "traces/java-session/pair-races.json",
+      "role": "java-session",
+      "expected": "replay-java-session",
+      "sha256": "8a107c05fba88ed601ea4f27b99b1e95fc0a9881a91872a08f75643b7cf21267"
+    },
+    {
+      "path": "traces/shared/unknown-action-auth-order.json",
+      "role": "shared-raw",
+      "expected": "replay-shared-order",
+      "sha256": "93a2569b2821516712c76272d25d645520c1b9cc2c943e123abc8b5e7fd78402"
+    }
+  ]
+}

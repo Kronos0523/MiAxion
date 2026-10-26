@@ -1,0 +1,883 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.miaxion.dev/bridge/v1/response.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocolVersion",
+    "requestId",
+    "timestamp",
+    "deadline",
+    "action",
+    "sessionToken",
+    "payload",
+    "error"
+  ],
+  "properties": {
+    "protocolVersion": { "$ref": "common.schema.json#/$defs/protocolVersion" },
+    "requestId": { "$ref": "common.schema.json#/$defs/uuid" },
+    "timestamp": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "deadline": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "action": { "$ref": "common.schema.json#/$defs/action" },
+    "sessionToken": { "type": "null" },
+    "payload": { "type": ["object", "null"] },
+    "error": {
+      "oneOf": [
+        { "$ref": "common.schema.json#/$defs/error" },
+        { "type": "null" }
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "action": {
+          "const": "inventory.view"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "player-observation.schema.json#/$defs/InventoryView"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "player.status"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "player-observation.schema.json#/$defs/PlayerStatus"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "world.context"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "player-observation.schema.json#/$defs/WorldContext"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "screen.snapshot"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "player-observation.schema.json#/$defs/ScreenSnapshot"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "target.snapshot"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "player-observation.schema.json#/$defs/TargetSnapshot"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "actions.context" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "request.schema.json#/$defs/castingActionContextResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "keybindings.catalog"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "request.schema.json#/$defs/castingKeyCatalogResponse"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "keybindings.preview"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "request.schema.json#/$defs/castingPreviewResponse"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "keybindings.apply"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "request.schema.json#/$defs/castingApplyResponse"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "keybindings.rollback"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "request.schema.json#/$defs/castingRollbackResponse"
+        }
+      }
+    },
+{
+  "properties": {
+    "action": {
+      "const": "actions.configuration"
+    },
+    "error": {
+      "type": "null"
+    },
+    "payload": {
+      "$ref": "request.schema.json#/$defs/actionConfigurationResponse"
+    }
+  }
+},
+    {
+      "properties": {
+        "action": {
+          "const": "actions.catalog"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "request.schema.json#/$defs/castingActionCatalogResponse"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "actions.grant"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "request.schema.json#/$defs/castingGrantResponse"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "actions.revoke"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "request.schema.json#/$defs/castingRevokeResponse"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "actions.execute"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "request.schema.json#/$defs/castingExecutionResponse"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "actions.status"
+        },
+        "error": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "request.schema.json#/$defs/castingExecutionResponse"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "extensions.list" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "extensions.schema.json#/$defs/listResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "extensions.call" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "extensions.schema.json#/$defs/callResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "enum": [
+            "session.pair.request",
+            "keybindings.catalog",
+            "keybindings.preview",
+            "keybindings.apply",
+            "keybindings.rollback",
+            "actions.context",
+            "actions.catalog",
+            "actions.configuration",
+            "actions.grant",
+            "actions.revoke",
+            "actions.execute",
+            "actions.status",
+            "session.pair.approved",
+            "session.revoke",
+            "request.cancel",
+            "capabilities.list",
+            "extensions.list",
+            "extensions.call",
+            "recipe.query",
+            "recipe.uses",
+            "recipe.query.source",
+            "recipe.uses.source",
+            "recipe.providers.list",
+            "quests.query",
+            "quests.detail",
+            "inventory.snapshot",
+              "inventory.view",
+              "player.status",
+              "world.context",
+              "screen.snapshot",
+              "target.snapshot",
+            "terminology.configure",
+            "terminology.v2.configure",
+            "terminology.snapshot",
+            "terminology.clear",
+            "player.snapshot",
+            "entities.resolve",
+            "entities.describe",
+            "mods.versions.resolve",
+            "world.structure.locate",
+            "world.biome.locate",
+            "world.machines.scan",
+            "world.containers.scan",
+            "world.structure.targets",
+            "world.registry.resolve", "world.registry.search",
+            "world.registry.describe",
+            "world.query.progress",
+            "hud.show",
+            "health.ping"
+          ]
+        },
+        "payload": { "type": "null" },
+        "error": { "$ref": "common.schema.json#/$defs/error" }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "not": {
+            "enum": [
+              "session.pair.request",
+              "keybindings.catalog",
+              "keybindings.preview",
+              "keybindings.apply",
+              "keybindings.rollback",
+              "actions.context",
+            "actions.catalog",
+            "actions.configuration",
+              "actions.grant",
+              "actions.revoke",
+              "actions.execute",
+              "actions.status",
+              "session.pair.approved",
+              "session.revoke",
+              "request.cancel",
+              "capabilities.list",
+              "extensions.list",
+              "extensions.call",
+              "recipe.query",
+              "recipe.uses",
+              "recipe.query.source",
+              "recipe.uses.source",
+              "recipe.providers.list",
+              "quests.query",
+              "quests.detail",
+              "inventory.snapshot",
+              "inventory.view",
+              "player.status",
+              "world.context",
+              "screen.snapshot",
+              "target.snapshot",
+              "terminology.configure",
+              "terminology.v2.configure",
+              "terminology.snapshot",
+              "terminology.clear",
+              "player.snapshot",
+              "entities.resolve",
+              "entities.describe",
+              "mods.versions.resolve",
+              "world.structure.locate",
+              "world.biome.locate",
+              "world.machines.scan",
+              "world.containers.scan",
+              "world.structure.targets",
+              "world.registry.resolve", "world.registry.search",
+              "world.registry.describe",
+              "world.query.progress",
+              "hud.show",
+              "health.ping"
+            ]
+          }
+        },
+        "payload": { "type": "null" },
+        "error": {
+          "allOf": [
+            { "$ref": "common.schema.json#/$defs/error" },
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "enum": [
+                    "CAPABILITY_UNAVAILABLE",
+                    "UNAUTHORIZED",
+                    "INVALID_REQUEST",
+                    "TIMEOUT",
+                    "UNSUPPORTED_VERSION",
+                    "RATE_LIMITED"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "session.pair.approved" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["sessionToken", "tokenType"],
+          "properties": {
+            "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+            "tokenType": { "const": "Bearer" }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "session.revoke" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["revoked"],
+          "properties": {
+            "revoked": { "const": true }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "request.cancel" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["targetRequestId", "cancelled", "state"],
+          "properties": {
+            "targetRequestId": { "$ref": "common.schema.json#/$defs/uuid" },
+            "cancelled": { "type": "boolean" },
+            "state": {
+              "enum": [
+                "cancelled",
+                "already_completed",
+                "not_cancellable"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "capabilities.list" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["capabilities"],
+          "properties": {
+            "capabilities": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["name", "version", "available"],
+                "properties": {
+                  "name": { "type": "string", "minLength": 1, "maxLength": 64 },
+                  "version": { "type": "string", "minLength": 1, "maxLength": 32 },
+                  "available": { "type": "boolean" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "enum": ["recipe.query", "recipe.uses", "recipe.query.source", "recipe.uses.source"] },
+        "error": { "type": "null" },
+        "payload": { "$ref": "recipe.schema.json" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "recipe.providers.list" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object", "additionalProperties": false,
+          "required": ["providers"],
+          "properties": { "providers": { "type": "array",
+            "items": { "type": "object", "additionalProperties": false,
+              "required": ["addonId", "addonVersion", "targetModId", "query", "uses"],
+              "properties": {
+                "addonId": { "$ref": "#/$defs/recipeProviderId" },
+                "addonVersion": { "type": "string", "minLength": 1, "maxLength": 64,
+                  "pattern": "^[0-9A-Za-z][0-9A-Za-z._+-]*$" },
+                "targetModId": { "$ref": "#/$defs/recipeProviderId" },
+                "query": { "$ref": "#/$defs/recipeProviderReadiness" },
+                "uses": { "$ref": "#/$defs/recipeProviderReadiness" },
+                "sourceGeneration": { "type": ["integer", "null"], "minimum": 0 }
+              }
+            }
+          } }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "quests.query" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "quest.schema.json#/$defs/queryResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "quests.detail" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "quest.schema.json#/$defs/detailResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "inventory.snapshot" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["revision", "slots"],
+          "properties": {
+            "revision": { "type": "string", "minLength": 1, "maxLength": 64 },
+            "slots": {
+              "type": "array",
+              "maxItems": 256,
+              "items": { "$ref": "common.schema.json#/$defs/inventorySlot" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "enum": ["terminology.configure", "terminology.snapshot", "terminology.clear"] },
+        "error": { "type": "null" },
+        "payload": { "$ref": "#/$defs/terminologySnapshot" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "terminology.v2.configure" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "#/$defs/terminologySnapshotV2" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "player.snapshot" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "dimensionId",
+            "position",
+            "health",
+            "food",
+            "experienceLevel",
+            "gameMode"
+          ],
+          "properties": {
+            "dimensionId": { "$ref": "common.schema.json#/$defs/resourceLocation" },
+            "position": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["x", "y", "z"],
+              "properties": {
+                "x": { "type": "number" },
+                "y": { "type": "number" },
+                "z": { "type": "number" }
+              }
+            },
+            "health": { "type": "number" },
+            "maxHealth": { "type": "number", "exclusiveMinimum": 0 },
+            "food": { "type": "number" },
+            "experienceLevel": { "type": "integer", "minimum": 0 },
+            "gameMode": {
+              "enum": [
+                "survival",
+                "creative",
+                "adventure",
+                "spectator"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "entities.resolve" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["revision", "matches", "truncated"],
+          "properties": {
+            "revision": { "type": "string", "minLength": 1, "maxLength": 64 },
+            "matches": {
+              "type": "array",
+              "maxItems": 8,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["kind", "resourceId", "translationKey", "displayName"],
+                "properties": {
+                  "kind": { "enum": ["item", "block", "fluid", "custom"] },
+                  "resourceId": { "$ref": "common.schema.json#/$defs/resourceLocation" },
+                  "translationKey": { "type": "string", "minLength": 1, "maxLength": 256 },
+                  "displayName": { "type": "string", "minLength": 1, "maxLength": 256 },
+                  "ingredientTypeUid": { "type": "string", "minLength": 1, "maxLength": 256 },
+                  "components": { "type": "object" }
+                }
+              }
+            },
+            "truncated": { "type": "boolean" },
+            "nextContinuation": { "type": "string", "minLength": 1, "maxLength": 256, "pattern": "^[A-Za-z0-9_-]+$" }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "mods.versions.resolve" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["versions"],
+          "properties": {
+            "versions": {
+              "type": "object",
+              "maxProperties": 32,
+              "propertyNames": { "pattern": "^[a-z0-9_.-]+$", "minLength": 1, "maxLength": 64 },
+              "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 128 }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "entities.describe" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["revision", "descriptions", "missing"],
+          "properties": {
+            "revision": { "type": "string", "minLength": 1, "maxLength": 64 },
+            "descriptions": {
+              "type": "array",
+              "maxItems": 128,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["kind", "resourceId", "translationKey", "displayName"],
+                "properties": {
+                  "kind": { "enum": ["item", "block"] },
+                  "resourceId": { "$ref": "common.schema.json#/$defs/resourceLocation" },
+                  "translationKey": { "type": "string", "minLength": 1, "maxLength": 256 },
+                  "displayName": { "type": "string", "minLength": 1, "maxLength": 256 }
+                }
+              }
+            },
+            "missing": {
+              "type": "array",
+              "maxItems": 128,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["kind", "resourceId"],
+                "properties": {
+                  "kind": { "enum": ["item", "block"] },
+                  "resourceId": { "$ref": "common.schema.json#/$defs/resourceLocation" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "hud.show" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["shown"],
+          "properties": {
+            "shown": { "type": "boolean" }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "health.ping" },
+        "error": { "type": "null" },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["nonce", "gameReady", "protocolVersion"],
+          "properties": {
+            "nonce": { "type": "string", "minLength": 1, "maxLength": 64 },
+            "gameReady": { "type": "boolean" },
+            "protocolVersion": { "$ref": "common.schema.json#/$defs/protocolVersion" },
+            "ordinaryRequestsPerMinute": { "type": "integer", "minimum": 1, "maximum": 10000 },
+            "ordinaryRequestBurst": { "type": "integer", "minimum": 1, "maximum": 10000 },
+            "ordinaryRequestRateSource": { "enum": ["protocol-default", "neoforge-config", "test-default"] }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "enum": ["world.structure.locate", "world.biome.locate"] },
+        "error": { "type": "null" },
+        "payload": { "$ref": "world-query.schema.json#/$defs/locatedResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "world.machines.scan" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "world-query.schema.json#/$defs/machinesResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "world.containers.scan" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "world-query.schema.json#/$defs/containersResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "world.structure.targets" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "world-query.schema.json#/$defs/targetsResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "world.registry.search" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "world-query.schema.json#/$defs/registrySearchResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "world.registry.resolve" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "world-query.schema.json#/$defs/registryResolveResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "world.registry.describe" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "world-query.schema.json#/$defs/registryDescribeResponse" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "world.query.progress" },
+        "error": { "type": "null" },
+        "payload": { "$ref": "world-query.schema.json#/$defs/progressResponse" }
+      }
+    }
+  ],
+  "$defs": {
+    "recipeProviderId": {
+      "type": "string", "minLength": 2, "maxLength": 64,
+      "pattern": "^[a-z][a-z0-9_]{1,63}$"
+    },
+    "recipeProviderReadiness": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "reason"],
+      "properties": {
+        "status": { "enum": ["READY", "GAME_NOT_READY", "CAPABILITY_UNAVAILABLE"] },
+        "reason": { "enum": ["READY", "VERSION_UNAVAILABLE", "OPERATION_UNSUPPORTED", "POLICY_REJECTED", "DEPENDENCY_MISSING", "ADAPTER_UNSUPPORTED", "API_INCOMPATIBLE", "RUNTIME_PENDING", "INITIALIZATION_FAILED", "DISABLED"] }
+      },
+      "allOf": [
+        { "if": { "properties": { "status": { "const": "READY" } } }, "then": { "properties": { "reason": { "const": "READY" } } } },
+        { "if": { "properties": { "status": { "const": "GAME_NOT_READY" } } }, "then": { "properties": { "reason": { "const": "RUNTIME_PENDING" } } } },
+        { "if": { "properties": { "status": { "const": "CAPABILITY_UNAVAILABLE" } } }, "then": { "properties": { "reason": { "not": { "enum": ["READY", "RUNTIME_PENDING"] } } } } }
+      ]
+    },
+    "terminologySnapshot": {
+      "type": "object", "additionalProperties": false,
+      "required": ["producerGeneration", "revision", "language", "captureSettings", "entries", "browserGroups", "sourceAvailability", "truncated"],
+      "properties": {
+        "producerGeneration": { "type": "integer", "minimum": 1 },
+        "revision": { "type": "integer", "minimum": 0 },
+        "language": { "type": "string", "minLength": 1, "maxLength": 64 },
+        "captureSettings": { "$ref": "request.schema.json#/$defs/terminologySettings" },
+        "entries": { "type": "array", "maxItems": 4096, "items": { "$ref": "#/$defs/terminologyEntry" } },
+        "browserGroups": { "type": "array", "maxItems": 256, "items": {
+          "type": "object", "additionalProperties": false,
+          "required": ["groupId", "entries", "remainingRetentionMilliseconds"],
+          "properties": {
+            "groupId": { "type": "integer", "minimum": 1 },
+            "entries": { "type": "array", "minItems": 1, "maxItems": 256, "items": { "$ref": "#/$defs/terminologyEntry" } },
+            "remainingRetentionMilliseconds": { "type": "integer", "minimum": 0 }
+          }
+        } },
+        "sourceAvailability": { "type": "object", "additionalProperties": { "enum": ["available", "disabled", "unavailable", "read_failed"] } },
+        "truncated": { "type": "boolean" }
+      }
+    },
+    "terminologySnapshotV2": {
+      "type": "object", "additionalProperties": false,
+      "required": ["producerGeneration", "revision", "language", "captureSettings", "entries", "browserGroups", "sourceAvailability", "truncated"],
+      "properties": {
+        "producerGeneration": { "$ref": "#/$defs/terminologySnapshot/properties/producerGeneration" },
+        "revision": { "$ref": "#/$defs/terminologySnapshot/properties/revision" },
+        "language": { "$ref": "#/$defs/terminologySnapshot/properties/language" },
+        "captureSettings": { "$ref": "#/$defs/terminologySnapshot/properties/captureSettings" },
+        "entries": { "$ref": "#/$defs/terminologySnapshot/properties/entries" },
+        "browserGroups": { "$ref": "#/$defs/terminologySnapshot/properties/browserGroups" },
+        "sourceAvailability": { "$ref": "#/$defs/terminologySnapshot/properties/sourceAvailability" },
+        "truncated": { "type": "boolean" },
+        "itemDetails": { "$ref": "#/$defs/observedItemDetails" }
+      }
+    },
+    "observedItemDetails": {
+      "type": "object", "additionalProperties": false,
+      "required": ["identity", "displayName", "source", "observedAtUtc", "tooltipStatus", "tooltip", "effectsStatus", "effects"],
+      "properties": {
+        "identity": { "allOf": [ { "$ref": "#/$defs/terminologyEntry/properties/identity" }, { "type": "object", "properties": { "kind": { "const": "item" } } } ] },
+        "displayName": { "$ref": "#/$defs/terminologyEntry/properties/displayName" },
+        "source": { "enum": ["player_inventory", "hotbar", "item_browser"] },
+        "observedAtUtc": { "$ref": "common.schema.json#/$defs/timestamp" },
+        "tooltipStatus": { "enum": ["complete", "truncated", "read_failed"] },
+        "tooltip": { "type": "array", "maxItems": 256, "items": { "type": "string", "maxLength": 8192 } },
+        "effectsStatus": { "enum": ["complete", "truncated", "component_absent", "read_failed"] },
+        "effects": { "type": "array", "maxItems": 32, "items": {
+          "type": "object", "additionalProperties": false,
+          "required": ["resourceId", "amplifier", "durationKind", "durationTicks"],
+          "properties": {
+            "resourceId": { "type": "string", "maxLength": 128, "pattern": "^[a-z0-9_.-]+:[a-z0-9/._-]+$" },
+            "amplifier": { "type": "integer", "minimum": 0, "maximum": 255 },
+            "durationKind": { "enum": ["timed", "instant", "infinite", "unknown"] },
+            "durationTicks": { "type": ["integer", "null"], "minimum": 0, "maximum": 2147483647 }
+          },
+          "if": { "properties": { "durationKind": { "const": "timed" } } },
+          "then": { "properties": { "durationTicks": { "type": "integer" } } },
+          "else": { "properties": { "durationTicks": { "type": "null" } } }
+        } }
+      }
+    },
+    "terminologyEntry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["identity", "displayName", "sources", "observedAtUtc"],
+      "properties": {
+        "identity": { "oneOf": [ { "type": "null" }, { "type": "object", "additionalProperties": false,
+          "required": ["kind", "resourceId"],
+          "properties": {
+            "kind": { "enum": ["item", "block", "entity", "fluid", "chemical", "energy", "custom"] },
+            "resourceId": { "$ref": "common.schema.json#/$defs/resourceLocation" },
+            "ingredientTypeUid": { "anyOf": [ { "type": "null" }, { "$ref": "#/$defs/ingredientTypeUid" } ] }
+          },
+          "allOf": [ {
+            "if": { "properties": { "kind": { "const": "custom" } } },
+            "then": {
+              "required": ["ingredientTypeUid"],
+              "properties": { "ingredientTypeUid": { "$ref": "#/$defs/ingredientTypeUid" } }
+            }
+          } ] } ] },
+        "displayName": { "type": "string", "minLength": 1, "maxLength": 256 },
+        "sources": { "type": "array", "minItems": 1, "maxItems": 4, "uniqueItems": true,
+          "items": { "enum": ["native_crosshair", "player_inventory", "item_browser", "hotbar"] } },
+        "observedAtUtc": { "type": "string", "format": "date-time" }
+      }
+    },
+    "ingredientTypeUid": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "pattern": "^[^\\u0000-\\u001F\\u007F-\\u009F\\u061C\\u200E\\u200F\\u202A-\\u202E\\u2066-\\u2069]+$"
+    }
+  }
+}

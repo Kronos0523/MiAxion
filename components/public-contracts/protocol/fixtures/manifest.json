@@ -1,0 +1,616 @@
+{
+  "fixtures": [
+    {
+      "path": "invalid/additional-property-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "additional-property"
+    },
+    {
+      "path": "invalid/deadline-order-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "deadline-order"
+    },
+    {
+      "path": "invalid/entities-describe-unknown-kind-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "unknown-enum"
+    },
+    {
+      "path": "invalid/invalid-format-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "invalid-format"
+    },
+    {
+      "path": "invalid/invalid-token-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "invalid-token"
+    },
+    {
+      "path": "invalid/inventory-exclusive-fields-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "inventory-exclusive-fields"
+    },
+    {
+      "path": "invalid/inventory-view-negative-slot.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "negative-observed-source-slot-index"
+    },
+    {
+      "path": "invalid/malformed-action-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "malformed-action"
+    },
+    {
+      "path": "invalid/missing-required-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "missing-required"
+    },
+    {
+      "path": "invalid/null-required-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "null-required"
+    },
+    {
+      "path": "invalid/out-of-range-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "out-of-range"
+    },
+    {
+      "path": "invalid/recipe-acquisition-deterministic-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "acquisition-category-cannot-be-deterministic"
+    },
+    {
+      "path": "invalid/recipe-empty-alternatives-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "recipe-empty-alternatives"
+    },
+    {
+      "path": "invalid/recipe-half-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "recipe-missing-required-role"
+    },
+    {
+      "path": "invalid/recipe-invalid-identity-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "recipe-invalid-identity"
+    },
+    {
+      "path": "invalid/recipe-missing-identity-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "recipe-missing-identity"
+    },
+    {
+      "path": "invalid/recipe-process-unpaired-energy-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "recipe-process-unpaired-energy"
+    },
+    {
+      "path": "invalid/recipe-slot-count-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "recipe-slot-level-count"
+    },
+    {
+      "path": "invalid/recipe-tag-id-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "recipe-tag-surrogate"
+    },
+    {
+      "path": "invalid/recipe-unknown-role-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "recipe-unknown-role"
+    },
+    {
+      "path": "invalid/screen-snapshot-interaction-field.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "observation-request-interaction-field"
+    },
+    {
+      "path": "invalid/session-pair-approved-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "action-direction"
+    },
+    {
+      "path": "invalid/unknown-action-success-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "unknown-action-success"
+    },
+    {
+      "path": "invalid/unknown-action-wrong-error-response.json",
+      "schema": "response.schema.json",
+      "expected": "invalid",
+      "reason": "unknown-action-wrong-error"
+    },
+    {
+      "path": "invalid/unknown-enum-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "unknown-enum"
+    },
+    {
+      "path": "invalid/wrong-case-request.json",
+      "schema": "request.schema.json",
+      "expected": "invalid",
+      "reason": "wrong-case"
+    },
+    {
+      "path": "valid/capabilities-list-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/capabilities-list-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/entities-describe-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/entities-describe-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/entities-resolve-kind-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/entities-resolve-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/entities-resolve-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/error-capability-unavailable-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-error-response"
+    },
+    {
+      "path": "valid/error-details-hidden-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-error-response"
+    },
+    {
+      "path": "valid/error-game-not-ready-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-error-response"
+    },
+    {
+      "path": "valid/error-internal-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-error-response"
+    },
+    {
+      "path": "valid/error-invalid-request-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-error-response"
+    },
+    {
+      "path": "valid/error-not-found-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-error-response"
+    },
+    {
+      "path": "valid/error-rate-limited-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-error-response"
+    },
+    {
+      "path": "valid/error-result-too-large-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-error-response"
+    },
+    {
+      "path": "valid/error-timeout-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-error-response"
+    },
+    {
+      "path": "valid/error-unauthorized-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-error-response"
+    },
+    {
+      "path": "valid/error-unsupported-version-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-error-response"
+    },
+    {
+      "path": "valid/extensions-call-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/extensions-call-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/extensions-list-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/extensions-list-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/health-ping-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/health-ping-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/hud-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-unicode-request"
+    },
+    {
+      "path": "valid/hud-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/inventory-snapshot-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/inventory-snapshot-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/inventory-view-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "typed-public-observation-source-partial-empty"
+    },
+    {
+      "path": "valid/inventory-view-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "typed-public-observation-source-partial-empty"
+    },
+    {
+      "path": "valid/player-snapshot-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/player-snapshot-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/player-status-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "typed-public-observation-source-partial-empty"
+    },
+    {
+      "path": "valid/player-status-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "typed-public-observation-source-partial-empty"
+    },
+    {
+      "path": "valid/quests-detail-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/quests-detail-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/quests-query-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/quests-query-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/recipe-acquisition-classification-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "recipe-acquisition-classification"
+    },
+    {
+      "path": "valid/recipe-process-family-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "recipe-process-family-selection"
+    },
+    {
+      "path": "valid/recipe-query-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/recipe-query-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/recipe-uses-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/recipe-uses-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/recipe-v11-components-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "recipe-v11-components"
+    },
+    {
+      "path": "valid/recipe-v15-process-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "recipe-v15-process"
+    },
+    {
+      "path": "valid/request-cancel-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/request-cancel-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/screen-snapshot-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "typed-public-observation-source-partial-empty"
+    },
+    {
+      "path": "valid/screen-snapshot-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "typed-public-observation-source-partial-empty"
+    },
+    {
+      "path": "valid/session-pair-approved-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/session-pair-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/session-revoke-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-request"
+    },
+    {
+      "path": "valid/session-revoke-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-response"
+    },
+    {
+      "path": "valid/target-snapshot-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "typed-public-observation-source-partial-empty"
+    },
+    {
+      "path": "valid/target-snapshot-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "typed-public-observation-source-partial-empty"
+    },
+    {
+      "path": "valid/unknown-action-capability-unavailable-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "valid-open-action-error-response"
+    },
+    {
+      "path": "valid/unknown-action-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "valid-open-action-request"
+    },
+    {
+      "path": "valid/world-biome-locate-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-locator-request"
+    },
+    {
+      "path": "valid/world-biome-locate-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-locator-response"
+    },
+    {
+      "path": "valid/world-containers-scan-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-nearby-request"
+    },
+    {
+      "path": "valid/world-containers-scan-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-nearby-response"
+    },
+    {
+      "path": "valid/world-context-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "typed-public-observation-source-partial-empty"
+    },
+    {
+      "path": "valid/world-context-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "typed-public-observation-source-partial-empty"
+    },
+    {
+      "path": "valid/world-machines-scan-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-nearby-request"
+    },
+    {
+      "path": "valid/world-machines-scan-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-nearby-response"
+    },
+    {
+      "path": "valid/world-registry-describe-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-registry-request"
+    },
+    {
+      "path": "valid/world-registry-describe-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-registry-response"
+    },
+    {
+      "path": "valid/world-registry-resolve-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-registry-request"
+    },
+    {
+      "path": "valid/world-registry-resolve-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-registry-response"
+    },
+    {
+      "path": "valid/world-registry-search-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "live-registry-search-request"
+    },
+    {
+      "path": "valid/world-registry-search-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "live-registry-search-response"
+    },
+    {
+      "path": "valid/world-structure-locate-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-locator-request"
+    },
+    {
+      "path": "valid/world-structure-locate-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-locator-response"
+    },
+    {
+      "path": "valid/world-structure-targets-request.json",
+      "schema": "request.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-target-request"
+    },
+    {
+      "path": "valid/world-structure-targets-response.json",
+      "schema": "response.schema.json",
+      "expected": "valid",
+      "reason": "stage-z-target-response"
+    }
+  ]
+}

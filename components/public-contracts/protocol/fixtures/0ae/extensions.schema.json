@@ -1,0 +1,528 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "0.ae AE-0 frozen wire contract; dispatcher activation is deferred to AE-5",
+  "$defs": {
+    "descriptor": {
+      "type": "object",
+      "properties": {
+        "extensionId": {
+          "type": "string",
+          "pattern": "^[a-z0-9_.-]+$",
+          "maxLength": 128
+        },
+        "extensionVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+$",
+          "maxLength": 32
+        },
+        "capabilityId": {
+          "type": "string",
+          "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$",
+          "maxLength": 128
+        },
+        "capabilityVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+$",
+          "maxLength": 32
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        "inputSchema": {
+          "type": "object"
+        },
+        "outputSchema": {
+          "type": "object"
+        },
+        "dataClass": {
+          "const": "ExtensionGameData"
+        },
+        "dependencies": {
+          "type": "array",
+          "maxItems": 16,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "capabilityId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "capabilityVersion": {
+                "type": "string",
+                "pattern": "^[0-9]+\\.[0-9]+$",
+                "maxLength": 32
+              }
+            },
+            "required": [
+              "capabilityId",
+              "capabilityVersion"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "executionContext": {
+          "enum": [
+            "client",
+            "integrated-server"
+          ]
+        },
+        "available": {
+          "type": "boolean"
+        },
+        "unavailableReason": {
+          "anyOf": [
+            {
+              "enum": [
+                "DEPENDENCY_MISSING",
+                "UNSUPPORTED_VERSION",
+                "GAME_NOT_READY"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "maximumDurationMs": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "maximumResultBytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16384
+        }
+      },
+      "required": [
+        "extensionId",
+        "extensionVersion",
+        "capabilityId",
+        "capabilityVersion",
+        "title",
+        "description",
+        "inputSchema",
+        "outputSchema",
+        "dataClass",
+        "dependencies",
+        "executionContext",
+        "available",
+        "unavailableReason",
+        "maximumDurationMs",
+        "maximumResultBytes"
+      ],
+      "additionalProperties": false
+    },
+    "listRequest": {
+      "type": "object",
+      "properties": {
+        "cursor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "catalogRevision": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "cursor",
+        "catalogRevision"
+      ],
+      "additionalProperties": false
+    },
+    "listResponse": {
+      "type": "object",
+      "properties": {
+        "catalogRevision": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "capabilities": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "$ref": "#/$defs/descriptor"
+          }
+        },
+        "nextCursor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "catalogRevision",
+        "capabilities",
+        "nextCursor"
+      ],
+      "additionalProperties": false
+    },
+    "callRequest": {
+      "type": "object",
+      "properties": {
+        "capabilityId": {
+          "type": "string",
+          "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$",
+          "maxLength": 128
+        },
+        "capabilityVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+$",
+          "maxLength": 32
+        },
+        "catalogRevision": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "arguments": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "capabilityId",
+        "capabilityVersion",
+        "catalogRevision",
+        "arguments"
+      ],
+      "additionalProperties": false
+    },
+    "callResponse": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "SUCCESS"
+            },
+            "data": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "status",
+            "data"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "UNAVAILABLE",
+                "DEPENDENCY_MISSING",
+                "UNSUPPORTED_VERSION",
+                "INVALID_ARGUMENTS",
+                "AUTHORITY_CHANGED",
+                "RATE_LIMITED",
+                "TIMED_OUT",
+                "CANCELLED",
+                "EXECUTION_FAILED",
+                "UNSUPPORTED_RESULT",
+                "RESULT_TOO_LARGE"
+              ]
+            },
+            "data": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "status",
+            "data"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": "1.0"
+        },
+        "requestId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deadline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "action": {
+          "const": "extensions.list"
+        },
+        "sessionToken": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{43}$"
+        },
+        "payload": {
+          "$ref": "#/$defs/listRequest"
+        },
+        "error": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "protocolVersion",
+        "requestId",
+        "timestamp",
+        "deadline",
+        "action",
+        "sessionToken",
+        "payload",
+        "error"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": "1.0"
+        },
+        "requestId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deadline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "action": {
+          "const": "extensions.list"
+        },
+        "sessionToken": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "#/$defs/listResponse"
+        },
+        "error": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "protocolVersion",
+        "requestId",
+        "timestamp",
+        "deadline",
+        "action",
+        "sessionToken",
+        "payload",
+        "error"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": "1.0"
+        },
+        "requestId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deadline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "action": {
+          "const": "extensions.call"
+        },
+        "sessionToken": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{43}$"
+        },
+        "payload": {
+          "$ref": "#/$defs/callRequest"
+        },
+        "error": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "protocolVersion",
+        "requestId",
+        "timestamp",
+        "deadline",
+        "action",
+        "sessionToken",
+        "payload",
+        "error"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": "1.0"
+        },
+        "requestId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deadline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "action": {
+          "const": "extensions.call"
+        },
+        "sessionToken": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "#/$defs/callResponse"
+        },
+        "error": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "protocolVersion",
+        "requestId",
+        "timestamp",
+        "deadline",
+        "action",
+        "sessionToken",
+        "payload",
+        "error"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "const": "1.0"
+        },
+        "requestId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deadline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "action": {
+          "enum": [
+            "extensions.list",
+            "extensions.call"
+          ]
+        },
+        "sessionToken": {
+          "type": "null"
+        },
+        "payload": {
+          "type": "null"
+        },
+        "error": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "enum": [
+                "INVALID_REQUEST",
+                "UNAUTHORIZED",
+                "UNSUPPORTED_VERSION",
+                "CAPABILITY_UNAVAILABLE",
+                "GAME_NOT_READY",
+                "NOT_FOUND",
+                "TIMEOUT",
+                "RATE_LIMITED",
+                "RESULT_TOO_LARGE",
+                "INTERNAL_ERROR"
+              ]
+            },
+            "message": {
+              "type": "string",
+              "maxLength": 256
+            },
+            "retryable": {
+              "const": false
+            },
+            "details": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "code",
+            "message",
+            "retryable",
+            "details"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "protocolVersion",
+        "requestId",
+        "timestamp",
+        "deadline",
+        "action",
+        "sessionToken",
+        "payload",
+        "error"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

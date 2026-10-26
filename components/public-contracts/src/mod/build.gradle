@@ -1,0 +1,31 @@
+plugins { id 'base' }
+allprojects {
+    group = 'dev.miaxion.public'
+    version = '0.1.0'
+    dependencyLocking {
+        lockAllConfigurations()
+        lockMode = LockMode.STRICT
+    }
+}
+subprojects {
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+        options.release = 21
+    }
+    tasks.withType(Test).configureEach {
+        useJUnitPlatform()
+        testLogging { events 'failed', 'skipped'; exceptionFormat = 'full' }
+    }
+    tasks.withType(AbstractArchiveTask).configureEach {
+        preserveFileTimestamps = false
+        reproducibleFileOrder = true
+    }
+    tasks.register('resolveLocks') {
+        doLast {
+            if (!gradle.startParameter.writeDependencyLocks) throw new GradleException('Use --write-locks explicitly.')
+            configurations.findAll { it.canBeResolved }.each { it.resolve() }
+        }
+    }
+}
+
+subprojects { tasks.withType(Jar).configureEach { from(layout.projectDirectory.file('LICENSE')) { into 'META-INF' } } }

@@ -1,0 +1,25 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-08-26T05:30:01Z",
+  "deadline": "2026-08-26T05:30:03Z",
+  "action": "quests.query",
+  "sessionToken": null,
+  "payload": {
+    "quests": [
+      {
+        "questId": "chapter-1:quest-1",
+        "chapterTitle": "Getting Started",
+        "title": "Make Power",
+        "state": "active",
+        "progress": 0.5,
+        "taskCount": 2,
+        "completedTaskCount": 1,
+        "repeatable": false
+      }
+    ],
+    "matchedCount": 1,
+    "truncated": false
+  },
+  "error": null
+}

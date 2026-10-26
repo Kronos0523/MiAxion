@@ -1,0 +1,50 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "extensions.list",
+  "sessionToken": null,
+  "payload": {
+    "worldScope": "4381a4cc-2ce2-4d48-95e3-d36413de2715",
+    "catalogRevision": "catalog-1",
+    "capabilities": [
+      {
+        "extensionId": "example",
+        "extensionVersion": "1.0",
+        "capabilityId": "example:standing_block",
+        "capabilityVersion": "1.0",
+        "title": "Standing block",
+        "description": "Returns one observed block identifier without coordinates.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "blockId": {
+              "type": "string",
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "blockId"
+          ],
+          "additionalProperties": false
+        },
+        "dataClass": "ExtensionGameData",
+        "dependencies": [],
+        "executionContext": "integrated-server",
+        "available": true,
+        "unavailableReason": null,
+        "maximumDurationMs": 1000,
+        "maximumResultBytes": 1024
+      }
+    ],
+    "nextCursor": "page-2"
+  },
+  "error": null
+}

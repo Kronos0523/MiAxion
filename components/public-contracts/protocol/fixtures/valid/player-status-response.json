@@ -1,0 +1,43 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "player.status",
+  "sessionToken": null,
+  "payload": {
+    "capturedAt": "2026-10-14T00:00:00Z",
+    "status": "partial",
+    "player": {
+      "dimensionId": "minecraft:overworld",
+      "position": {
+        "x": 0,
+        "y": 64,
+        "z": 0
+      },
+      "health": 20,
+      "food": 20,
+      "experienceLevel": 0,
+      "gameMode": "survival"
+    },
+    "effects": [
+      {
+        "id": "minecraft:speed",
+        "displayName": "速度",
+        "level": 2,
+        "durationTicks": null,
+        "infinite": true
+      }
+    ],
+    "armor": 12.0,
+    "toughness": 4.0,
+    "experienceProgress": 0.25,
+    "saturation": null,
+    "air": 300,
+    "maxAir": 300,
+    "unknownFields": [
+      "saturation"
+    ]
+  },
+  "error": null
+}

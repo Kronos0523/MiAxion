@@ -1,0 +1,10 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:00Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "player.status",
+  "sessionToken": "QmFzZTY0dXJsLXNlc3Npb24tdG9rZW4tdjEtMzItYnl0ZXM",
+  "payload": {},
+  "error": null
+}

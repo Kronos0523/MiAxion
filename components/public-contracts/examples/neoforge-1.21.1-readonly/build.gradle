@@ -1,0 +1,29 @@
+plugins { id 'java'; id 'net.neoforged.moddev' }
+group = 'dev.miaxion.examples'
+version = '0.1.0'
+base { archivesName = 'MiAXion-Standing-Block-Example-neoforge-1.21.1' }
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+neoForge { enable { version = '21.1.238'; disableRecompilation = true } }
+def sdkFile = providers.gradleProperty('sdkJar').map { file(it) }
+    .orElse(layout.projectDirectory.file('../../src/mod/bridge-extension-api/build/libs/bridge-extension-api-0.1.0.jar').asFile)
+dependencies { compileOnly files(sdkFile) }
+dependencyLocking { lockAllConfigurations(); lockMode = LockMode.STRICT }
+tasks.withType(JavaCompile).configureEach { options.release = 21; options.encoding = 'UTF-8' }
+tasks.withType(AbstractArchiveTask).configureEach { preserveFileTimestamps = false; reproducibleFileOrder = true }
+tasks.named('compileJava') {
+    doFirst { if (!sdkFile.get().isFile()) throw new GradleException('Build the independent aggregate SDK first, or pass -PsdkJar=<standalone JAR>.') }
+}
+tasks.register('verifyExampleArtifact') {
+    dependsOn 'jar'
+    doLast {
+        def archive = new java.util.zip.ZipFile(tasks.named('jar', Jar).get().archiveFile.get().asFile)
+        try {
+            if (archive.getEntry('dev/miaxion/extension/example/StandingBlockExtension.class') == null || archive.getEntry('META-INF/neoforge.mods.toml') == null)
+                throw new GradleException('Missing real mod entrypoint or metadata.')
+            if (archive.stream().anyMatch { it.name.startsWith('dev/miaxion/bridge/') || it.name.startsWith('net/minecraft/') })
+                throw new GradleException('Do not bundle host APIs or Minecraft.')
+        } finally { archive.close() }
+    }
+}
+
+tasks.named('jar', Jar) { from(layout.projectDirectory.file('LICENSE')) { into 'META-INF' } }

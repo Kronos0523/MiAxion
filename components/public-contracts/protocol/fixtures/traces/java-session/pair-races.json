@@ -1,0 +1,981 @@
+{
+  "schemaVersion": 1,
+  "traceId": "pair-races",
+  "owner": "java-session",
+  "terminalOwner": "java-session",
+  "inputs": {
+    "pairRequest": {
+      "action": "session.pair.request",
+      "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+      "sessionToken": null
+    },
+    "approval": {
+      "event": "approve",
+      "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf"
+    },
+    "denial": {
+      "event": "deny",
+      "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf"
+    },
+    "deadline": {
+      "event": "deadline",
+      "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf"
+    },
+    "invalidTokenRequest": {
+      "action": "health.ping",
+      "requestId": "9c84c889-4766-412d-8c5a-235dd7d52cb4",
+      "sessionToken": "invalid"
+    },
+    "revokeRequest": {
+      "action": "session.revoke",
+      "requestId": "9c84c889-4766-412d-8c5a-235dd7d52cb4",
+      "sessionToken": "QmFzZTY0dXJsLXNlc3Npb24tdG9rZW4tdjEtMzItYnl0ZXM"
+    },
+    "disconnect": {
+      "event": "disconnect"
+    },
+    "boundary-json-depth-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-json-depth-limit-minus-one.json.bin"
+    },
+    "boundary-json-depth-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/java-json-depth-limit.json.bin"
+    },
+    "boundary-json-depth-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-json-depth-limit-plus-one.json.bin"
+    },
+    "boundary-raw-json-string-utf16-units-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-raw-json-string-utf16-units-limit-minus-one.json.bin"
+    },
+    "boundary-raw-json-string-utf16-units-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/java-raw-json-string-utf16-units-limit.json.bin"
+    },
+    "boundary-raw-json-string-utf16-units-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-raw-json-string-utf16-units-limit-plus-one.json.bin"
+    },
+    "boundary-semantic-json-string-scalars-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-semantic-json-string-scalars-limit-minus-one.json.bin"
+    },
+    "boundary-semantic-json-string-scalars-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/java-semantic-json-string-scalars-limit.json.bin"
+    },
+    "boundary-semantic-json-string-scalars-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-semantic-json-string-scalars-limit-plus-one.json.bin"
+    },
+    "boundary-canonical-inbound-bytes-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-canonical-inbound-bytes-limit-minus-one.json.bin"
+    },
+    "boundary-canonical-inbound-bytes-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/java-canonical-inbound-bytes-limit.json.bin"
+    },
+    "boundary-canonical-inbound-bytes-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-canonical-inbound-bytes-limit-plus-one.json.bin"
+    },
+    "boundary-json-number-ascii-bytes-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-json-number-ascii-bytes-limit-minus-one.json.bin"
+    },
+    "boundary-json-number-ascii-bytes-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/java-json-number-ascii-bytes-limit.json.bin"
+    },
+    "boundary-json-number-ascii-bytes-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-json-number-ascii-bytes-limit-plus-one.json.bin"
+    },
+    "boundary-hud-text-scalars-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-hud-text-scalars-limit-minus-one.json.bin"
+    },
+    "boundary-hud-text-scalars-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/java-hud-text-scalars-limit.json.bin"
+    },
+    "boundary-hud-text-scalars-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-hud-text-scalars-limit-plus-one.json.bin"
+    },
+    "boundary-client-to-server-message-bytes-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-client-to-server-message-bytes-limit-minus-one.json.bin"
+    },
+    "boundary-client-to-server-message-bytes-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/java-client-to-server-message-bytes-limit.json.bin"
+    },
+    "boundary-client-to-server-message-bytes-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/java-client-to-server-message-bytes-limit-plus-one.json.bin"
+    }
+  },
+  "processingOrder": [],
+  "cases": [
+    {
+      "name": "approve-wins",
+      "initialState": "ConnectedUnpaired",
+      "processingOrder": [
+        "public-validation",
+        "pair-rate-limit",
+        "pair-payload-validation",
+        "pairing-state-transition"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "receive-request",
+          "inputRef": "pairRequest"
+        },
+        {
+          "sequence": 2,
+          "type": "approve",
+          "inputRef": "approval"
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "session.pair.approved",
+        "errorCode": null
+      }
+    },
+    {
+      "name": "deny-wins",
+      "initialState": "PairingPending",
+      "processingOrder": [
+        "terminal-claim"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "deny",
+          "inputRef": "denial"
+        }
+      ],
+      "expectedFinalState": "ConnectedUnpaired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "session.pair.request",
+        "errorCode": "UNAUTHORIZED"
+      }
+    },
+    {
+      "name": "timeout-wins",
+      "initialState": "PairingPending",
+      "processingOrder": [
+        "terminal-claim"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "deadline",
+          "inputRef": "deadline"
+        }
+      ],
+      "expectedFinalState": "ConnectedUnpaired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "session.pair.request",
+        "errorCode": "TIMEOUT"
+      }
+    },
+    {
+      "name": "duplicate-pair",
+      "initialState": "PairingPending",
+      "processingOrder": [
+        "public-validation",
+        "pair-rate-limit",
+        "pair-payload-validation",
+        "pairing-state-transition"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "receive-request",
+          "inputRef": "pairRequest"
+        }
+      ],
+      "expectedFinalState": "PairingPending",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "session.pair.request",
+        "errorCode": "RATE_LIMITED"
+      }
+    },
+    {
+      "name": "invalid-token",
+      "initialState": "Paired",
+      "processingOrder": [
+        "public-validation",
+        "authentication"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "receive-request",
+          "inputRef": "invalidTokenRequest"
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "health.ping",
+        "errorCode": "UNAUTHORIZED"
+      }
+    },
+    {
+      "name": "revoke",
+      "initialState": "Paired",
+      "processingOrder": [
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "receive-request",
+          "inputRef": "revokeRequest"
+        }
+      ],
+      "expectedFinalState": "Closed",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "session.revoke",
+        "errorCode": null
+      }
+    },
+    {
+      "name": "disconnect",
+      "initialState": "PairingPending",
+      "processingOrder": [
+        "channel-close"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "disconnect",
+          "inputRef": "disconnect"
+        }
+      ],
+      "expectedFinalState": "Closed",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "close",
+        "closeCode": 1000
+      }
+    }
+  ],
+  "boundaries": [
+    {
+      "limit": "jsonDepth",
+      "relation": "limit-1",
+      "value": 31,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-json-depth-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 326,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "jsonDepth",
+      "relation": "limit",
+      "value": 32,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-json-depth-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 328,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "jsonDepth",
+      "relation": "limit+1",
+      "value": 33,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-json-depth-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 330,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Closed",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "close",
+        "closeCode": 1007
+      }
+    },
+    {
+      "limit": "rawJsonStringUtf16Units",
+      "relation": "limit-1",
+      "value": 32767,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-raw-json-string-utf16-units-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65802,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "rawJsonStringUtf16Units",
+      "relation": "limit",
+      "value": 32768,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-raw-json-string-utf16-units-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65805,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "rawJsonStringUtf16Units",
+      "relation": "limit+1",
+      "value": 32769,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-raw-json-string-utf16-units-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65806,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Closed",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "close",
+        "closeCode": 1007
+      }
+    },
+    {
+      "limit": "semanticJsonStringScalars",
+      "relation": "limit-1",
+      "value": 16383,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-semantic-json-string-scalars-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 16652,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "semanticJsonStringScalars",
+      "relation": "limit",
+      "value": 16384,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-semantic-json-string-scalars-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 16653,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "semanticJsonStringScalars",
+      "relation": "limit+1",
+      "value": 16385,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-semantic-json-string-scalars-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 16654,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "INVALID_REQUEST"
+      }
+    },
+    {
+      "limit": "canonicalInboundBytes",
+      "relation": "limit-1",
+      "value": 65535,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-canonical-inbound-bytes-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65535,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "canonicalInboundBytes",
+      "relation": "limit",
+      "value": 65536,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-canonical-inbound-bytes-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65536,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "canonicalInboundBytes",
+      "relation": "limit+1",
+      "value": 65537,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-canonical-inbound-bytes-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65537,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "INVALID_REQUEST"
+      }
+    },
+    {
+      "limit": "jsonNumberAsciiBytes",
+      "relation": "limit-1",
+      "value": 63,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-json-number-ascii-bytes-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 330,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "jsonNumberAsciiBytes",
+      "relation": "limit",
+      "value": 64,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-json-number-ascii-bytes-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 331,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "jsonNumberAsciiBytes",
+      "relation": "limit+1",
+      "value": 65,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-json-number-ascii-bytes-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 332,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Closed",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "close",
+        "closeCode": 1007
+      }
+    },
+    {
+      "limit": "hudTextScalars",
+      "relation": "limit-1",
+      "value": 279,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-hud-text-scalars-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 562,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "hud.show",
+        "errorCode": null
+      }
+    },
+    {
+      "limit": "hudTextScalars",
+      "relation": "limit",
+      "value": 280,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-hud-text-scalars-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 563,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "hud.show",
+        "errorCode": null
+      }
+    },
+    {
+      "limit": "hudTextScalars",
+      "relation": "limit+1",
+      "value": 281,
+      "entryPoint": "strict-request-validator",
+      "processingOrder": [
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-hud-text-scalars-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 564,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "hud.show",
+        "errorCode": "INVALID_REQUEST"
+      }
+    },
+    {
+      "limit": "clientToServerMessageBytes",
+      "relation": "limit-1",
+      "value": 65535,
+      "entryPoint": "websocket-message",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-client-to-server-message-bytes-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65535,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "clientToServerMessageBytes",
+      "relation": "limit",
+      "value": 65536,
+      "entryPoint": "websocket-message",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-client-to-server-message-bytes-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65535,
+          "endOfMessage": false
+        },
+        {
+          "sequence": 2,
+          "offset": 65535,
+          "length": 1,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "clientToServerMessageBytes",
+      "relation": "limit+1",
+      "value": 65537,
+      "entryPoint": "websocket-message",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "read-constraints",
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "inputRef": "boundary-client-to-server-message-bytes-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65535,
+          "endOfMessage": false
+        },
+        {
+          "sequence": 2,
+          "offset": 65535,
+          "length": 2,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Closed",
+      "expectedTerminal": {
+        "owner": "java-session",
+        "count": 1,
+        "kind": "close",
+        "closeCode": 1009
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "traceId": "unknown-action-auth-order",
+  "owner": "shared",
+  "terminalOwner": "shared",
+  "inputs": {
+    "unknownInvalidToken": {
+      "action": "future.echo",
+      "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+      "sessionToken": "invalid"
+    },
+    "unknownValidToken": {
+      "action": "future.echo",
+      "requestId": "9c84c889-4766-412d-8c5a-235dd7d52cb4",
+      "sessionToken": "QmFzZTY0dXJsLXNlc3Npb24tdG9rZW4tdjEtMzItYnl0ZXM"
+    },
+    "unicodeProbe": "中文🙂𝄞 \"引号\" \\反斜杠\n换行 § é"
+  },
+  "processingOrder": [
+    "public-validation",
+    "authentication",
+    "rate-limit",
+    "action-payload-validation"
+  ],
+  "cases": [
+    {
+      "name": "unknown-action-invalid-token",
+      "initialState": "Paired",
+      "processingOrder": [
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "receive-request",
+          "inputRef": "unknownInvalidToken"
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "shared",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "UNAUTHORIZED"
+      }
+    },
+    {
+      "name": "unknown-action-valid-token",
+      "initialState": "Paired",
+      "processingOrder": [
+        "public-validation",
+        "authentication",
+        "rate-limit",
+        "action-payload-validation"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "receive-request",
+          "inputRef": "unknownValidToken"
+        }
+      ],
+      "expectedFinalState": "Paired",
+      "expectedTerminal": {
+        "owner": "shared",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    }
+  ],
+  "boundaries": []
+}

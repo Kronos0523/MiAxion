@@ -1,0 +1,1308 @@
+{
+  "sourceRevision": "3aa5af2b6bd7a4500766e4919d01632c1c2c08f8",
+  "records": [
+    {
+      "coordinate": "com.ethlo.time:itu:1.14.0",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/com.ethlo.time/itu/1.14.0/itu-1.14.0.pom",
+          "sha256": "0d5ae0bec09495529c63cc8a6c13253870686832a4e3b206c138165035ae4bc5",
+          "bytes": 18267
+        }
+      ]
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-annotations:2.22",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/com.fasterxml.jackson.core/jackson-annotations/2.22/jackson-annotations-2.22.pom",
+          "sha256": "38c3ba52a0eade3e3eacc5b13499d56e1038ccbad8ec4bb79426dc21432b46d0",
+          "bytes": 7184
+        },
+        {
+          "file": "maven/com.fasterxml.jackson.core/jackson-annotations/2.22/META-INF__LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "archiveEntry": "META-INF/LICENSE"
+        },
+        {
+          "file": "maven/com.fasterxml.jackson.core/jackson-annotations/2.22/META-INF__NOTICE",
+          "sha256": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201",
+          "bytes": 738,
+          "archiveEntry": "META-INF/NOTICE"
+        }
+      ]
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-core:2.22.1",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/com.fasterxml.jackson.core/jackson-core/2.22.1/jackson-core-2.22.1.pom",
+          "sha256": "34551c6c8d72a4a2215fd05fdcf2f4e693eff99e6e54632bd57cf2674478e293",
+          "bytes": 9704
+        },
+        {
+          "file": "maven/com.fasterxml.jackson.core/jackson-core/2.22.1/META-INF__LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "archiveEntry": "META-INF/LICENSE"
+        },
+        {
+          "file": "maven/com.fasterxml.jackson.core/jackson-core/2.22.1/META-INF__NOTICE",
+          "sha256": "e6aef1c0f4cf5b0f802c16b31fce309b3c3737450b93c40d6291bf6540aae3d1",
+          "bytes": 1616,
+          "archiveEntry": "META-INF/NOTICE"
+        }
+      ]
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-databind:2.22.1",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/com.fasterxml.jackson.core/jackson-databind/2.22.1/jackson-databind-2.22.1.pom",
+          "sha256": "0bc8f98c7bd7232bc90324fc63c2f56f7ae92dee2bf0dc303669f4e2de8c1f69",
+          "bytes": 23024
+        },
+        {
+          "file": "maven/com.fasterxml.jackson.core/jackson-databind/2.22.1/META-INF__LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "archiveEntry": "META-INF/LICENSE"
+        },
+        {
+          "file": "maven/com.fasterxml.jackson.core/jackson-databind/2.22.1/META-INF__NOTICE",
+          "sha256": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201",
+          "bytes": 738,
+          "archiveEntry": "META-INF/NOTICE"
+        }
+      ]
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.22.1",
+      "ecosystem": "maven",
+      "declarations": [],
+      "materials": [
+        {
+          "file": "maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.22.1/jackson-datatype-jsr310-2.22.1.pom",
+          "sha256": "fe19b490bef5c81fd9b9bff8c0f8088747d6f58680ceff4bb228840a33428ca9",
+          "bytes": 5350
+        },
+        {
+          "file": "maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.22.1/META-INF__LICENSE",
+          "sha256": "66ea9c8987b1674aababbcc24f61c83ab4fb7baf3af1d701caf0a3aaea97fa92",
+          "bytes": 331,
+          "archiveEntry": "META-INF/LICENSE"
+        },
+        {
+          "file": "maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.22.1/META-INF__NOTICE",
+          "sha256": "7347397a0665f6898b32894a1869a514251abef7da7620902b0e57c5026cf1ed",
+          "bytes": 610,
+          "archiveEntry": "META-INF/NOTICE"
+        }
+      ]
+    },
+    {
+      "coordinate": "com.fasterxml.jackson:jackson-bom:2.22.1",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/com.fasterxml.jackson/jackson-bom/2.22.1/jackson-bom-2.22.1.pom",
+          "sha256": "b366aa5fd26958e2308a4807e5d42b14706b001b3ccbf138e31b8698dc0ac0ec",
+          "bytes": 20225
+        }
+      ]
+    },
+    {
+      "coordinate": "com.networknt:json-schema-validator:3.0.4",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Apache License Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/com.networknt/json-schema-validator/3.0.4/json-schema-validator-3.0.4.pom",
+          "sha256": "798458da314d9bd2c67f1d4392ce2a4064fa0a68462d65187ad83bdc33a5d2c2",
+          "bytes": 17558
+        }
+      ]
+    },
+    {
+      "coordinate": "org.apiguardian:apiguardian-api:1.1.2",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "The Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/org.apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.pom",
+          "sha256": "32355081d109095c3d5d374d5a43b4f4c1b75d549e983ef50723e2772e5302a0",
+          "bytes": 1526
+        },
+        {
+          "file": "maven/org.apiguardian/apiguardian-api/1.1.2/META-INF__LICENSE",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+          "bytes": 11357,
+          "archiveEntry": "META-INF/LICENSE"
+        }
+      ]
+    },
+    {
+      "coordinate": "org.junit.jupiter:junit-jupiter-api:5.14.2",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Eclipse Public License v2.0",
+          "url": "https://www.eclipse.org/legal/epl-v20.html"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/org.junit.jupiter/junit-jupiter-api/5.14.2/junit-jupiter-api-5.14.2.pom",
+          "sha256": "357bea0adf15e03ac2c8eadf2045b934250faf84809409963599bcf475deb338",
+          "bytes": 3208
+        },
+        {
+          "file": "maven/org.junit.jupiter/junit-jupiter-api/5.14.2/META-INF__LICENSE.md",
+          "sha256": "5aa4cd44c111add178d1c2e2fe36d58a484012c80167df925f826cd64d411bf0",
+          "bytes": 14235,
+          "archiveEntry": "META-INF/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "coordinate": "org.junit.jupiter:junit-jupiter-engine:5.14.2",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Eclipse Public License v2.0",
+          "url": "https://www.eclipse.org/legal/epl-v20.html"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/org.junit.jupiter/junit-jupiter-engine/5.14.2/junit-jupiter-engine-5.14.2.pom",
+          "sha256": "da3fd80cc1e16225902880c3c1707f3b895a11da9c6233084a04b395c0e1fd01",
+          "bytes": 3227
+        },
+        {
+          "file": "maven/org.junit.jupiter/junit-jupiter-engine/5.14.2/META-INF__LICENSE.md",
+          "sha256": "5aa4cd44c111add178d1c2e2fe36d58a484012c80167df925f826cd64d411bf0",
+          "bytes": 14235,
+          "archiveEntry": "META-INF/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "coordinate": "org.junit.jupiter:junit-jupiter-params:5.14.2",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Eclipse Public License v2.0",
+          "url": "https://www.eclipse.org/legal/epl-v20.html"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/org.junit.jupiter/junit-jupiter-params/5.14.2/junit-jupiter-params-5.14.2.pom",
+          "sha256": "0ae28b9bde4c5bd60255e09beef1915c07ef2f981d3b8f47c8b48879518916e6",
+          "bytes": 3034
+        },
+        {
+          "file": "maven/org.junit.jupiter/junit-jupiter-params/5.14.2/META-INF__LICENSE.md",
+          "sha256": "5aa4cd44c111add178d1c2e2fe36d58a484012c80167df925f826cd64d411bf0",
+          "bytes": 14235,
+          "archiveEntry": "META-INF/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "coordinate": "org.junit.jupiter:junit-jupiter:5.14.2",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Eclipse Public License v2.0",
+          "url": "https://www.eclipse.org/legal/epl-v20.html"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/org.junit.jupiter/junit-jupiter/5.14.2/junit-jupiter-5.14.2.pom",
+          "sha256": "e882bc8925bef49b289c6ae7fc670a774ce64f779eafd747b8aa3d8a8a867e3a",
+          "bytes": 3225
+        },
+        {
+          "file": "maven/org.junit.jupiter/junit-jupiter/5.14.2/META-INF__LICENSE.md",
+          "sha256": "5aa4cd44c111add178d1c2e2fe36d58a484012c80167df925f826cd64d411bf0",
+          "bytes": 14235,
+          "archiveEntry": "META-INF/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "coordinate": "org.junit.platform:junit-platform-commons:1.14.2",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Eclipse Public License v2.0",
+          "url": "https://www.eclipse.org/legal/epl-v20.html"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/org.junit.platform/junit-platform-commons/1.14.2/junit-platform-commons-1.14.2.pom",
+          "sha256": "6faa6714bb8b6f857b1b3ed3b61cf910ebfdad93f2583279d3a4fd45655af9c5",
+          "bytes": 2853
+        },
+        {
+          "file": "maven/org.junit.platform/junit-platform-commons/1.14.2/META-INF__LICENSE.md",
+          "sha256": "5aa4cd44c111add178d1c2e2fe36d58a484012c80167df925f826cd64d411bf0",
+          "bytes": 14235,
+          "archiveEntry": "META-INF/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "coordinate": "org.junit.platform:junit-platform-engine:1.14.2",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Eclipse Public License v2.0",
+          "url": "https://www.eclipse.org/legal/epl-v20.html"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/org.junit.platform/junit-platform-engine/1.14.2/junit-platform-engine-1.14.2.pom",
+          "sha256": "936aa5a7b1df583973a3227fcbdb95ea74e31e1beb18ea86992ec90653f0a86a",
+          "bytes": 3225
+        },
+        {
+          "file": "maven/org.junit.platform/junit-platform-engine/1.14.2/META-INF__LICENSE.md",
+          "sha256": "5aa4cd44c111add178d1c2e2fe36d58a484012c80167df925f826cd64d411bf0",
+          "bytes": 14235,
+          "archiveEntry": "META-INF/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "coordinate": "org.junit.platform:junit-platform-launcher:1.14.2",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Eclipse Public License v2.0",
+          "url": "https://www.eclipse.org/legal/epl-v20.html"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/org.junit.platform/junit-platform-launcher/1.14.2/junit-platform-launcher-1.14.2.pom",
+          "sha256": "0459fc35a3343ebfea78eb7932fa41ece76d832437035300b048e7a42e80e709",
+          "bytes": 3049
+        },
+        {
+          "file": "maven/org.junit.platform/junit-platform-launcher/1.14.2/META-INF__LICENSE.md",
+          "sha256": "5aa4cd44c111add178d1c2e2fe36d58a484012c80167df925f826cd64d411bf0",
+          "bytes": 14235,
+          "archiveEntry": "META-INF/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "coordinate": "org.junit:junit-bom:5.14.2",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Eclipse Public License v2.0",
+          "url": "https://www.eclipse.org/legal/epl-v20.html"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/org.junit/junit-bom/5.14.2/junit-bom-5.14.2.pom",
+          "sha256": "ed2dcc7855bd460bccc93a1bf0c962e63b566ff7d8f1ded0f1f2593ba8183aaf",
+          "bytes": 5669
+        }
+      ]
+    },
+    {
+      "coordinate": "org.opentest4j:opentest4j:1.3.0",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "The Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/org.opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.pom",
+          "sha256": "9bf7cffc410f3e8372c2522578df9ca56d9d43bd937e30948706c232a943b355",
+          "bytes": 2035
+        },
+        {
+          "file": "maven/org.opentest4j/opentest4j/1.3.0/META-INF__LICENSE",
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+          "bytes": 11358,
+          "archiveEntry": "META-INF/LICENSE"
+        }
+      ]
+    },
+    {
+      "coordinate": "org.slf4j:slf4j-api:2.0.9",
+      "ecosystem": "maven",
+      "declarations": [],
+      "materials": [
+        {
+          "file": "maven/org.slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.pom",
+          "sha256": "9c3a654f9d0aa1a34b3178ebe53a89c76792e1d81fc1e9739cbe9b1610523385",
+          "bytes": 2816
+        },
+        {
+          "file": "maven/org.slf4j/slf4j-api/2.0.9/META-INF__LICENSE.txt",
+          "sha256": "4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc",
+          "bytes": 1178,
+          "archiveEntry": "META-INF/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "coordinate": "org.snakeyaml:snakeyaml-engine:3.0.1",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/org.snakeyaml/snakeyaml-engine/3.0.1/snakeyaml-engine-3.0.1.pom",
+          "sha256": "03559cfc71af8ef4af83385d25d93bf38dfc7a43169b83defc70acdfde14b6d9",
+          "bytes": 19617
+        }
+      ]
+    },
+    {
+      "coordinate": "tools.jackson.core:jackson-core:3.1.1",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/tools.jackson.core/jackson-core/3.1.1/jackson-core-3.1.1.pom",
+          "sha256": "8b6d6237d902b6f20b95b82a4ecd89961ee894cb6651892571d00f5a8e0f0536",
+          "bytes": 11443
+        },
+        {
+          "file": "maven/tools.jackson.core/jackson-core/3.1.1/META-INF__LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "archiveEntry": "META-INF/LICENSE"
+        },
+        {
+          "file": "maven/tools.jackson.core/jackson-core/3.1.1/META-INF__NOTICE",
+          "sha256": "d055bebbe8c803db1062ccc5f14ad8c3928df820056107620badae987e8e4eb7",
+          "bytes": 1221,
+          "archiveEntry": "META-INF/NOTICE"
+        }
+      ]
+    },
+    {
+      "coordinate": "tools.jackson.core:jackson-databind:3.1.1",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/tools.jackson.core/jackson-databind/3.1.1/jackson-databind-3.1.1.pom",
+          "sha256": "967ff0d4094fa6af10a0ca197df56e1ecbc4248c827ac0ea6a948885b2459a13",
+          "bytes": 18027
+        },
+        {
+          "file": "maven/tools.jackson.core/jackson-databind/3.1.1/META-INF__LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "archiveEntry": "META-INF/LICENSE"
+        },
+        {
+          "file": "maven/tools.jackson.core/jackson-databind/3.1.1/META-INF__NOTICE",
+          "sha256": "d3fa47349b4ba4a3763bf635b930f8877073aa3915a3f3e45fe4b1842fc60302",
+          "bytes": 732,
+          "archiveEntry": "META-INF/NOTICE"
+        }
+      ]
+    },
+    {
+      "coordinate": "tools.jackson.dataformat:jackson-dataformat-yaml:3.1.1",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/tools.jackson.dataformat/jackson-dataformat-yaml/3.1.1/jackson-dataformat-yaml-3.1.1.pom",
+          "sha256": "93f97ebb1cdb52ebdabc3324c711926794e5f40d2b38b5c52696041615052821",
+          "bytes": 2889
+        },
+        {
+          "file": "maven/tools.jackson.dataformat/jackson-dataformat-yaml/3.1.1/META-INF__LICENSE",
+          "sha256": "9e255394eb9f8cfdcdf599dd150d9ca3e922ab4d31cb5e83519479a91e1d3072",
+          "bytes": 319,
+          "archiveEntry": "META-INF/LICENSE"
+        },
+        {
+          "file": "maven/tools.jackson.dataformat/jackson-dataformat-yaml/3.1.1/META-INF__NOTICE",
+          "sha256": "5828ffe74ea0ee4bf896654026f05fed1ead1d22acd577cc1eec9be0bc0de1ed",
+          "bytes": 681,
+          "archiveEntry": "META-INF/NOTICE"
+        }
+      ]
+    },
+    {
+      "coordinate": "tools.jackson:jackson-bom:3.1.1",
+      "ecosystem": "maven",
+      "declarations": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "materials": [
+        {
+          "file": "maven/tools.jackson/jackson-bom/3.1.1/jackson-bom-3.1.1.pom",
+          "sha256": "fd1cc21d60ad33b9a30fe57428dd447de171208ca2fc09c179f801c4bebae9a6",
+          "bytes": 19864
+        }
+      ]
+    },
+    {
+      "coordinate": "JsonSchema.Net:9.3.0",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/JsonSchema.Net/9.3.0/jsonschema.net.nuspec",
+          "sha256": "d332e4ef4c96bf6c179cd80bc7f73d64f5fd720c8b8a2562a50c7be7cbd1045b",
+          "bytes": 1556
+        },
+        {
+          "file": "nuget/JsonSchema.Net/9.3.0/OSMFEULA.txt",
+          "sha256": "5c805ac94dfdb4a3be55547f04a2f4b9f1bb87d7e9ee6d6fe54b0e72093900c3",
+          "bytes": 3463
+        }
+      ],
+      "license": {
+        "text": "OSMFEULA.txt",
+        "attributes": {
+          "type": "file"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://aka.ms/deprecateLicenseUrl",
+        "attributes": {}
+      },
+      "projectUrl": {
+        "text": "https://github.com/json-everything/json-everything",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/json-everything/json-everything",
+          "branch": "refs/heads/master",
+          "commit": "0b08e9d043ce40bf20b1d39911c111c4f14ebacd"
+        }
+      },
+      "packageSha256": "3b6663f4bf49e26be8b569178791d91b778c619dfac4622c78667d2e05fdb3b7",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "xunit.v3:3.2.2",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/xunit.v3/3.2.2/xunit.v3.nuspec",
+          "sha256": "6c40e88a87acf8b073f693c74b25d01f75eb03a43e25badf5c7d0c63d2729485",
+          "bytes": 1415
+        }
+      ],
+      "license": {
+        "text": "Apache-2.0",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/Apache-2.0",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/xunit/xunit",
+          "commit": "728c1dce012cd82193035dddfeaba184baaa88c6"
+        }
+      },
+      "packageSha256": "47a23f2098f28a6aa62f154d9e0e761a7e627ff09c7778a22e3754d5f2014543",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "Humanizer.Core:3.0.10",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/Humanizer.Core/3.0.10/humanizer.core.nuspec",
+          "sha256": "07d999aaff5f7cbdfa7c7d23662dd3641e70f9ca8b33a5ff246d2917395548bf",
+          "bytes": 1756
+        }
+      ],
+      "license": {
+        "text": "MIT",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/MIT",
+        "attributes": {}
+      },
+      "projectUrl": {
+        "text": "https://github.com/Humanizr/Humanizer",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/Humanizr/Humanizer",
+          "commit": "90f0cb1d7427635f38b46350bb1dc5fca2164f2d"
+        }
+      },
+      "packageSha256": "99f95210d8c3a1fd40bfd33d44b18441c97857891e55f1f7a88c72feec49e851",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "Json.More.Net:3.0.1",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/Json.More.Net/3.0.1/json.more.net.nuspec",
+          "sha256": "1622819b0864bc1d80fbc100dcb4fbd1161d0b6ac6de7c34474e87aa93aa8322",
+          "bytes": 1402
+        },
+        {
+          "file": "nuget/Json.More.Net/3.0.1/OSMFEULA.txt",
+          "sha256": "5c805ac94dfdb4a3be55547f04a2f4b9f1bb87d7e9ee6d6fe54b0e72093900c3",
+          "bytes": 3463
+        }
+      ],
+      "license": {
+        "text": "OSMFEULA.txt",
+        "attributes": {
+          "type": "file"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://aka.ms/deprecateLicenseUrl",
+        "attributes": {}
+      },
+      "projectUrl": {
+        "text": "https://github.com/json-everything/json-everything",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/json-everything/json-everything",
+          "branch": "refs/heads/master",
+          "commit": "8b8ab34027de5ad9f4ed50808b8e4889ca69cf4d"
+        }
+      },
+      "packageSha256": "53812bb344e46cdb2b0bc4c126cb90726f481e2adfd8144239ffbdb9a3a1412b",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "JsonPointer.Net:7.0.1",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/JsonPointer.Net/7.0.1/jsonpointer.net.nuspec",
+          "sha256": "7c2a3094f42428eb62cae67da213717fbb4f2210aa239df130ce8627189bdcd1",
+          "bytes": 1917
+        },
+        {
+          "file": "nuget/JsonPointer.Net/7.0.1/OSMFEULA.txt",
+          "sha256": "5c805ac94dfdb4a3be55547f04a2f4b9f1bb87d7e9ee6d6fe54b0e72093900c3",
+          "bytes": 3463
+        }
+      ],
+      "license": {
+        "text": "OSMFEULA.txt",
+        "attributes": {
+          "type": "file"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://aka.ms/deprecateLicenseUrl",
+        "attributes": {}
+      },
+      "projectUrl": {
+        "text": "https://github.com/json-everything/json-everything",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/json-everything/json-everything",
+          "branch": "refs/heads/master",
+          "commit": "8b8ab34027de5ad9f4ed50808b8e4889ca69cf4d"
+        }
+      },
+      "packageSha256": "2825383412ab340272b0a95ec342073794c3f84ba8f37c1f1bd3e2d64a005849",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "Microsoft.ApplicationInsights:2.23.0",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/Microsoft.ApplicationInsights/2.23.0/microsoft.applicationinsights.nuspec",
+          "sha256": "184c649613d487d2b11466882ad83e375bf94f6aa228afae78dd4005bb0bb2a0",
+          "bytes": 2313
+        }
+      ],
+      "license": {
+        "text": "MIT",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/MIT",
+        "attributes": {}
+      },
+      "projectUrl": {
+        "text": "https://go.microsoft.com/fwlink/?LinkId=392727",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "Git",
+          "url": "https://github.com/Microsoft/ApplicationInsights-dotnet",
+          "commit": "2faa7e8b157a431daa2e71785d68abd5fa817b53"
+        }
+      },
+      "packageSha256": "e6c7f76e0ec26598c7b1e2be1777e839c84486655e8a878fc4c655bd2e918dbd",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "Microsoft.Bcl.AsyncInterfaces:6.0.0",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/Microsoft.Bcl.AsyncInterfaces/6.0.0/microsoft.bcl.asyncinterfaces.nuspec",
+          "sha256": "3a965c424d56f1cee169d88cc9c04f2c04f01bd65f20147b26ac093d761beec9",
+          "bytes": 1559
+        },
+        {
+          "file": "nuget/Microsoft.Bcl.AsyncInterfaces/6.0.0/LICENSE.TXT",
+          "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+          "bytes": 1139
+        }
+      ],
+      "license": {
+        "text": "MIT",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/MIT",
+        "attributes": {}
+      },
+      "projectUrl": {
+        "text": "https://dot.net/",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/dotnet/runtime",
+          "commit": "4822e3c3aa77eb82b2fb33c9321f923cf11ddde6"
+        }
+      },
+      "packageSha256": "e3df87fe2170a7e01f0880af59caa8f6eb380b3c40a4f282dfb43912aaf0f895",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "Microsoft.Testing.Extensions.Telemetry:1.9.1",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/Microsoft.Testing.Extensions.Telemetry/1.9.1/microsoft.testing.extensions.telemetry.nuspec",
+          "sha256": "bc29e1a8d5688d4daa29fb02551a1fc11c5c97d2ba3dc5cb2b82c6053e51e314",
+          "bytes": 2541
+        }
+      ],
+      "license": {
+        "text": "MIT",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/MIT",
+        "attributes": {}
+      },
+      "projectUrl": {
+        "text": "https://github.com/microsoft/testfx",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/microsoft/testfx",
+          "commit": "cb5afc3bb9bb01ebd75b57f89e8358b914ee2a49"
+        }
+      },
+      "packageSha256": "225ce692a0c2b22265b1b836390fdc4e0b3bd9dcd41d87405aff6301b853656c",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "Microsoft.Testing.Extensions.TrxReport.Abstractions:1.9.1",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/Microsoft.Testing.Extensions.TrxReport.Abstractions/1.9.1/microsoft.testing.extensions.trxreport.abstractions.nuspec",
+          "sha256": "0aa235792bd90cfa0a81e52edbde8f3522a2856c28477b9f7f2cd8c6492b4961",
+          "bytes": 1771
+        }
+      ],
+      "license": {
+        "text": "MIT",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/MIT",
+        "attributes": {}
+      },
+      "projectUrl": {
+        "text": "https://github.com/microsoft/testfx",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/microsoft/testfx",
+          "commit": "cb5afc3bb9bb01ebd75b57f89e8358b914ee2a49"
+        }
+      },
+      "packageSha256": "e2721103b80186371866a00f2b4e843363b396106b0b35569accc2c84a7412ca",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "Microsoft.Testing.Platform:1.9.1",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/Microsoft.Testing.Platform/1.9.1/microsoft.testing.platform.nuspec",
+          "sha256": "64fa746795e6d12b49c62ae26d3825d8c4eef5ee922321a155d18192d6d54820",
+          "bytes": 1387
+        }
+      ],
+      "license": {
+        "text": "MIT",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/MIT",
+        "attributes": {}
+      },
+      "projectUrl": {
+        "text": "https://github.com/microsoft/testfx",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/microsoft/testfx",
+          "commit": "cb5afc3bb9bb01ebd75b57f89e8358b914ee2a49"
+        }
+      },
+      "packageSha256": "dcc7a695780bf2c0ee4f06f30cf0aba1845bc4769fa36478ac4b87579f579b76",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "Microsoft.Testing.Platform.MSBuild:1.9.1",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/Microsoft.Testing.Platform.MSBuild/1.9.1/microsoft.testing.platform.msbuild.nuspec",
+          "sha256": "9a659919421e5b42e0bbb2688c5d5b998d4112f58d26d082afdad58196a258dc",
+          "bytes": 1969
+        }
+      ],
+      "license": {
+        "text": "MIT",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/MIT",
+        "attributes": {}
+      },
+      "projectUrl": {
+        "text": "https://github.com/microsoft/testfx",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/microsoft/testfx",
+          "commit": "cb5afc3bb9bb01ebd75b57f89e8358b914ee2a49"
+        }
+      },
+      "packageSha256": "e656707346c3b661decb574f279713ec0e46d84e4ca2593a1285479beeefc567",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "Microsoft.Win32.Registry:5.0.0",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/Microsoft.Win32.Registry/5.0.0/microsoft.win32.registry.nuspec",
+          "sha256": "eb8c4b9d4ebe62d8528dec6ab2a752c2e3488f28f882a6c45a33dcc21eacc58e",
+          "bytes": 5003
+        },
+        {
+          "file": "nuget/Microsoft.Win32.Registry/5.0.0/LICENSE.TXT",
+          "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+          "bytes": 1139
+        }
+      ],
+      "license": {
+        "text": "MIT",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/MIT",
+        "attributes": {}
+      },
+      "projectUrl": {
+        "text": "https://github.com/dotnet/runtime",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "git://github.com/dotnet/runtime",
+          "commit": "cf258a14b70ad9069470a108f13765e0e5988f51"
+        }
+      },
+      "packageSha256": "f64ca53c67ca65ce7cc85a8d29aefbb2da2672836731e1115e8cd62730dc5080",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "xunit.analyzers:1.27.0",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/xunit.analyzers/1.27.0/xunit.analyzers.nuspec",
+          "sha256": "cbccdd6860c67f953308d9945efee919bd71d0d44e842f996feb2ee37fe603f7",
+          "bytes": 1363
+        }
+      ],
+      "license": {
+        "text": "Apache-2.0",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/Apache-2.0",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/xunit/xunit.analyzers",
+          "commit": "a2260df3e96395e6b513e5c7485bd6c53806871e"
+        }
+      },
+      "packageSha256": "463c14d78a60248f91a76bcc631ff60609e2679acd0b3a30f38f7945ee61914e",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "xunit.v3.assert:3.2.2",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/xunit.v3.assert/3.2.2/xunit.v3.assert.nuspec",
+          "sha256": "1a043f64e4ca18c9a355427c4257872a7166a51fe6679d2b9a9b8798cb3d5c0f",
+          "bytes": 1261
+        }
+      ],
+      "license": {
+        "text": "Apache-2.0",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/Apache-2.0",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/xunit/xunit",
+          "commit": "728c1dce012cd82193035dddfeaba184baaa88c6"
+        }
+      },
+      "packageSha256": "c3775aac8f1cc2c3c4a0a2105b97b190dca01924e29a883b8b99c220fb787bc6",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "xunit.v3.common:3.2.2",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/xunit.v3.common/3.2.2/xunit.v3.common.nuspec",
+          "sha256": "00e79bbaa369dd095484fd26c9770ec0145be140ad80d6495d8df3024cc531b2",
+          "bytes": 1178
+        }
+      ],
+      "license": {
+        "text": "Apache-2.0",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/Apache-2.0",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/xunit/xunit",
+          "commit": "728c1dce012cd82193035dddfeaba184baaa88c6"
+        }
+      },
+      "packageSha256": "90e5960fde1a502083a333be75bf05cb0de11b03471435c31ac48ad3bc5f1290",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "xunit.v3.core.mtp-v1:3.2.2",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/xunit.v3.core.mtp-v1/3.2.2/xunit.v3.core.mtp-v1.nuspec",
+          "sha256": "49858dd97bcc0dfcad21d68a288ab6a7e318de68ade67c4c104d468186e05859",
+          "bytes": 2287
+        }
+      ],
+      "license": {
+        "text": "Apache-2.0",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/Apache-2.0",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/xunit/xunit",
+          "commit": "728c1dce012cd82193035dddfeaba184baaa88c6"
+        }
+      },
+      "packageSha256": "817f93844cbfdd923a1cb417fb0ed302008811f4a5fdc607da1c9a1895a86083",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "xunit.v3.extensibility.core:3.2.2",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/xunit.v3.extensibility.core/3.2.2/xunit.v3.extensibility.core.nuspec",
+          "sha256": "ee1092365c723420482984f8e4183af66d30964ae4d9a9efc4b87515cbf4cb7a",
+          "bytes": 1233
+        }
+      ],
+      "license": {
+        "text": "Apache-2.0",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/Apache-2.0",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/xunit/xunit",
+          "commit": "728c1dce012cd82193035dddfeaba184baaa88c6"
+        }
+      },
+      "packageSha256": "2285bf7868701c97e2e0a0fdf89f97761a1d49ce3ac33d1ce8bfe86ae54eeb51",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "xunit.v3.mtp-v1:3.2.2",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/xunit.v3.mtp-v1/3.2.2/xunit.v3.mtp-v1.nuspec",
+          "sha256": "fd776f97881e5f639b571588939e574fdf160217b6dbbd40671343102f1a1e6b",
+          "bytes": 1762
+        }
+      ],
+      "license": {
+        "text": "Apache-2.0",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/Apache-2.0",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/xunit/xunit",
+          "commit": "728c1dce012cd82193035dddfeaba184baaa88c6"
+        }
+      },
+      "packageSha256": "c4b4d226547639daa669cdc3453cfb9505ba6c0432cee89ffe69821c337bdc23",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "xunit.v3.runner.common:3.2.2",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/xunit.v3.runner.common/3.2.2/xunit.v3.runner.common.nuspec",
+          "sha256": "1cdbe89b6ece85f088e1f1451b37b8edca3a06826c62efe47e7cbee3a863d520",
+          "bytes": 1324
+        }
+      ],
+      "license": {
+        "text": "Apache-2.0",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/Apache-2.0",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/xunit/xunit",
+          "commit": "728c1dce012cd82193035dddfeaba184baaa88c6"
+        }
+      },
+      "packageSha256": "98d4ccf2e6de806d757a0639e5dff6ee8183b0f5304b19327338d16c9d40c1e8",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    },
+    {
+      "coordinate": "xunit.v3.runner.inproc.console:3.2.2",
+      "ecosystem": "nuget",
+      "scope": "protocol-tests",
+      "materials": [
+        {
+          "file": "nuget/xunit.v3.runner.inproc.console/3.2.2/xunit.v3.runner.inproc.console.nuspec",
+          "sha256": "cade441fef5a62ba8da47520795df3a80d1a711af81df148daf9c96d5ed4342d",
+          "bytes": 1518
+        }
+      ],
+      "license": {
+        "text": "Apache-2.0",
+        "attributes": {
+          "type": "expression"
+        }
+      },
+      "licenseUrl": {
+        "text": "https://licenses.nuget.org/Apache-2.0",
+        "attributes": {}
+      },
+      "repository": {
+        "text": null,
+        "attributes": {
+          "type": "git",
+          "url": "https://github.com/xunit/xunit",
+          "commit": "728c1dce012cd82193035dddfeaba184baaa88c6"
+        }
+      },
+      "packageSha256": "1bede7ecde0b53ee71fe4a42faaedb67e2b56c6a7868b7e3d3f204a41df3a89c",
+      "archiveSha512MatchesSidecar": true,
+      "nugetMetadataMatchesLock": true,
+      "cachePresent": true
+    }
+  ],
+  "upstream": [
+    {
+      "file": "upstream/itu-1.14.0-LICENSE",
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "bytes": 11357,
+      "url": "https://raw.githubusercontent.com/ethlo/itu/f5fbc9ec887dfbb46ec59407bc437e296ba381e4/LICENSE"
+    },
+    {
+      "file": "upstream/itu-1.14.0-pom.xml",
+      "sha256": "0d5ae0bec09495529c63cc8a6c13253870686832a4e3b206c138165035ae4bc5",
+      "bytes": 18267,
+      "url": "https://raw.githubusercontent.com/ethlo/itu/f5fbc9ec887dfbb46ec59407bc437e296ba381e4/pom.xml"
+    },
+    {
+      "file": "upstream/networknt-3.0.4-LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "bytes": 11357,
+      "url": "https://raw.githubusercontent.com/networknt/json-schema-validator/2276a17e117c8977eacac2dcef04908939463bed/LICENSE"
+    },
+    {
+      "file": "upstream/snakeyaml-engine-3.0.1-LICENSE.txt",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "bytes": 10173,
+      "url": "https://bitbucket.org/snakeyaml/snakeyaml-engine/raw/8ca9ad4a0f54422634e76f8db6873cdd46789c36/LICENSE.txt"
+    }
+  ]
+}

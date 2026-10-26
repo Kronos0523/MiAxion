@@ -1,0 +1,30 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "recipe.query",
+  "sessionToken": null,
+  "payload": {
+    "recipes": [
+      {
+        "recipeId": "example:from_vault",
+        "type": "example:loot_table",
+        "sourceModId": "example",
+        "identity": { "kind": "registered" },
+        "inputs": [],
+        "catalysts": [],
+        "outputs": [
+          { "alternatives": [{ "itemId": "example:artifact", "count": 1 }] }
+        ],
+        "classification": {
+          "category": "loot",
+          "visibleCategoryName": "Ancient Vault",
+          "planningEligibility": "acquisition_only"
+        }
+      }
+    ],
+    "truncated": false
+  },
+  "error": null
+}

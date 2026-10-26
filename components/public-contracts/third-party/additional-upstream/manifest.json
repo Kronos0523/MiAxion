@@ -1,0 +1,116 @@
+[
+  {
+    "request": {
+      "coordinate": "JsonSchema.Net:9.3.0",
+      "repo": "https://github.com/json-everything/json-everything",
+      "commit": "0b08e9d043ce40bf20b1d39911c111c4f14ebacd"
+    },
+    "materials": [
+      {
+        "file": "json-everything-json-everything-0b08e9d0-LICENSE",
+        "source": "https://raw.githubusercontent.com/json-everything/json-everything/0b08e9d043ce40bf20b1d39911c111c4f14ebacd/LICENSE",
+        "for": "JsonSchema.Net:9.3.0"
+      }
+    ]
+  },
+  {
+    "request": {
+      "coordinate": "xunit.v3:3.2.2",
+      "repo": "https://github.com/xunit/xunit",
+      "commit": "728c1dce012cd82193035dddfeaba184baaa88c6"
+    },
+    "materials": [
+      {
+        "file": "xunit-xunit-728c1dce-LICENSE",
+        "source": "https://raw.githubusercontent.com/xunit/xunit/728c1dce012cd82193035dddfeaba184baaa88c6/LICENSE",
+        "for": "xunit.v3:3.2.2"
+      }
+    ]
+  },
+  {
+    "request": {
+      "coordinate": "Humanizer.Core:3.0.10",
+      "repo": "https://github.com/Humanizr/Humanizer",
+      "commit": "90f0cb1d7427635f38b46350bb1dc5fca2164f2d"
+    },
+    "materials": [
+      {
+        "file": "Humanizr-Humanizer-90f0cb1d-license.txt",
+        "source": "https://raw.githubusercontent.com/Humanizr/Humanizer/90f0cb1d7427635f38b46350bb1dc5fca2164f2d/license.txt",
+        "for": "Humanizer.Core:3.0.10"
+      }
+    ]
+  },
+  {
+    "request": {
+      "coordinate": "Json.More.Net:3.0.1",
+      "repo": "https://github.com/json-everything/json-everything",
+      "commit": "8b8ab34027de5ad9f4ed50808b8e4889ca69cf4d"
+    },
+    "materials": [
+      {
+        "file": "json-everything-json-everything-8b8ab340-LICENSE",
+        "source": "https://raw.githubusercontent.com/json-everything/json-everything/8b8ab34027de5ad9f4ed50808b8e4889ca69cf4d/LICENSE",
+        "for": "Json.More.Net:3.0.1"
+      }
+    ]
+  },
+  {
+    "request": {
+      "coordinate": "Microsoft.ApplicationInsights:2.23.0",
+      "repo": "https://github.com/Microsoft/ApplicationInsights-dotnet",
+      "commit": "2faa7e8b157a431daa2e71785d68abd5fa817b53"
+    },
+    "materials": [
+      {
+        "file": "Microsoft-ApplicationInsights-dotnet-2faa7e8b-LICENSE",
+        "source": "https://raw.githubusercontent.com/Microsoft/ApplicationInsights-dotnet/2faa7e8b157a431daa2e71785d68abd5fa817b53/LICENSE",
+        "for": "Microsoft.ApplicationInsights:2.23.0"
+      }
+    ]
+  },
+  {
+    "request": {
+      "coordinate": "Microsoft.Bcl.AsyncInterfaces:6.0.0",
+      "repo": "https://github.com/dotnet/runtime",
+      "commit": "4822e3c3aa77eb82b2fb33c9321f923cf11ddde6"
+    },
+    "materials": []
+  },
+  {
+    "request": {
+      "coordinate": "Microsoft.Testing.Extensions.Telemetry:1.9.1",
+      "repo": "https://github.com/microsoft/testfx",
+      "commit": "cb5afc3bb9bb01ebd75b57f89e8358b914ee2a49"
+    },
+    "materials": [
+      {
+        "file": "microsoft-testfx-cb5afc3b-LICENSE",
+        "source": "https://raw.githubusercontent.com/microsoft/testfx/cb5afc3bb9bb01ebd75b57f89e8358b914ee2a49/LICENSE",
+        "for": "Microsoft.Testing.Extensions.Telemetry:1.9.1"
+      }
+    ]
+  },
+  {
+    "request": {
+      "coordinate": "Microsoft.Win32.Registry:5.0.0",
+      "repo": "https://github.com/dotnet/runtime",
+      "commit": "cf258a14b70ad9069470a108f13765e0e5988f51"
+    },
+    "materials": []
+  },
+  {
+    "request": {
+      "coordinate": "xunit.analyzers:1.27.0",
+      "repo": "https://github.com/xunit/xunit.analyzers",
+      "commit": "a2260df3e96395e6b513e5c7485bd6c53806871e"
+    },
+    "materials": [
+      {
+        "file": "xunit-xunit.analyzers-a2260df3-LICENSE",
+        "source": "https://raw.githubusercontent.com/xunit/xunit.analyzers/a2260df3e96395e6b513e5c7485bd6c53806871e/LICENSE",
+        "for": "xunit.analyzers:1.27.0"
+      }
+    ]
+  }
+]

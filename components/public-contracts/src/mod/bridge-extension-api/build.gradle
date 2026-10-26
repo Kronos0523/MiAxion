@@ -1,0 +1,204 @@
+plugins {
+    id 'java-library'
+}
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(java_version as int) }
+    withSourcesJar()
+}
+
+// Public contracts use Java 17 syntax and bytecode on all four hosts. Native addon
+// implementations still compile against their own game's required JVM.
+tasks.named('compileJava', JavaCompile) {
+    javaCompiler = javaToolchains.compilerFor { languageVersion = JavaLanguageVersion.of(21) }
+    options.release = 17
+}
+
+// BMC2 Fabric addons have a Java 17 boundary that is deliberately smaller
+// than the aggregate extension SDK. Keep its artifact boundary
+// separate so an addon never needs the base remapJar merely to see this API.
+sourceSets {
+    recipeApi {
+        java {
+            srcDirs = ['src/main/java']
+            include 'dev/miaxion/bridge/recipe/api/**'
+            include 'dev/miaxion/bridge/fabric/api/**'
+            include 'dev/miaxion/bridge/forge/api/**'
+            include 'dev/miaxion/bridge/neoforge/api/**'
+            exclude 'dev/miaxion/bridge/neoforge/api/NeoForgeClientAction*'
+        }
+    }
+    recipeApiLink {
+        java.srcDirs = ['src/recipe-api-link/java']
+    }
+}
+
+dependencies {
+    recipeApiCompileOnly "com.fasterxml.jackson.core:jackson-databind:${jackson_version}"
+    recipeApiLinkCompileOnly "com.fasterxml.jackson.core:jackson-databind:${jackson_version}"
+}
+
+tasks.named('compileRecipeApiJava') {
+    javaCompiler = javaToolchains.compilerFor { languageVersion = JavaLanguageVersion.of(21) }
+    options.release = 17
+    options.encoding = 'UTF-8'
+}
+
+def recipeApiJar = tasks.register('recipeApiJar', Jar) {
+    group = 'build'
+    description = 'Builds the Java 17 loader-neutral recipe addon API.'
+    archiveBaseName = 'miaxion-bridge-recipe-api'
+    archiveVersion.set('0.1.9')
+    from sourceSets.recipeApi.output
+}
+def recipeApiArchive = recipeApiJar.flatMap { it.archiveFile }
+
+tasks.named('compileRecipeApiLinkJava') {
+    dependsOn recipeApiJar
+    javaCompiler = javaToolchains.compilerFor { languageVersion = JavaLanguageVersion.of(21) }
+    options.release = 17
+    options.encoding = 'UTF-8'
+    classpath = files(recipeApiArchive) + configurations.recipeApiLinkCompileClasspath
+}
+
+tasks.register('verifyRecipeApiArtifact') {
+    group = 'verification'
+    description = 'Verifies the standalone Java 17 recipe API and an external link fixture.'
+    dependsOn tasks.named('compileRecipeApiLinkJava')
+    inputs.file(recipeApiArchive)
+    doLast {
+        def jar = recipeApiArchive.get().asFile
+        def zip = new java.util.zip.ZipFile(jar)
+        try {
+            [
+                'dev/miaxion/bridge/forge/api/ForgeRecipeProviderEntrypoint.class',
+                'dev/miaxion/bridge/forge/api/ForgeTerminologyBrowserEntrypoint.class',
+                'dev/miaxion/bridge/recipe/api/RecipeProvider.class',
+                'dev/miaxion/bridge/recipe/api/RecipeQuery.class',
+                'dev/miaxion/bridge/recipe/api/RecipeResourceValue.class',
+                'dev/miaxion/bridge/recipe/api/RecipeCategory.class',
+                'dev/miaxion/bridge/recipe/api/RecipeClassificationCandidate.class',
+                'dev/miaxion/bridge/recipe/api/RecipeProviderDiagnostics.class',
+                'dev/miaxion/bridge/recipe/api/RecipeProviderDiagnostics$Reason.class',
+                'dev/miaxion/bridge/recipe/api/RecipePlanningEligibility.class',
+                'dev/miaxion/bridge/recipe/api/RecipeIdentityFactory.class',
+                'dev/miaxion/bridge/fabric/api/FabricRecipeProviderEntrypoint.class',
+                'dev/miaxion/bridge/fabric/api/FabricTerminologyBrowserEntrypoint.class',
+                'dev/miaxion/bridge/fabric/api/FabricRecipeProviderRegistrar.class',
+                'dev/miaxion/bridge/neoforge/api/NeoForgeRecipeProviderEntrypoint.class',
+                'dev/miaxion/bridge/neoforge/api/NeoForgeRecipeProviderRegistrar.class',
+                'dev/miaxion/bridge/neoforge/api/NeoForgeTerminologyBrowserEntrypoint.class',
+                'dev/miaxion/bridge/neoforge/api/TerminologyBrowserProvider.class',
+                'dev/miaxion/bridge/recipe/api/RecipeProcessCandidate.class'
+            ].each { if (zip.getEntry(it) == null) throw new GradleException("Recipe API is missing ${it}.") }
+            if (zip.stream().anyMatch { it.name.startsWith('dev/miaxion/bridge/game/') || it.name.startsWith('dev/miaxion/bridge/session/') || it.name.startsWith('dev/miaxion/bridge/transport/') })
+                throw new GradleException('Recipe API must not contain Bridge implementation classes.')
+            zip.entries().findAll { !it.directory && it.name.endsWith('.class') }.each { entry ->
+                def input = zip.getInputStream(entry)
+                try {
+                    byte[] header = input.readNBytes(8)
+                    int major = ((header[6] & 0xff) << 8) | (header[7] & 0xff)
+                    if (major != 61) throw new GradleException("${entry.name} is not Java 17 bytecode.")
+                } finally { input.close() }
+            }
+        } finally { zip.close() }
+    }
+}
+
+// RecipeQuery exposes JsonNode as an immutable component filter.  The base
+// Bridge owns this runtime dependency; addon artifacts compile against it only.
+dependencies {
+    compileOnly "com.fasterxml.jackson.core:jackson-databind:${jackson_version}"
+}
+
+// SDK release identity is independent of the Bridge product release. Keep this
+// artifact unchanged when only the host implementation changes.
+def actionApiSdkVersion = '1.2.0'
+def actionApiJar = tasks.register('actionApiJar', Jar) {
+    group = 'build'
+    description = 'Builds the standalone Java 17 client-action API v1 SDK (not an installable mod).'
+    archiveBaseName = 'miaxion-bridge-action-api'
+    archiveVersion.set(actionApiSdkVersion)
+    from(sourceSets.main.output) {
+        include 'dev/miaxion/bridge/action/api/**'
+        include 'dev/miaxion/bridge/neoforge/api/NeoForgeClientAction*'
+    }
+    manifest { attributes('Implementation-Version': actionApiSdkVersion) }
+}
+def actionApiArchive = actionApiJar.flatMap { it.archiveFile }
+
+sourceSets {
+    actionApiLink { java.srcDirs = ['src/action-api-link/java'] }
+}
+tasks.named('compileActionApiLinkJava') {
+    dependsOn actionApiJar
+    // Deliberately only the published SDK: no source-set or base implementation dependency.
+    classpath = files(actionApiArchive)
+}
+tasks.register('actionApiLinkJar', Jar) {
+    group = 'verification'
+    archiveBaseName = 'action-api-link-fixture'
+    archiveVersion.set(actionApiSdkVersion)
+    from sourceSets.actionApiLink.output
+}
+tasks.register('verifyActionApiArtifact') {
+    group = 'verification'
+    dependsOn actionApiJar
+    inputs.file(actionApiArchive)
+    doLast { task ->
+        def zip = new java.util.zip.ZipFile(task.inputs.files.singleFile)
+        try {
+            ['dev/miaxion/bridge/action/api/ClientActionEntrypoint.class',
+             'dev/miaxion/bridge/action/api/ClientActionRegistrar.class',
+             'dev/miaxion/bridge/action/api/ClientActionConfiguration.class',
+             'dev/miaxion/bridge/action/api/ClientActionConfiguration$Page.class',
+             'dev/miaxion/bridge/action/api/ClientActionAdapter.class',
+             'dev/miaxion/bridge/action/api/ClientActionRegistration.class',
+             'dev/miaxion/bridge/neoforge/api/NeoForgeClientActionEntrypoint.class',
+             'dev/miaxion/bridge/neoforge/api/NeoForgeClientActionRegistrar.class'].each {
+                if (zip.getEntry(it) == null) throw new GradleException("Action API is missing ${it}")
+            }
+            zip.entries().findAll { !it.directory && it.name.endsWith('.class') }.each { entry ->
+                if (!entry.name.startsWith('dev/miaxion/bridge/action/api/') &&
+                    !entry.name.startsWith('dev/miaxion/bridge/neoforge/api/NeoForgeClientAction'))
+                    throw new GradleException("Unexpected SDK class ${entry.name}")
+                def stream = zip.getInputStream(entry)
+                try {
+                    def bytes = stream.readNBytes(8)
+                    if (bytes.length != 8 || (((bytes[6] & 0xff) << 8) | (bytes[7] & 0xff)) != 61)
+                        throw new GradleException("Action SDK must use Java 17 bytecode: ${entry.name}")
+                } finally { stream.close() }
+            }
+            if (zip.getEntry('META-INF/neoforge.mods.toml') != null)
+                throw new GradleException('Action SDK is compile-only, not an installable mod.')
+        } finally { zip.close() }
+    }
+}
+// Optional runtime JAR is a previously built Bridge. Never put both copies of
+// the API on this runtime classpath; the fixture checks its actual class origin.
+def actionApiRuntime = providers.gradleProperty('actionApiRuntimeJar')
+    .map { file(it) }.orElse(actionApiArchive.map { it.asFile })
+tasks.register('verifyActionApiLink', JavaExec) {
+    group = 'verification'
+    dependsOn 'verifyActionApiArtifact', 'actionApiLinkJar'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
+    classpath = files(tasks.named('actionApiLinkJar', Jar).flatMap { it.archiveFile }, actionApiRuntime)
+    mainClass = 'example.ExternalActionAddon'
+    argumentProviders.add({ [actionApiRuntime.get().absolutePath] } as CommandLineArgumentProvider)
+}
+
+// Separate consumer uses the built JAR, never sourceSets.main or the original product output.
+sourceSets { aggregateApiLink { java.srcDirs = ['src/aggregate-api-link/java'] } }
+dependencies { aggregateApiLinkCompileOnly "com.fasterxml.jackson.core:jackson-databind:${jackson_version}" }
+tasks.named('compileAggregateApiLinkJava') {
+    dependsOn 'jar'
+    options.release = 17
+    classpath = files(tasks.named('jar', Jar).flatMap { it.archiveFile }) + configurations.aggregateApiLinkCompileClasspath
+}
+tasks.register('verifyAggregateApiLink', JavaExec) {
+    dependsOn 'compileAggregateApiLinkJava'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
+    classpath = sourceSets.aggregateApiLink.output + files(tasks.named('jar', Jar).flatMap { it.archiveFile }) + configurations.aggregateApiLinkCompileClasspath
+    mainClass = 'example.ExternalAggregateConsumer'
+    argumentProviders.add({ [tasks.named('jar', Jar).get().archiveFile.get().asFile.absolutePath] } as CommandLineArgumentProvider)
+}

@@ -1,0 +1,24 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "inventory.snapshot",
+  "sessionToken": null,
+  "payload": {
+    "revision": "inventory-revision-1",
+    "slots": [
+      {
+        "slot": 0,
+        "empty": true
+      },
+      {
+        "slot": 1,
+        "empty": false,
+        "itemId": "minecraft:diamond",
+        "count": 3
+      }
+    ]
+  },
+  "error": null
+}

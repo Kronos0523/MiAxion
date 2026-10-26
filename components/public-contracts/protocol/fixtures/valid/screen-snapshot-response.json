@@ -1,0 +1,64 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "screen.snapshot",
+  "sessionToken": null,
+  "payload": {
+    "capturedAt": "2026-10-14T00:00:00Z",
+    "status": "partial",
+    "title": "大箱子",
+    "screenType": "container",
+    "menuId": 2,
+    "slots": [
+      {
+        "slotId": "menu:2:0",
+        "source": "unknown",
+        "area": "menu",
+        "index": 0,
+        "legacySlot": null,
+        "containerSlot": 0,
+        "status": "item",
+        "item": {
+          "itemId": "minecraft:diamond_sword",
+          "displayName": "我的剑 · 左手?",
+          "count": 1,
+          "damage": 5,
+          "maxDamage": 1561,
+          "durabilityStatus": "known",
+          "enchantments": [
+            {
+              "id": "minecraft:sharpness",
+              "displayName": "锋利 II",
+              "level": 2
+            }
+          ],
+          "detailsStatus": "complete"
+        },
+        "failureCode": null
+      }
+    ],
+    "carried": null,
+    "elements": [
+      {
+        "source": "screen.widget",
+        "elementId": "widget:0",
+        "kind": "Button",
+        "text": "返回 · [主页]",
+        "x": 10,
+        "y": 20,
+        "visible": null,
+        "active": true,
+        "tooltipLines": [
+          "配置提示，并非一定正在显示"
+        ]
+      }
+    ],
+    "details": null,
+    "coverageNotes": [
+      "public_properties_not_full_screen_transcript"
+    ]
+  },
+  "error": null
+}

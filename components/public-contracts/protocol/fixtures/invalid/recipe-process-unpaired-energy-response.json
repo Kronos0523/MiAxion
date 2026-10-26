@@ -1,0 +1,27 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "e15c12c4-36c0-4bdc-a5c1-8a976dc7d2d0",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "recipe.query",
+  "sessionToken": null,
+  "payload": {
+    "recipes": [
+      {
+        "recipeId": "minecraft:iron_ingot_from_smelting_iron_ore",
+        "type": "minecraft:smelting",
+        "sourceModId": "minecraft",
+        "identity": { "kind": "registered" },
+        "inputs": [],
+        "catalysts": [],
+        "outputs": [],
+        "process": {
+          "machineFamily": "minecraft:furnace",
+          "energyUnit": "fuel_ticks"
+        }
+      }
+    ],
+    "truncated": false
+  },
+  "error": null
+}

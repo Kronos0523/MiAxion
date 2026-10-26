@@ -1,0 +1,15 @@
+package dev.miaxion.protocol;
+
+public enum ProtocolErrorCode {
+    INVALID_REQUEST,
+    UNAUTHORIZED,
+    UNSUPPORTED_VERSION,
+    CAPABILITY_UNAVAILABLE,
+    GAME_NOT_READY,
+    NOT_FOUND,
+    TIMEOUT,
+    RATE_LIMITED,
+    DETAILS_HIDDEN,
+    RESULT_TOO_LARGE,
+    INTERNAL_ERROR
+}

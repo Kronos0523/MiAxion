@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "taskId": "526688d4-616c-40be-bc48-5395739ec241",
+  "revision": 1,
+  "instanceDirectory": "/fixture/game",
+  "compatibilityFamily": "minecraft-1.21.1-neoforge",
+  "profileId": "959d05c5-e29b-43bf-a388-b9dbd92c036b",
+  "profileRevision": 3,
+  "operation": "apply",
+  "status": "pending",
+  "bindings": [
+    {
+      "id": {"providerId": "minecraft", "rawActionId": "key.jump", "compatibilityFamily": "minecraft-1.21.1-neoforge"},
+      "value": {"kind": "bound", "inputType": "keysym", "code": 74, "modifier": "none"},
+      "context": {"nativeConflictContext": "inGame", "compatibilityEvidence": "minecraft-1.21.1-neoforge"},
+      "expectedWrittenValue": null
+    },
+    {
+      "id": {"providerId": "minecraft", "rawActionId": "key.inventory", "compatibilityFamily": "minecraft-1.21.1-neoforge"},
+      "value": {"kind": "unbound"},
+      "context": {"nativeConflictContext": "inGame", "compatibilityEvidence": "minecraft-1.21.1-neoforge"},
+      "expectedWrittenValue": null
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "world.context",
+  "sessionToken": null,
+  "payload": {
+    "capturedAt": "2026-10-14T00:00:00Z",
+    "status": "complete",
+    "dimensionId": "minecraft:overworld",
+    "position": {
+      "x": -0.5,
+      "y": 64.0,
+      "z": -17.1
+    },
+    "blockPosition": {
+      "x": -1,
+      "y": 64,
+      "z": -18
+    },
+    "chunkPosition": {
+      "x": -1,
+      "y": 4,
+      "z": -2
+    },
+    "relativePosition": {
+      "x": 15,
+      "y": 0,
+      "z": 14
+    },
+    "direction": "north",
+    "yaw": 179.5,
+    "pitch": 0.0,
+    "biomeId": "minecraft:plains",
+    "skyLight": 15,
+    "blockLight": 0,
+    "combinedLight": 15,
+    "gameTime": 100,
+    "dayTime": 6000,
+    "daylight": true,
+    "weather": "clear",
+    "unknownFields": []
+  },
+  "error": null
+}

@@ -1,0 +1,661 @@
+{
+  "schemaVersion": 1,
+  "traceId": "receive-and-cancel",
+  "owner": "dotnet-client",
+  "terminalOwner": "dotnet-client",
+  "inputs": {
+    "correlatedResponse": {
+      "action": "health.ping",
+      "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf"
+    },
+    "cancelRequest": {
+      "action": "request.cancel",
+      "requestId": "76f88201-f156-4be2-888b-a6d35bc144dc",
+      "targetRequestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf"
+    },
+    "deadline": {
+      "event": "deadline",
+      "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf"
+    },
+    "reconnect": {
+      "event": "reconnect"
+    },
+    "boundary-json-depth-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-json-depth-limit-minus-one.json.bin"
+    },
+    "boundary-json-depth-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-json-depth-limit.json.bin"
+    },
+    "boundary-json-depth-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-json-depth-limit-plus-one.json.bin"
+    },
+    "boundary-raw-json-string-utf16-units-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-raw-json-string-utf16-units-limit-minus-one.json.bin"
+    },
+    "boundary-raw-json-string-utf16-units-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-raw-json-string-utf16-units-limit.json.bin"
+    },
+    "boundary-raw-json-string-utf16-units-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-raw-json-string-utf16-units-limit-plus-one.json.bin"
+    },
+    "boundary-semantic-json-string-scalars-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-semantic-json-string-scalars-limit-minus-one.json.bin"
+    },
+    "boundary-semantic-json-string-scalars-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-semantic-json-string-scalars-limit.json.bin"
+    },
+    "boundary-semantic-json-string-scalars-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-semantic-json-string-scalars-limit-plus-one.json.bin"
+    },
+    "boundary-json-number-ascii-bytes-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-json-number-ascii-bytes-limit-minus-one.json.bin"
+    },
+    "boundary-json-number-ascii-bytes-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-json-number-ascii-bytes-limit.json.bin"
+    },
+    "boundary-json-number-ascii-bytes-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-json-number-ascii-bytes-limit-plus-one.json.bin"
+    },
+    "boundary-server-to-desktop-message-bytes-limit-minus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-server-to-desktop-message-bytes-limit-minus-one.json.bin"
+    },
+    "boundary-server-to-desktop-message-bytes-limit": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-server-to-desktop-message-bytes-limit.json.bin"
+    },
+    "boundary-server-to-desktop-message-bytes-limit-plus-one": {
+      "kind": "raw-bytes",
+      "path": "raw/dotnet-server-to-desktop-message-bytes-limit-plus-one.json.bin"
+    }
+  },
+  "processingOrder": [],
+  "cases": [
+    {
+      "name": "response-wins",
+      "initialState": "Pending",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "receive-response",
+          "inputRef": "correlatedResponse"
+        }
+      ],
+      "expectedFinalState": "Completed",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "health.ping",
+        "errorCode": null
+      }
+    },
+    {
+      "name": "cancel-wins",
+      "initialState": "Pending",
+      "processingOrder": [
+        "pending-terminal-claim",
+        "enqueue-cancel"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "cancel-requested",
+          "inputRef": "cancelRequest"
+        }
+      ],
+      "expectedFinalState": "Canceled",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "request.cancel",
+        "errorCode": null
+      }
+    },
+    {
+      "name": "deadline-wins",
+      "initialState": "Pending",
+      "processingOrder": [
+        "pending-terminal-claim"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "deadline",
+          "inputRef": "deadline"
+        }
+      ],
+      "expectedFinalState": "TimedOut",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "health.ping",
+        "errorCode": "TIMEOUT"
+      }
+    },
+    {
+      "name": "reconnect-completes-pending",
+      "initialState": "Pending",
+      "processingOrder": [
+        "connection-generation-switch",
+        "complete-pending"
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "reconnect",
+          "inputRef": "reconnect"
+        }
+      ],
+      "expectedFinalState": "Disconnected",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "close",
+        "closeCode": 1006,
+        "pendingOutcome": "Disconnected"
+      }
+    }
+  ],
+  "boundaries": [
+    {
+      "limit": "jsonDepth",
+      "relation": "limit-1",
+      "value": 31,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-json-depth-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 365,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Connected",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "jsonDepth",
+      "relation": "limit",
+      "value": 32,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-json-depth-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 367,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Connected",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "jsonDepth",
+      "relation": "limit+1",
+      "value": 33,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-json-depth-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 369,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Closed",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "close",
+        "closeCode": 1007,
+        "pendingOutcome": "MalformedResponse"
+      }
+    },
+    {
+      "limit": "rawJsonStringUtf16Units",
+      "relation": "limit-1",
+      "value": 32767,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-raw-json-string-utf16-units-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65843,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Connected",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "rawJsonStringUtf16Units",
+      "relation": "limit",
+      "value": 32768,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-raw-json-string-utf16-units-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65846,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Connected",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "rawJsonStringUtf16Units",
+      "relation": "limit+1",
+      "value": 32769,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-raw-json-string-utf16-units-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 65847,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Closed",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "close",
+        "closeCode": 1007,
+        "pendingOutcome": "MalformedResponse"
+      }
+    },
+    {
+      "limit": "semanticJsonStringScalars",
+      "relation": "limit-1",
+      "value": 16383,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-semantic-json-string-scalars-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 16693,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Connected",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "semanticJsonStringScalars",
+      "relation": "limit",
+      "value": 16384,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-semantic-json-string-scalars-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 16694,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Connected",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "semanticJsonStringScalars",
+      "relation": "limit+1",
+      "value": 16385,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-semantic-json-string-scalars-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 16695,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Closed",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "close",
+        "closeCode": 1007,
+        "pendingOutcome": "MalformedResponse"
+      }
+    },
+    {
+      "limit": "jsonNumberAsciiBytes",
+      "relation": "limit-1",
+      "value": 63,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-json-number-ascii-bytes-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 371,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Connected",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "jsonNumberAsciiBytes",
+      "relation": "limit",
+      "value": 64,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-json-number-ascii-bytes-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 372,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Connected",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "jsonNumberAsciiBytes",
+      "relation": "limit+1",
+      "value": 65,
+      "entryPoint": "strict-response-reader",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-json-number-ascii-bytes-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 373,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Closed",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "close",
+        "closeCode": 1007,
+        "pendingOutcome": "MalformedResponse"
+      }
+    },
+    {
+      "limit": "serverToDesktopMessageBytes",
+      "relation": "limit-1",
+      "value": 1048575,
+      "entryPoint": "websocket-message",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-server-to-desktop-message-bytes-limit-minus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 1048575,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Connected",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "serverToDesktopMessageBytes",
+      "relation": "limit",
+      "value": 1048576,
+      "entryPoint": "websocket-message",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-server-to-desktop-message-bytes-limit",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 1048575,
+          "endOfMessage": false
+        },
+        {
+          "sequence": 2,
+          "offset": 1048575,
+          "length": 1,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Connected",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "response",
+        "action": "future.echo",
+        "errorCode": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "limit": "serverToDesktopMessageBytes",
+      "relation": "limit+1",
+      "value": 1048577,
+      "entryPoint": "websocket-message",
+      "processingOrder": [
+        "frame-type",
+        "transport-size",
+        "strict-utf8",
+        "single-json-object",
+        "correlation",
+        "response-validation"
+      ],
+      "inputRef": "boundary-server-to-desktop-message-bytes-limit-plus-one",
+      "fragments": [
+        {
+          "sequence": 1,
+          "offset": 0,
+          "length": 1048575,
+          "endOfMessage": false
+        },
+        {
+          "sequence": 2,
+          "offset": 1048575,
+          "length": 2,
+          "endOfMessage": true
+        }
+      ],
+      "expectedFinalState": "Closed",
+      "expectedTerminal": {
+        "owner": "dotnet-client",
+        "count": 1,
+        "kind": "close",
+        "closeCode": 1009,
+        "pendingOutcome": "MessageTooLarge"
+      }
+    }
+  ]
+}

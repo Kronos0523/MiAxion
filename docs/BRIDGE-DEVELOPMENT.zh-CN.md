@@ -1,29 +1,29 @@
 # Bridge 与附属开发入口
 
-当前处于公开材料整理阶段。这里的 skill 已完成接入指导的独立拆分草稿；自有 SDK、协议、示例和公开 skill 已确定采用 MIT。Bridge／SDK／示例源码尚未导出，第三方许可仍在核对；不表示已经具备可独立构建的公开开发包。
+首批 SDK、协议和 NeoForge 只读示例已整合到 [独立组件目录](../components/public-contracts/README.zh-CN.md)，仍为本地候选，尚未推送或正式发布。自有选定组件采用 MIT，第三方材料单列；完整客户端和基础 Bridge 实现不在此次源码范围内。
 
 ## 编码 Agent 使用
 
 入口：[bridge-mod-integration](../skills/bridge-mod-integration/SKILL.md)。包含独立附属开发、基础 Bridge 平台适配两条路线，以及公共合同和交付规则。不要求访问原开发仓库或安装 Graphify。
 
-支持 skill 的工具可读取该目录；调用方式按各工具实际支持为准。无自动发现功能时，直接让 Agent 阅读上述 SKILL.md 及其相对引用。单独复制时保留 references、agents，并将本页放到相对路径所需的 docs 位置；更稳妥的方式是使用本仓库完整 checkout。
+支持 skill 的工具可读取该目录；调用方式按各工具实际支持为准。无自动发现功能时，直接让 Agent 阅读上述 SKILL.md 及其相对引用。推荐使用本仓库完整 checkout。单独复制时必须同时保留 skill 的 references、agents、所引用的 docs 和 components/public-contracts，并保持相对目录布局；只复制 SKILL.md 或 skill 加本页会缺少源码与构建入口。
 
 ## 公开材料状态
 
 | 材料 | 当前状态 | 外部作者现在能做什么 |
 |---|---|---|
-| 接入 skill 与工作流程 | 本地草稿，尚未推送 | 明确需求、选择接口类别、列出验证与材料缺口 |
-| 只读／动作／配方／术语 SDK | 尚未导出 | 不能据此编译或猜测方法签名 |
-| Bridge 公共层与平台源码 | 尚未导出 | 可规划适配范围，尚不能从本仓库构建 |
-| 通信协议 schema 与兼容文档 | 尚未导出 | 不自行假定协议字段或握手实现 |
-| 可发行的独立附属示例 | 尚未导出 | 不用 TestOnly 或链接测试替代安装模板 |
-| 依赖、许可证与构建入口 | 审查中 | 等待逐组件核对后提供真实位置与命令 |
+| 接入 skill 与工作流程 | 已接入真实源码路径，尚未推送 | 按实际接口准备附属，检查验证范围 |
+| 聚合／动作／配方 SDK | [源码与构建](../components/public-contracts/docs/BUILD.zh-CN.md) 已整合 | 构建本地 JAR；版本分别为 0.1.0／1.2.0／0.1.9，不安装到 mods |
+| Bridge 公共层与平台源码 | 尚未导出 | 新平台移植仍需另行提供已授权宿主源码 |
+| 通信协议 schema 与实现 | [协议导航](../components/public-contracts/docs/PROTOCOL.zh-CN.md) 已整合 | 阅读真实合同，构建 Java／C# 协议库 |
+| 独立附属示例 | [NeoForge 1.21.1 只读示例](../components/public-contracts/examples/neoforge-1.21.1-readonly/) 构建通过 | 可查看真实入口；游戏内注册与查询仍待验 |
+| 依赖与许可证 | [组件声明](../components/public-contracts/THIRD-PARTY-NOTICES.md) 已整合 | 区分运行、编译、测试依赖及工具链材料 |
 
 每项落地时更新真实路径、适用版本和验证范围，再将其标为可用。不要通过创建空 SDK／示例目录制造已公开的印象。
 
-已完成第一轮 [SDK、协议与示例导出初审](EXPORT-REVIEW.zh-CN.md)，明确了候选文件范围、构建耦合和许可缺口；尚未导出源码或验证独立构建。
+候选 `97290d36` 的交付记录与测试报告显示 Linux 独立构建、SDK／协议独立消费者及示例构建通过；Java 协议 336/336、C# 协议 265/265。Windows 独立构建和示例游戏实测未执行。接收审阅见 [整合记录](SOURCE-INTEGRATION.zh-CN.md)，原构建细节见 [验证记录](../components/public-contracts/docs/VALIDATION.zh-CN.md)。
 
-后续已补充 [第三方许可核对](THIRD-PARTY-REVIEW.zh-CN.md) 和 [独立构建整理方案](EXPORT-BUILD-PLAN.zh-CN.md)。ITU 声明冲突已有更正依据，C# JSON 测试包的附加条款已单列；这些准备记录不代替实际构建结果。
+前期 [导出初审](EXPORT-REVIEW.zh-CN.md)、[第三方核对](THIRD-PARTY-REVIEW.zh-CN.md) 和 [独立构建方案](EXPORT-BUILD-PLAN.zh-CN.md) 保留为历史准备记录；当前源码与验证状态以本页及组件目录为准。
 
 ## 开放范围
 

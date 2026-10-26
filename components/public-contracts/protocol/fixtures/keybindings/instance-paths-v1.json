@@ -1,0 +1,11 @@
+[
+  {"os":"linux", "input":"/fixture/game/../game/", "normalized":"/fixture/game"},
+  {"os":"linux", "input":"/fixture/GAME", "normalized":"/fixture/GAME"},
+  {"os":"linux", "input":"/", "normalized":"/"},
+  {"os":"linux", "input":"D:\\Games\\Instance", "normalized":null},
+  {"os":"linux", "input":"relative/game", "normalized":null},
+  {"os":"windows", "input":"d:\\Games\\Other\\..\\Instance\\", "normalized":"D:\\GAMES\\INSTANCE"},
+  {"os":"windows", "input":"D:\\", "normalized":"D:\\"},
+  {"os":"windows", "input":"/mnt/d/Games/Instance", "normalized":null},
+  {"os":"windows", "input":"\\\\?\\D:\\Games\\Instance", "normalized":null}
+]

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.miaxion.dev/bridge/v1/request-envelope.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocolVersion",
+    "requestId",
+    "timestamp",
+    "deadline",
+    "action",
+    "sessionToken",
+    "payload",
+    "error"
+  ],
+  "properties": {
+    "protocolVersion": { "$ref": "common.schema.json#/$defs/protocolVersion" },
+    "requestId": { "$ref": "common.schema.json#/$defs/uuid" },
+    "timestamp": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "deadline": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "action": { "$ref": "common.schema.json#/$defs/action" },
+    "sessionToken": {
+      "oneOf": [
+        { "$ref": "common.schema.json#/$defs/token" },
+        { "type": "null" }
+      ]
+    },
+    "payload": { "type": "object" },
+    "error": { "type": "null" }
+  }
+}

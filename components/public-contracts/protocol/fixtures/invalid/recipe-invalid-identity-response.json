@@ -1,0 +1,27 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "recipe.query",
+  "sessionToken": null,
+  "payload": {
+    "recipes": [
+      {
+        "recipeId": "miaxion:derived/ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "type": "minecraft:crafting",
+        "sourceModId": "unknown",
+        "identity": {
+          "kind": "derived",
+          "algorithm": "sha256-canonical-v0",
+          "contentSha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+        },
+        "inputs": [],
+        "catalysts": [],
+        "outputs": []
+      }
+    ],
+    "truncated": false
+  },
+  "error": null
+}

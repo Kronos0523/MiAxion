@@ -1,0 +1,28 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "target.snapshot",
+  "sessionToken": null,
+  "payload": {
+    "capturedAt": "2026-10-14T00:00:00Z",
+    "status": "present",
+    "kind": "block",
+    "registryId": "minecraft:furnace",
+    "displayName": "熔炉",
+    "blockPosition": {
+      "x": 1,
+      "y": 64,
+      "z": 3
+    },
+    "entityId": null,
+    "properties": [
+      {
+        "name": "lit",
+        "value": "true"
+      }
+    ]
+  },
+  "error": null
+}

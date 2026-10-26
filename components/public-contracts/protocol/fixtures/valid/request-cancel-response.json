@@ -1,0 +1,14 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "76f88201-f156-4be2-888b-a6d35bc144dc",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "request.cancel",
+  "sessionToken": null,
+  "payload": {
+    "targetRequestId": "9c84c889-4766-412d-8c5a-235dd7d52cb4",
+    "cancelled": true,
+    "state": "cancelled"
+  },
+  "error": null
+}

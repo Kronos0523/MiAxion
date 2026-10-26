@@ -1,0 +1,15 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "recipe.query",
+  "sessionToken": null,
+  "payload": null,
+  "error": {
+    "code": "CAPABILITY_UNAVAILABLE",
+    "message": "capability is unavailable",
+    "retryable": false,
+    "details": null
+  }
+}

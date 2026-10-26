@@ -1,0 +1,64 @@
+namespace MiAxion.Protocol.Runtime;
+
+public sealed record ProtocolRuntimeLimits
+{
+    public required int SchemaVersion { get; init; }
+    public required int HttpUpgradeHeaderBytes { get; init; }
+    public required int HandshakeTimeoutMs { get; init; }
+    public required int UnpairedFirstRequestTimeoutMs { get; init; }
+    public required int ClientToServerMessageBytes { get; init; }
+    public required int ServerToDesktopMessageBytes { get; init; }
+    public required int RecipeResponseMessageBytes { get; init; }
+    public required int PairingDeadlineMs { get; init; }
+    public required int ActionDeadlineMs { get; init; }
+    public required int RecipeActionDeadlineMs { get; init; }
+    public required int QueryDeadlineMaximumMs { get; init; }
+    public required int AuthenticatedIdleTimeoutMs { get; init; }
+    public required int ConnectionInFlight { get; init; }
+    public required int RecipeInFlight { get; init; }
+    public required int PairingPending { get; init; }
+    public required int JsonDepth { get; init; }
+    public required int RawJsonStringUtf16Units { get; init; }
+    public required int SemanticJsonStringScalars { get; init; }
+    public required int CanonicalInboundBytes { get; init; }
+    public required int JsonNumberAsciiBytes { get; init; }
+    public required int HudTextScalars { get; init; }
+    public required int HudQueueMessages { get; init; }
+    public required int OutboundQueueMessages { get; init; }
+    public required int OutboundQueueBytes { get; init; }
+    public required int RecipeOutboundQueueBytes { get; init; }
+    public required int OutboundUnwritableTimeoutMs { get; init; }
+    public required int DesktopHeartbeatMs { get; init; }
+    public required int OrdinaryRatePerMinute { get; init; }
+    public required int OrdinaryBurst { get; init; }
+    public required int HealthRatePerMinute { get; init; }
+    public required int HealthBurst { get; init; }
+    public required int HudRatePerMinute { get; init; }
+    public required int HudBurst { get; init; }
+    public required int PairRatePerMinute { get; init; }
+    public required int PairBurst { get; init; }
+    public required int CancelRatePerMinute { get; init; }
+    public required int CancelBurst { get; init; }
+    public required int WorldQueryResponseMessageBytes { get; init; }
+    public required int WorldQueryLocatorDeadlineMs { get; init; }
+    public required int WorldQueryNearbyDeadlineMs { get; init; }
+    public required int WorldQueryLocatorInFlight { get; init; }
+    public required int WorldQueryNearbyInFlight { get; init; }
+    public required int WorldQueryLocatorRatePerMinute { get; init; }
+    public required int WorldQueryLocatorBurst { get; init; }
+    public required int WorldQueryNearbyRatePerMinute { get; init; }
+    public required int WorldQueryNearbyBurst { get; init; }
+    public required int WorldQueryChunkMaximum { get; init; }
+    public required int WorldQueryVerticalBlocksMaximum { get; init; }
+    public required int WorldQueryBlockEntityMaximum { get; init; }
+    public required int WorldQueryContainerSlotMaximum { get; init; }
+    public required int WorldQueryContainerStackMaximum { get; init; }
+    public required int WorldQueryMachineMaximum { get; init; }
+    public required int WorldQueryMachineFeatureMaximum { get; init; }
+    public required int WorldQueryTargetMaximum { get; init; }
+    public required int WorldQueryStructurePieceMaximum { get; init; }
+    public required int WorldQueryNameCandidateMaximum { get; init; }
+    public required int WorldQueryStringScalarsMaximum { get; init; }
+    public required int WorldQueryTickBudgetMs { get; init; }
+    public required int WorldQueryWorkUnitsPerTick { get; init; }
+}

@@ -1,0 +1,14 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:00Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "world.containers.scan",
+  "sessionToken": null,
+  "payload": {
+    "summary": { "authority": "loaded_observed", "dimensionId": "minecraft:overworld", "observedAtTick": 120, "queryGeneration": "z1", "requested": 1, "loaded": 1, "examined": 1, "matched": 1, "complete": true, "truncated": false, "warnings": [] },
+    "chunkRange": "1x1", "verticalRange": "50",
+    "containers": [{ "blockId": "minecraft:chest", "displayName": "Chest", "position": { "x": 1, "y": 64, "z": 2 }, "distanceBlocks": 3, "view": "full" }]
+  },
+  "error": null
+}

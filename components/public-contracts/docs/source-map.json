@@ -1,0 +1,3177 @@
+{
+  "sourceCommit": "3aa5af2b6bd7a4500766e4919d01632c1c2c08f8",
+  "files": [
+    {
+      "source": "global.json",
+      "sourceBlob": "dd47870e9fb3583b3af5919cf1c62a368e676943",
+      "decision": "copy",
+      "destination": "global.json",
+      "reason": "Pinned standalone toolchain/wrapper; preserve third-party license and distribution checksum."
+    },
+    {
+      "source": "protocol/fixtures/0ae/exchanges.json",
+      "sourceBlob": "cb4e951c93b9cefcdd94ee2eed23b471e6941883",
+      "decision": "copy",
+      "destination": "protocol/fixtures/0ae/exchanges.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/0ae/extensions.schema.json",
+      "sourceBlob": "8cb2aa0c12e1202bd33e2255f4c8f6b3ac6737fb",
+      "decision": "copy",
+      "destination": "protocol/fixtures/0ae/extensions.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/additional-property-request.json",
+      "sourceBlob": "8ed4ea423490870f9a3f99bff325e32f1b5e65df",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/additional-property-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/deadline-order-request.json",
+      "sourceBlob": "17e5dd234c1730309f0deb08d50f6d80bb8089a0",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/deadline-order-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/entities-describe-unknown-kind-request.json",
+      "sourceBlob": "e5e6f72a9df60ef2a99a12671d96323786a3e9a4",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/entities-describe-unknown-kind-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/invalid-format-request.json",
+      "sourceBlob": "68960b119d88a34302a706eccd3a313261aaf78f",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/invalid-format-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/invalid-token-request.json",
+      "sourceBlob": "3f5eaba4f5f5a9c61ff4ebd55655e44dcb3c9bbf",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/invalid-token-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/inventory-exclusive-fields-response.json",
+      "sourceBlob": "80fa765cf614b39d1baca295fe1e3c1020541ffe",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/inventory-exclusive-fields-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/inventory-view-negative-slot.json",
+      "sourceBlob": "5b12d62d91d7825afa24405bc6e0e39a21b59195",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/inventory-view-negative-slot.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/malformed-action-request.json",
+      "sourceBlob": "2e9f55c43fd7a971ff5f458f33b357bca931a7fb",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/malformed-action-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/missing-required-request.json",
+      "sourceBlob": "1a4e0c512e505fa879801e6c3bb36a06d47cbb11",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/missing-required-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/null-required-request.json",
+      "sourceBlob": "95a08b4cf9951f98410812ddf4b427e419df50eb",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/null-required-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/out-of-range-request.json",
+      "sourceBlob": "dec19f997c3d8d6e197592db198b684bc78b2db5",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/out-of-range-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/recipe-acquisition-deterministic-response.json",
+      "sourceBlob": "8cc574614cdb862f9f7069d54f9b44ccf56d8bf2",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/recipe-acquisition-deterministic-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/recipe-empty-alternatives-response.json",
+      "sourceBlob": "0b78219fe5b54fee91b3fd273e603652a14b6004",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/recipe-empty-alternatives-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/recipe-half-response.json",
+      "sourceBlob": "3ade6542474b233ba6cd251f71046fe9d1024f1d",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/recipe-half-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/recipe-invalid-identity-response.json",
+      "sourceBlob": "bb816dd97bc048d188fa72831b242835d76a57a7",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/recipe-invalid-identity-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/recipe-missing-identity-response.json",
+      "sourceBlob": "e210b5e13cd8240d99ac1d0f347b90fb8b2f5202",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/recipe-missing-identity-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/recipe-process-unpaired-energy-response.json",
+      "sourceBlob": "a20bef3e994174aef4c3a89173f38dc30888f90c",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/recipe-process-unpaired-energy-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/recipe-slot-count-response.json",
+      "sourceBlob": "d55f565591f56572c72ad1d4b38cf6cdc7779450",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/recipe-slot-count-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/recipe-tag-id-response.json",
+      "sourceBlob": "b397147ae294606465993bdf31be9b7a7e87b483",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/recipe-tag-id-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/recipe-unknown-role-response.json",
+      "sourceBlob": "e8ccea0ed4756b5f07352931a557a1d16c0e49ff",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/recipe-unknown-role-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/screen-snapshot-interaction-field.json",
+      "sourceBlob": "ff60cda5148689a5f975ae7d73f818749a45a838",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/screen-snapshot-interaction-field.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/session-pair-approved-request.json",
+      "sourceBlob": "5552ab02221ecc8c15fdf6e177a421e94b76490d",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/session-pair-approved-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/unknown-action-success-response.json",
+      "sourceBlob": "1511a3afa8be10fb77c9e4e90d3327f41891a55c",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/unknown-action-success-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/unknown-action-wrong-error-response.json",
+      "sourceBlob": "2c493c86e9a9c879c31a59846cf978fb07f48a92",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/unknown-action-wrong-error-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/unknown-enum-request.json",
+      "sourceBlob": "3ec6a6a550a939437c11ab3f92ac659ffae1a289",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/unknown-enum-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/invalid/wrong-case-request.json",
+      "sourceBlob": "e218eae94313b4c5211557475c55660cb273fdad",
+      "decision": "copy",
+      "destination": "protocol/fixtures/invalid/wrong-case-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/keybindings/instance-paths-v1.json",
+      "sourceBlob": "46c02f27d37317ab7f0ab189dc8edac004d006a6",
+      "decision": "copy",
+      "destination": "protocol/fixtures/keybindings/instance-paths-v1.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/keybindings/one-shot-task-v1.json",
+      "sourceBlob": "d473beca9b82f25d228dccf492532a330ba1faf8",
+      "decision": "copy",
+      "destination": "protocol/fixtures/keybindings/one-shot-task-v1.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/manifest.json",
+      "sourceBlob": "72309f4bcf34dfc526b1ce47c2a57105ac3d72d6",
+      "decision": "copy",
+      "destination": "protocol/fixtures/manifest.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input. Contract inventory/fixture correction from pinned follow-up commit; production contract unchanged.",
+      "sourceCommit": "a4cbb396f7e2990e7505dd7035b274297de854a9"
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-json-depth-limit-minus-one.json.bin",
+      "sourceBlob": "4210ef9aa31fea070467450f21d359ddc6902b90",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-json-depth-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-json-depth-limit-plus-one.json.bin",
+      "sourceBlob": "df35b3ad57378f7085a6a3091f75e4dcc6e494a5",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-json-depth-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-json-depth-limit.json.bin",
+      "sourceBlob": "9d6ca01463838549c30f252e7c8ef72cb737bf2a",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-json-depth-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-json-number-ascii-bytes-limit-minus-one.json.bin",
+      "sourceBlob": "95f698b9b66483cf6a3d255e78d74f1a8ce6f974",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-json-number-ascii-bytes-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-json-number-ascii-bytes-limit-plus-one.json.bin",
+      "sourceBlob": "d981742a30288161f8c69f66f8b46609a5960dd3",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-json-number-ascii-bytes-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-json-number-ascii-bytes-limit.json.bin",
+      "sourceBlob": "5f5cd9a9463d91a5bf134f84c7fb8dadf3f4789a",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-json-number-ascii-bytes-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-raw-json-string-utf16-units-limit-minus-one.json.bin",
+      "sourceBlob": "1f10c36c4348263eec835d13486778902d5b3bb4",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-raw-json-string-utf16-units-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-raw-json-string-utf16-units-limit-plus-one.json.bin",
+      "sourceBlob": "ee378d00d40d42bceb65d851754109a273ae213e",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-raw-json-string-utf16-units-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-raw-json-string-utf16-units-limit.json.bin",
+      "sourceBlob": "044fbb7e8b6020798bd76eab14eb47dafce82124",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-raw-json-string-utf16-units-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-semantic-json-string-scalars-limit-minus-one.json.bin",
+      "sourceBlob": "b585d0810dd55748d18b8260c2d034454e44ceea",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-semantic-json-string-scalars-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-semantic-json-string-scalars-limit-plus-one.json.bin",
+      "sourceBlob": "fae61419642c2ea755b13f42692a6edf717c1fd5",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-semantic-json-string-scalars-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-semantic-json-string-scalars-limit.json.bin",
+      "sourceBlob": "0f822557bf1422af22176fb7baec2280a9df95a0",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-semantic-json-string-scalars-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-server-to-desktop-message-bytes-limit-minus-one.json.bin",
+      "sourceBlob": "d35b8b2b97018f9bc42ace833f9350dc5c90208f",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-server-to-desktop-message-bytes-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-server-to-desktop-message-bytes-limit-plus-one.json.bin",
+      "sourceBlob": "9ff64e82ffb4b449284eb873838582393585f505",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-server-to-desktop-message-bytes-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/dotnet-server-to-desktop-message-bytes-limit.json.bin",
+      "sourceBlob": "740717f7338c154ad8d121c2c2ee4d037b26a885",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/dotnet-server-to-desktop-message-bytes-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/duplicate-key.json.bin",
+      "sourceBlob": "c31e7e9a0f1f9e13df6b6514356b42aaf0965538",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/duplicate-key.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/invalid-utf8.bin",
+      "sourceBlob": "7515ee07492dcc2fd9b9473874486440ea35c59b",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/invalid-utf8.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-canonical-inbound-bytes-limit-minus-one.json.bin",
+      "sourceBlob": "09658bf501c8c16f1d65f500911a93502d15a50c",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-canonical-inbound-bytes-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-canonical-inbound-bytes-limit-plus-one.json.bin",
+      "sourceBlob": "4dc524e41b5426b1af3cd4e5f44fc8f1852eb2a4",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-canonical-inbound-bytes-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-canonical-inbound-bytes-limit.json.bin",
+      "sourceBlob": "309159308d1b8a01186a44963c71bd89111ba931",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-canonical-inbound-bytes-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-client-to-server-message-bytes-limit-minus-one.json.bin",
+      "sourceBlob": "09658bf501c8c16f1d65f500911a93502d15a50c",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-client-to-server-message-bytes-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-client-to-server-message-bytes-limit-plus-one.json.bin",
+      "sourceBlob": "4dc524e41b5426b1af3cd4e5f44fc8f1852eb2a4",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-client-to-server-message-bytes-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-client-to-server-message-bytes-limit.json.bin",
+      "sourceBlob": "309159308d1b8a01186a44963c71bd89111ba931",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-client-to-server-message-bytes-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-hud-text-scalars-limit-minus-one.json.bin",
+      "sourceBlob": "908027a27b25c6db13d4c3605caa67e29690c147",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-hud-text-scalars-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-hud-text-scalars-limit-plus-one.json.bin",
+      "sourceBlob": "2208af663ae02036a27592000553eb03f2e8156c",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-hud-text-scalars-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-hud-text-scalars-limit.json.bin",
+      "sourceBlob": "d5bac3f1b776be14b4b628a4a087f1a142e4fd54",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-hud-text-scalars-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-json-depth-limit-minus-one.json.bin",
+      "sourceBlob": "4465cd994e7cfe6f3bc8810ce8e089bd466545a6",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-json-depth-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-json-depth-limit-plus-one.json.bin",
+      "sourceBlob": "81ec60bc55af868425326cf850c443cc45911ae5",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-json-depth-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-json-depth-limit.json.bin",
+      "sourceBlob": "22e59cfa33a7546f8059a7f676a858332fb1b936",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-json-depth-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-json-number-ascii-bytes-limit-minus-one.json.bin",
+      "sourceBlob": "7c34cacc1b16b2bbbea8195959ee5d726ff6f264",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-json-number-ascii-bytes-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-json-number-ascii-bytes-limit-plus-one.json.bin",
+      "sourceBlob": "7da2a356b4292b2188fb14ca079dc400a9800774",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-json-number-ascii-bytes-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-json-number-ascii-bytes-limit.json.bin",
+      "sourceBlob": "53166da093f80e701823ce4616d31ffebb6d3356",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-json-number-ascii-bytes-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-raw-json-string-utf16-units-limit-minus-one.json.bin",
+      "sourceBlob": "e290d85742784316e2588d753b6c156483a9bbe9",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-raw-json-string-utf16-units-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-raw-json-string-utf16-units-limit-plus-one.json.bin",
+      "sourceBlob": "afe1894e1d016fe17f775acbd6095e829c3fc963",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-raw-json-string-utf16-units-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-raw-json-string-utf16-units-limit.json.bin",
+      "sourceBlob": "1a5d8a8e0bad3300dc22b66d0a3764e8bdff2255",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-raw-json-string-utf16-units-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-semantic-json-string-scalars-limit-minus-one.json.bin",
+      "sourceBlob": "7d9abb2ff3406f4c3979e2335ede5430a2c23545",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-semantic-json-string-scalars-limit-minus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-semantic-json-string-scalars-limit-plus-one.json.bin",
+      "sourceBlob": "533d116ea102281e674e06f0ec954efff9306540",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-semantic-json-string-scalars-limit-plus-one.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/java-semantic-json-string-scalars-limit.json.bin",
+      "sourceBlob": "7c550fc276b724bbf042ecc76cdacd038c67735a",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/java-semantic-json-string-scalars-limit.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/manifest.json",
+      "sourceBlob": "5960f5a1c2363cce0578e9684592402fc9c1f832",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/manifest.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/raw/trailing-token.json.bin",
+      "sourceBlob": "713fbb4e48d843a1726cf50edd0d592ddefcfaae",
+      "decision": "copy",
+      "destination": "protocol/fixtures/raw/trailing-token.json.bin",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/traces/dotnet-client/receive-and-cancel.json",
+      "sourceBlob": "646825a9ee4b7ffc688b0e8ac09dd48a2f25937e",
+      "decision": "copy",
+      "destination": "protocol/fixtures/traces/dotnet-client/receive-and-cancel.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/traces/java-session/pair-races.json",
+      "sourceBlob": "dc24326c45ddcb0246e8786d0d07c3fc93ce43e1",
+      "decision": "copy",
+      "destination": "protocol/fixtures/traces/java-session/pair-races.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/traces/shared/unknown-action-auth-order.json",
+      "sourceBlob": "3b669b516d6f7c0cc2ccc303a02cac5682e0eb9f",
+      "decision": "copy",
+      "destination": "protocol/fixtures/traces/shared/unknown-action-auth-order.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/capabilities-list-request.json",
+      "sourceBlob": "57984c1da922284867f03227e40956958bdaafca",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/capabilities-list-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/capabilities-list-response.json",
+      "sourceBlob": "e9f892f1750eb34843336240d75245e046880745",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/capabilities-list-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/entities-describe-request.json",
+      "sourceBlob": "515bb757dfe9ec5d3f09b65ece21f8b673c91d6b",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/entities-describe-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/entities-describe-response.json",
+      "sourceBlob": "08741405ba0f15ce30a4d0f194b189a31ba8da4e",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/entities-describe-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/entities-resolve-kind-request.json",
+      "sourceBlob": "89fbe5ce5f1293e9d615faa7112047700f2174f2",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/entities-resolve-kind-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/entities-resolve-request.json",
+      "sourceBlob": "0ec394de0c87605dab1352d488b994e053df91a7",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/entities-resolve-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/entities-resolve-response.json",
+      "sourceBlob": "9396886ce67dda8b2cf15e0f6e8c6bf8efcd250c",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/entities-resolve-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/error-capability-unavailable-response.json",
+      "sourceBlob": "a5153b0f6f30e507f1baeda81fd9cd9237a6318b",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/error-capability-unavailable-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/error-details-hidden-response.json",
+      "sourceBlob": "1b3c438e834371fdeb40fc1aea4de54fcdb7db19",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/error-details-hidden-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/error-game-not-ready-response.json",
+      "sourceBlob": "9341dd43f2ac2f1d935b1270a2afd52468a62c71",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/error-game-not-ready-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/error-internal-response.json",
+      "sourceBlob": "7641bd8f589c1bc3dd0fa55148fd6c8971b6c2a8",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/error-internal-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/error-invalid-request-response.json",
+      "sourceBlob": "cba7881124d0d7f352c90bd665e7f3f6435f8261",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/error-invalid-request-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/error-not-found-response.json",
+      "sourceBlob": "4f2d42aba4a7487e439c6a7f2428a7bdcb39ba79",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/error-not-found-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/error-rate-limited-response.json",
+      "sourceBlob": "5095c6828a5429ea4e3cb643a069e7e0dc888b83",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/error-rate-limited-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/error-result-too-large-response.json",
+      "sourceBlob": "50ea68d054e7a3ef3919aa9478cf24ffe4bb37d9",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/error-result-too-large-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/error-timeout-response.json",
+      "sourceBlob": "99dd79a7e06c5db3d610695691246379c93e8c59",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/error-timeout-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/error-unauthorized-response.json",
+      "sourceBlob": "9c90730d296320a331e553bb5d36436f9e210cff",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/error-unauthorized-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/error-unsupported-version-response.json",
+      "sourceBlob": "ccee154f6961c1a5bd42809814c00931fdcf8425",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/error-unsupported-version-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/extensions-call-request.json",
+      "sourceBlob": "db63b74fb727e69cd77bac119db2446047c9a3b9",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/extensions-call-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/extensions-call-response.json",
+      "sourceBlob": "ca3d087201365de3830e9c93ba5e40c5ce563c9b",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/extensions-call-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/extensions-list-request.json",
+      "sourceBlob": "3dd7814a2e10056375336a648b87d4e330842e57",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/extensions-list-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/extensions-list-response.json",
+      "sourceBlob": "31fcffc223262971f6a0200ddee28deefdc5882c",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/extensions-list-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/health-ping-request.json",
+      "sourceBlob": "5245c19a6eee9da8b94ffb4d9ae911f3259ebe53",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/health-ping-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/health-ping-response.json",
+      "sourceBlob": "6c2b2ee469794f26b606ec3dd60d36840e82ec5c",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/health-ping-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/hud-request.json",
+      "sourceBlob": "4694944aea7a4cf07796e4a6c84d0d07cb568ace",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/hud-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/hud-response.json",
+      "sourceBlob": "2c47636b2e75c3f81a38aa4e56588cb595d61626",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/hud-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/inventory-snapshot-request.json",
+      "sourceBlob": "c3447254fae0a26e168e1ecb5b4330c870f6d50c",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/inventory-snapshot-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/inventory-snapshot-response.json",
+      "sourceBlob": "2ffa19201150667d19d0e612fed484ad4b36e658",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/inventory-snapshot-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/inventory-view-request.json",
+      "sourceBlob": "b45c5cff2161c25e692cd0bfb5a94d3c0c8b252c",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/inventory-view-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/inventory-view-response.json",
+      "sourceBlob": "33876a327d21905366f60d21af16ce51fffe8ad0",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/inventory-view-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/player-snapshot-request.json",
+      "sourceBlob": "6160a4a903dd7b5e071fe7851cfcf260fc4ed044",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/player-snapshot-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/player-snapshot-response.json",
+      "sourceBlob": "932308a7c0af13126f485c81b83449808e9bc232",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/player-snapshot-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/player-status-request.json",
+      "sourceBlob": "84e82d5066d4655315f84ac3e1aa72e6fb989749",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/player-status-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/player-status-response.json",
+      "sourceBlob": "1f0efdbfb99233f61980c2dac14a83dc007e42f5",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/player-status-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/quests-detail-request.json",
+      "sourceBlob": "2c3b358402b505af28c078a1ee435371bd363476",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/quests-detail-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/quests-detail-response.json",
+      "sourceBlob": "ccf2a59a197609787e6fb6e4f3d7412616885058",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/quests-detail-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/quests-query-request.json",
+      "sourceBlob": "865de07aebe7e1b3dc0fa323fae3efe0d78230df",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/quests-query-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/quests-query-response.json",
+      "sourceBlob": "ef70900a48cb54f082cfb6800ead850593eca8ec",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/quests-query-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/recipe-acquisition-classification-response.json",
+      "sourceBlob": "768da7925fef18b23450205bf79daed6b588a60c",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/recipe-acquisition-classification-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/recipe-process-family-request.json",
+      "sourceBlob": "d105c5f4562ba6fc2bde8434f409770b5ccabde8",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/recipe-process-family-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/recipe-query-request.json",
+      "sourceBlob": "21bac0d76a4c186c215387a7b5bc044655a8c83e",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/recipe-query-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/recipe-query-response.json",
+      "sourceBlob": "d6bf229233605a2fe3d86ffd678fdd628c2efa7e",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/recipe-query-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/recipe-uses-request.json",
+      "sourceBlob": "605dee1d92f4d335255269609caada3172db02bf",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/recipe-uses-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/recipe-uses-response.json",
+      "sourceBlob": "2b2687e38b64fda0ce788ee3242cbc18cacb7169",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/recipe-uses-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/recipe-v11-components-response.json",
+      "sourceBlob": "e15e69d69faeb7fc8a3a25b0e311ce407cac4a71",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/recipe-v11-components-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/recipe-v15-process-response.json",
+      "sourceBlob": "7b428c622913270488ad23493c299eae95d6cf08",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/recipe-v15-process-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/request-cancel-request.json",
+      "sourceBlob": "54e1d492764efc201e5a606ee6945f4b2ea2b433",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/request-cancel-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/request-cancel-response.json",
+      "sourceBlob": "a68c18cc09dda280a2a221772dc6394f22c4ebf6",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/request-cancel-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/screen-snapshot-request.json",
+      "sourceBlob": "3f460966c4a7b068d4d0ad6d75f3c30c7f180edc",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/screen-snapshot-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/screen-snapshot-response.json",
+      "sourceBlob": "b684c5a8170f390e91f3f246b609fae776a6a71e",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/screen-snapshot-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/session-pair-approved-response.json",
+      "sourceBlob": "eee787a99a7eac6b3f745682db0373cdcb2db5fb",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/session-pair-approved-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/session-pair-request.json",
+      "sourceBlob": "4f58532b4a56cd7ca79cbba7ffc6a7cddb5c9868",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/session-pair-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/session-revoke-request.json",
+      "sourceBlob": "4383e7723d9b82b50bd3b1a8e2bf9d26f54914ff",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/session-revoke-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/session-revoke-response.json",
+      "sourceBlob": "47866d49ce92c2955365b943e42ccec198b62bb5",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/session-revoke-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/target-snapshot-request.json",
+      "sourceBlob": "429a1c1d76ca90ebf501bf3ba67a0942e98ac221",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/target-snapshot-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/target-snapshot-response.json",
+      "sourceBlob": "82ce2f3a647ac86d3f968ea4ed4ac3018e9b5287",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/target-snapshot-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/unknown-action-capability-unavailable-response.json",
+      "sourceBlob": "4f7e08fdd732b28bbbc9c282ac17bd60ec02283e",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/unknown-action-capability-unavailable-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/unknown-action-request.json",
+      "sourceBlob": "c1c7ca353eec6cdede9152ea341bd29b01c97c95",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/unknown-action-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-biome-locate-request.json",
+      "sourceBlob": "88356698989730b973ec77717b3604a59803b146",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-biome-locate-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-biome-locate-response.json",
+      "sourceBlob": "11e9c1782015e96f07c75778a6362cbbdfa86b75",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-biome-locate-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-containers-scan-request.json",
+      "sourceBlob": "fc277b50b4f42147c3618102ffb98d995d9cb3d3",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-containers-scan-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-containers-scan-response.json",
+      "sourceBlob": "f0f4e51bd081169acfe9d5b42e6082e342f0fade",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-containers-scan-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-context-request.json",
+      "sourceBlob": "239f41a009c96b7e804c8195ec363b52f74419d0",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-context-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-context-response.json",
+      "sourceBlob": "f832d41588054836305f7518e4b0a1eec07d9790",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-context-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-machines-scan-request.json",
+      "sourceBlob": "facedf572d8192a7415fa076088af7cb4ff0328d",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-machines-scan-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-machines-scan-response.json",
+      "sourceBlob": "72972eccaa838c30a4c703c1a42d175bd704767f",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-machines-scan-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-registry-describe-request.json",
+      "sourceBlob": "6dda5e0aebf76bc7b6062d72e556e18c69caaf28",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-registry-describe-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-registry-describe-response.json",
+      "sourceBlob": "c663e8474e249ebc539cba6f9d9e60f905d1b1ec",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-registry-describe-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-registry-resolve-request.json",
+      "sourceBlob": "f0a4436774f36180c203073511e79826bae4b0a8",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-registry-resolve-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-registry-resolve-response.json",
+      "sourceBlob": "48cbfb65d53dbb38f5e79c63cc61b7022b874e5f",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-registry-resolve-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-registry-search-request.json",
+      "sourceBlob": "0458e48c188c960eb7612c0978dfa376c5a2cdaf",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-registry-search-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-registry-search-response.json",
+      "sourceBlob": "1149bad112d7fe9232e2d0e4623bd25ed91fca3f",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-registry-search-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-structure-locate-request.json",
+      "sourceBlob": "45f550a656bb29afa393fde98a5337f14415dcbd",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-structure-locate-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-structure-locate-response.json",
+      "sourceBlob": "3cba9f3ec11dad0cf4641de5ee39945ef4e3f20b",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-structure-locate-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-structure-targets-request.json",
+      "sourceBlob": "9db037be313111248cc1c044082c289b494d8c21",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-structure-targets-request.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/fixtures/valid/world-structure-targets-response.json",
+      "sourceBlob": "964b222e4a0166bfa30bc59dab520b03a8afe3e4",
+      "decision": "copy",
+      "destination": "protocol/fixtures/valid/world-structure-targets-response.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/runtime-limits.json",
+      "sourceBlob": "e8e6a22820e17e70277b1aeaf2684a89d3ab61dd",
+      "decision": "copy",
+      "destination": "protocol/runtime-limits.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/common.schema.json",
+      "sourceBlob": "00a659edd4706118d4e4806ffcad5c49942b8b0c",
+      "decision": "copy",
+      "destination": "protocol/schema/common.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/discovery-v2.schema.json",
+      "sourceBlob": "032520aabdb2e5ac85c464a55d55035b70333f6b",
+      "decision": "copy",
+      "destination": "protocol/schema/discovery-v2.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/discovery.schema.json",
+      "sourceBlob": "69160a971754751309cb12d50a31434b89c4cec1",
+      "decision": "copy",
+      "destination": "protocol/schema/discovery.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/extensions.schema.json",
+      "sourceBlob": "72ac71971f776681cf4b1f8ec79efc5fad4b8adf",
+      "decision": "copy",
+      "destination": "protocol/schema/extensions.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/player-observation.schema.json",
+      "sourceBlob": "722ba687047d897805b4bd019b46a8c15548aaf1",
+      "decision": "copy",
+      "destination": "protocol/schema/player-observation.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/quest.schema.json",
+      "sourceBlob": "37b65339c502c3c10096f5bb0627aea58d9ed80b",
+      "decision": "copy",
+      "destination": "protocol/schema/quest.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/recipe.schema.json",
+      "sourceBlob": "7277e0226f20225e0cae48473a315b6c49fa2cd2",
+      "decision": "copy",
+      "destination": "protocol/schema/recipe.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/request-envelope.schema.json",
+      "sourceBlob": "14b885ee11c6fbeb1e8a7b82f9bb291effc1f9f3",
+      "decision": "copy",
+      "destination": "protocol/schema/request-envelope.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/request.schema.json",
+      "sourceBlob": "ef1bd06d88cce5031e0ad1c073531dc4370de15f",
+      "decision": "copy",
+      "destination": "protocol/schema/request.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/response.schema.json",
+      "sourceBlob": "b6aa5a513736647e9ece18e95d72dcb2afed3722",
+      "decision": "copy",
+      "destination": "protocol/schema/response.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/terminology-changed.schema.json",
+      "sourceBlob": "58f0268b4d1600d383dcc38ef6d1c43805c94ec1",
+      "decision": "copy",
+      "destination": "protocol/schema/terminology-changed.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "protocol/schema/world-query.schema.json",
+      "sourceBlob": "68eb12db6c071ee54f2d5a708032d6d5829315c7",
+      "decision": "copy",
+      "destination": "protocol/schema/world-query.schema.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/AssemblyInfo.cs",
+      "sourceBlob": "8675a9e69fc61d688276a94c4b6714ff7c6e7215",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/AssemblyInfo.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/ActionConfigurationPayloads.cs",
+      "sourceBlob": "ad6290471a959255cf9bf0d1e46317728a05f530",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/ActionConfigurationPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/CapabilityPayloads.cs",
+      "sourceBlob": "4bef883550aef88d10646dd260091e3562fc8589",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/CapabilityPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/ControlPayloads.cs",
+      "sourceBlob": "3b47f8b56102fd2fa3b632dc8d14fe6618368dc1",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/ControlPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/EntityDescribePayloads.cs",
+      "sourceBlob": "c4f32e8dc70019ea83ae690b30aaa46a221991dd",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/EntityDescribePayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/EntityPayloadValidation.cs",
+      "sourceBlob": "0718f95f1ece1123057a83db6f3b0ca651830078",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/EntityPayloadValidation.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/EntityResolvePayloads.cs",
+      "sourceBlob": "a4c136fff56647db64a6297b25bbcd1e62186b6d",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/EntityResolvePayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/Envelopes.cs",
+      "sourceBlob": "ccce35623d54437c72f3016aebc2d3cb7ef53b59",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/Envelopes.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/ExtensionPayloads.cs",
+      "sourceBlob": "9c25b9f48de86c8c7b90b372fd7796950298167d",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/ExtensionPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/GameActionPayloads.cs",
+      "sourceBlob": "f9b7f2e6a3ec200c41641995a083f4df4cc6693d",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/GameActionPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/HudAndHealthPayloads.cs",
+      "sourceBlob": "d4ad356c6d6c717c4c2139ca5680d700b4feeff5",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/HudAndHealthPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/KeybindingPayloads.cs",
+      "sourceBlob": "f8949e05b89476f24ca23ee6eaec6a927f3d4a6f",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/KeybindingPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/KnownProtocolAction.cs",
+      "sourceBlob": "6b9b5127e0dc21603ebfdac08777189a40f13b15",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/KnownProtocolAction.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/ModVersionPayloads.cs",
+      "sourceBlob": "46f5201cc2f6c9c60e1e44e9c9cfdd347fb4e3f9",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/ModVersionPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/PlayerObservationPayloads.cs",
+      "sourceBlob": "714fae587fd48f966014fb6d50a7e54820a7833b",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/PlayerObservationPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/ProtocolAction.cs",
+      "sourceBlob": "09d6f0c16bab28b148a8e2c45e67da72d767d0f0",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/ProtocolAction.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/ProtocolConstants.cs",
+      "sourceBlob": "659fbdc337db53900e85387e284859f68b7a0ce5",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/ProtocolConstants.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/ProtocolErrorCode.cs",
+      "sourceBlob": "f5042d3e7608affe223ba96677200f96977464e1",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/ProtocolErrorCode.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/QuestPayloads.cs",
+      "sourceBlob": "391f9f1ba18c0bce52dfcb47b0893f3c8eda65f5",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/QuestPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/RecipeDtos.cs",
+      "sourceBlob": "c6351994b802bc439ad3dd6e8de231e36270768a",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/RecipeDtos.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/RecipePayloads.cs",
+      "sourceBlob": "968afbf87de24031860ff8705b2b03c4a11b322b",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/RecipePayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/RecipeProviderDirectoryPayloads.cs",
+      "sourceBlob": "493cc987aaedc81ae865e19e1f4eedb7af304a5d",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/RecipeProviderDirectoryPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/RecipeResourceDto.cs",
+      "sourceBlob": "3b58043ad37af751175e1b10cb470ee9a59620b7",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/RecipeResourceDto.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/SnapshotPayloads.cs",
+      "sourceBlob": "cc93cf615a4734b28d11c8ffac43cc16cb480107",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/SnapshotPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/TerminologyPayloads.cs",
+      "sourceBlob": "9382f7906341ba36ed630104e6917d0cf6a0a833",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/TerminologyPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/WorldQueryPayloads.cs",
+      "sourceBlob": "b22b998ebf83bf9554d9052fa6f26901b2484293",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/WorldQueryPayloads.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/WorldQueryProgressResponses.cs",
+      "sourceBlob": "52b3d74e3fb18a00faae21b70bbd7efc9d8bf9ab",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/WorldQueryProgressResponses.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/WorldQueryResponses.cs",
+      "sourceBlob": "08b08aadce1ae03e92ddd2faacbb850b26b95b61",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/WorldQueryResponses.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/WorldRegistrySearch.cs",
+      "sourceBlob": "0f346a53d2a0f58afe10e2fa3536c64d6f8be971",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/WorldRegistrySearch.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Contracts/WorldScanWindow.cs",
+      "sourceBlob": "894f8cfeec754a963c1a61372026be3d9aef5acc",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Contracts/WorldScanWindow.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/MiAxion.Protocol.csproj",
+      "sourceBlob": "80846f0411e457a25763c8055f34411fa524d011",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/MiAxion.Protocol.csproj",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Runtime/DiscoverySchemaAuthority.cs",
+      "sourceBlob": "8c8fc754252e06d63dcc40cb048c29010feeb07d",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Runtime/DiscoverySchemaAuthority.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Runtime/ProtocolActionBudget.cs",
+      "sourceBlob": "fd5616ca2bd7c748414e0cbc06ad4a691248ce8d",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Runtime/ProtocolActionBudget.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Runtime/ProtocolRuntimeLimits.cs",
+      "sourceBlob": "b82bb4abdb2e1f905dfb2510108adefd021704ad",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Runtime/ProtocolRuntimeLimits.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Runtime/ProtocolRuntimeLimitsLoader.cs",
+      "sourceBlob": "3b595df40ae8e39574881aa799f8aa289d4a623b",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Runtime/ProtocolRuntimeLimitsLoader.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Serialization/ProtocolActionJsonConverter.cs",
+      "sourceBlob": "9d7cde6d9b5c52bba959031204c2329a173be6d3",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Serialization/ProtocolActionJsonConverter.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/Serialization/ProtocolJson.cs",
+      "sourceBlob": "2359cfd43b8b72b9f05df3993d951b87682b8cc1",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/Serialization/ProtocolJson.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/dotnet/MiAxion.Protocol/packages.lock.json",
+      "sourceBlob": "6afd6786b95a8c85febce85cf6219643ee860872",
+      "decision": "copy",
+      "destination": "src/dotnet/MiAxion.Protocol/packages.lock.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/build.gradle",
+      "sourceBlob": "98e3fb2e796c96f2529ec9f18b2a72883b0275c3",
+      "decision": "adapt",
+      "destination": "src/mod/bridge-extension-api/build.gradle",
+      "reason": "Preserve implementation/tests; adapt standalone version/toolchain or fixture-root discovery only."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/gradle-linux.lockfile",
+      "sourceBlob": "0dd700ca18b3b50697c2c518fb67ec6ec2b1a689",
+      "decision": "adapt",
+      "destination": "src/mod/bridge-extension-api/gradle.lockfile",
+      "reason": "Use reviewed Linux lock as standalone baseline; add independent-consumer configuration names without changing component versions."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/action-api-link/java/example/ExternalActionAddon.java",
+      "sourceBlob": "6b8b903549b5afac6110ba53d73fbb997043d6aa",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/action-api-link/java/example/ExternalActionAddon.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/action/api/ClientActionAdapter.java",
+      "sourceBlob": "1d90baa7173d48110a3a57deb0754cb79981188c",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/action/api/ClientActionAdapter.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/action/api/ClientActionConfiguration.java",
+      "sourceBlob": "787e6c37b141c19f0a19c5a97baf7e09e6b1b410",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/action/api/ClientActionConfiguration.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/action/api/ClientActionEntrypoint.java",
+      "sourceBlob": "ebecf202a7d9df356a29f048e4f098bc6419fd67",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/action/api/ClientActionEntrypoint.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/action/api/ClientActionRegistrar.java",
+      "sourceBlob": "c8737aab9c34265f69398a875e3a0dc4f1002def",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/action/api/ClientActionRegistrar.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/action/api/ClientActionRegistration.java",
+      "sourceBlob": "6ed245a494ee07a4c18106895a96eb579abfb606",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/action/api/ClientActionRegistration.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/BridgeExtension.java",
+      "sourceBlob": "d6c4a3d23c280580b44abedba5fc97c52d29f4e9",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/BridgeExtension.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ExtensionCapability.java",
+      "sourceBlob": "4e2228a6ae7a43e58f917dd2b9e9e4d8fb05cd4c",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ExtensionCapability.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ExtensionDependency.java",
+      "sourceBlob": "715f812938b73ec71edf20300957182d0df1c561",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ExtensionDependency.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ExtensionExecutionContext.java",
+      "sourceBlob": "c8c4935f901b3ecf6a5dea2d1107383fc047c1f5",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ExtensionExecutionContext.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ExtensionHandler.java",
+      "sourceBlob": "6f8a297ee91d04ce18bd550a4a63cc31040b22bc",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ExtensionHandler.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ExtensionInvocation.java",
+      "sourceBlob": "a35016cf3a494affd08f6fa787037d0aba1d7b78",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ExtensionInvocation.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ReadOnlyExtensionEntrypoint.java",
+      "sourceBlob": "82a1e2dab77ed9443bff820c9d0a5a3060e7fdd5",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/extension/api/ReadOnlyExtensionEntrypoint.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/fabric/api/FabricRecipeProviderEntrypoint.java",
+      "sourceBlob": "b282f193dd556620bd9a8839952643f18d07c53b",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/fabric/api/FabricRecipeProviderEntrypoint.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/fabric/api/FabricRecipeProviderRegistrar.java",
+      "sourceBlob": "009bffaaf380b6b653981a7b6c6d2674431c4aa2",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/fabric/api/FabricRecipeProviderRegistrar.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/fabric/api/FabricTerminologyBrowserEntrypoint.java",
+      "sourceBlob": "8835496a9c0e93ff02f2099e5de9b551ed55673a",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/fabric/api/FabricTerminologyBrowserEntrypoint.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/forge/api/ForgeRecipeProviderEntrypoint.java",
+      "sourceBlob": "f6e073b6f5c9807bb39d3cd5e258575b14b636e7",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/forge/api/ForgeRecipeProviderEntrypoint.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/forge/api/ForgeRecipeProviderRegistrar.java",
+      "sourceBlob": "ff569153b88a5e7584f8cd8937406ced3e1f1aab",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/forge/api/ForgeRecipeProviderRegistrar.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/forge/api/ForgeTerminologyBrowserEntrypoint.java",
+      "sourceBlob": "7be8a5c70e675c5eac0da7ce457adfad07c7169a",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/forge/api/ForgeTerminologyBrowserEntrypoint.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeClientActionEntrypoint.java",
+      "sourceBlob": "4a08c90bb2861b0dff776456f8e2e59422c6bef9",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeClientActionEntrypoint.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeClientActionRegistrar.java",
+      "sourceBlob": "8746283d0fc35836a3d2f9c17b34e5d90e42f879",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeClientActionRegistrar.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeRecipeProviderEntrypoint.java",
+      "sourceBlob": "bbb4ed156d354c8c6f75791111b44595bf07491c",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeRecipeProviderEntrypoint.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeRecipeProviderRegistrar.java",
+      "sourceBlob": "8b550e68796c6201f171b6c33d178cc9a058229b",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeRecipeProviderRegistrar.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeTerminologyBrowserEntrypoint.java",
+      "sourceBlob": "5b7f952c88af97b4fe935dba394ddadf73c2603f",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeTerminologyBrowserEntrypoint.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeTerminologyBrowserRegistrar.java",
+      "sourceBlob": "7d8014fb6fa53f84d5ec4316639cdf48594eb874",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/NeoForgeTerminologyBrowserRegistrar.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/ObservedItemDetails.java",
+      "sourceBlob": "b13abb039e8f10490ab39b03995ac8f5a580decc",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/ObservedItemDetails.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/TerminologyBrowserProvider.java",
+      "sourceBlob": "f2593824b15c642155ef0543372744e05f789fee",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/neoforge/api/TerminologyBrowserProvider.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/IngredientDirectoryCollector.java",
+      "sourceBlob": "e28249e5614b7ab04ed6eece260768256f262f03",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/IngredientDirectoryCollector.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/IngredientDirectoryEntry.java",
+      "sourceBlob": "adf10550987f33db2d0336688c46b1ceb3dcdaef",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/IngredientDirectoryEntry.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/IngredientDirectoryPage.java",
+      "sourceBlob": "ff2677cba0e05e02eaabc56427462d09f066ba2f",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/IngredientDirectoryPage.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/IngredientDirectoryQuery.java",
+      "sourceBlob": "49981e6aca9a23289b2594e0415bca499fa1a65a",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/IngredientDirectoryQuery.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeAlternativeCandidate.java",
+      "sourceBlob": "6891c77ca1872a447f3ed1550cde5fcc94931e2b",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeAlternativeCandidate.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeCandidate.java",
+      "sourceBlob": "581f9707fbe468b44dfd724a475475706ad6869a",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeCandidate.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeCanonicalJson.java",
+      "sourceBlob": "15a8227e8d2512e942920780175c484257efda77",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeCanonicalJson.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeCategory.java",
+      "sourceBlob": "a649f54acdab340810b889ddef53143f66997b4b",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeCategory.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeClassificationCandidate.java",
+      "sourceBlob": "438edd297523c215aa7a6263c2f1080818e930f6",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeClassificationCandidate.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeIdentityCandidate.java",
+      "sourceBlob": "1307cfc6065cdf75acbfdcce3724f69e664f880c",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeIdentityCandidate.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeIdentityFactory.java",
+      "sourceBlob": "ae019e798248a0bab346b565fe2fba18fab334b0",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeIdentityFactory.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipePlanningEligibility.java",
+      "sourceBlob": "48fb9271926634215c9ff50bd4c600e2a9826e5c",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipePlanningEligibility.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProcessCandidate.java",
+      "sourceBlob": "302a3d96e8946ba2b5e2916e2843722f22e3c292",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProcessCandidate.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProvider.java",
+      "sourceBlob": "ed8e03c29b48c3ec4c2cb4ab8947a5adbe2d3509",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProvider.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderDiagnostics.java",
+      "sourceBlob": "15031466b8f04537ffc4ddf4c2b7b8a58b7dcab2",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderDiagnostics.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderFailureReason.java",
+      "sourceBlob": "06fc6cced2264fc2449e442184d6bdd00e3aa9ce",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderFailureReason.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderOperation.java",
+      "sourceBlob": "e26e0d142c11706acbb42f1df2b777104c437eb5",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderOperation.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderReadiness.java",
+      "sourceBlob": "7b325ed10e0441d5257b44c4d82a0669aa0d950f",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderReadiness.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderResult.java",
+      "sourceBlob": "cbfc955e72e8d58bd0947e21c406f43044e42a21",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderResult.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderStatus.java",
+      "sourceBlob": "f386fd6134490e793c199a914be9d17cf303ad2d",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeProviderStatus.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeQuery.java",
+      "sourceBlob": "6500bea3e8eb3a200e5a0e83e66b0949cfa278af",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeQuery.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeResourceValue.java",
+      "sourceBlob": "86a0a1ca9aff3002674aa6944884e54c03b4647c",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeResourceValue.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeSlotCandidate.java",
+      "sourceBlob": "32bd4c1c24fedad55efdf0300cb0c3b7c9fb03df",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeSlotCandidate.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeSourcePageCollector.java",
+      "sourceBlob": "87a090b26a1c625ce5b8f3c9f9a763fc1d204514",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/main/java/dev/miaxion/bridge/recipe/api/RecipeSourcePageCollector.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/src/recipe-api-link/java/dev/miaxion/bridge/recipe/link/StandaloneRecipeAddon.java",
+      "sourceBlob": "cfc1493f736539613386bec4a54a3635e200b45a",
+      "decision": "copy",
+      "destination": "src/mod/bridge-extension-api/src/recipe-api-link/java/dev/miaxion/bridge/recipe/link/StandaloneRecipeAddon.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/gradle/wrapper/gradle-wrapper.jar",
+      "sourceBlob": "1b33c55baabb587c669f562ae36f953de2481846",
+      "decision": "copy",
+      "destination": "src/mod/gradle/wrapper/gradle-wrapper.jar",
+      "reason": "Pinned standalone toolchain/wrapper; preserve third-party license and distribution checksum."
+    },
+    {
+      "source": "src/mod/gradle/wrapper/gradle-wrapper.properties",
+      "sourceBlob": "d0c145b78a263c55328f040a540878c41cf37354",
+      "decision": "copy",
+      "destination": "src/mod/gradle/wrapper/gradle-wrapper.properties",
+      "reason": "Pinned standalone toolchain/wrapper; preserve third-party license and distribution checksum."
+    },
+    {
+      "source": "src/mod/gradlew",
+      "sourceBlob": "c1b8621dea8afbd2bdc8f8a0cf836ab8a076df5c",
+      "decision": "copy",
+      "destination": "src/mod/gradlew",
+      "reason": "Pinned standalone toolchain/wrapper; preserve third-party license and distribution checksum."
+    },
+    {
+      "source": "src/mod/gradlew.bat",
+      "sourceBlob": "1c0791cdf1df20f997050818cab8cb10f8e8517f",
+      "decision": "copy",
+      "destination": "src/mod/gradlew.bat",
+      "reason": "Pinned standalone toolchain/wrapper; preserve third-party license and distribution checksum."
+    },
+    {
+      "source": "src/mod/protocol-java/build.gradle",
+      "sourceBlob": "d33031f58204f899f2e73e00dfc525400b997c85",
+      "decision": "adapt",
+      "destination": "src/mod/protocol-java/build.gradle",
+      "reason": "Independent group/version and JAR-only consumer; explicitly retain existing SLF4J2.0.9 as runtime dependency formerly supplied by host."
+    },
+    {
+      "source": "src/mod/protocol-java/gradle-linux.lockfile",
+      "sourceBlob": "d2722826680bfa7ec40e9d23dd463f7247131389",
+      "decision": "adapt",
+      "destination": "src/mod/protocol-java/gradle.lockfile",
+      "reason": "Use reviewed Linux lock as standalone baseline; add independent-consumer configuration names without changing component versions."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ActionConfigurationPayloads.java",
+      "sourceBlob": "83966f633d4c08bfc82743d8ebdbf2944534257f",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ActionConfigurationPayloads.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/CancelState.java",
+      "sourceBlob": "b637e50acf56bded7fe8591480cf5e42ed283f5b",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/CancelState.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/CapabilitiesListRequest.java",
+      "sourceBlob": "6a04dc46fd174332110ce0f1be7212b2de240ce1",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/CapabilitiesListRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/CapabilitiesListResponse.java",
+      "sourceBlob": "56314b5d1599a2e1eaf56316c8ad1b94bd05059b",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/CapabilitiesListResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/CapabilityDescriptor.java",
+      "sourceBlob": "da16594808de9ed04df07d427373a28abcde3a7b",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/CapabilityDescriptor.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/CommonRequest.java",
+      "sourceBlob": "557276f622ce62b72cde309f325e2e80f7af7eb3",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/CommonRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityDescribeRequest.java",
+      "sourceBlob": "88f04e37f279e2f9e75a98f440b4e1f54022c2fb",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityDescribeRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityDescribeResponse.java",
+      "sourceBlob": "6eace8f92e34c930838c8b38e320e3fc820ce3cb",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityDescribeResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityDescription.java",
+      "sourceBlob": "2ba128be9a6f977e12da883ea1981742d24ef50c",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityDescription.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityReference.java",
+      "sourceBlob": "6419b765889fb41b4fbcc73735c018f0b899fd01",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityReference.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityResolveMatch.java",
+      "sourceBlob": "0c0931a4415613cd51f658a1006dc717d440e4ab",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityResolveMatch.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityResolveRequest.java",
+      "sourceBlob": "84ad62a8d3f90a19c518153bb9d772a5a538bcd4",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityResolveRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityResolveResponse.java",
+      "sourceBlob": "1d48f0611cf8e35061bbf7d9c9bb22cc7ce718cb",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityResolveResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityTextValidation.java",
+      "sourceBlob": "e33e23a1e1fcfbb24f78d3d6bad59fa1c642289f",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/EntityTextValidation.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ExtensionCallRequest.java",
+      "sourceBlob": "e44975a86b961f77fe934f2bb5c5f6f8d4ff0c19",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ExtensionCallRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ExtensionDataSchema.java",
+      "sourceBlob": "2ea9751074e3928c201e40729963cecdb4e7eaa0",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ExtensionDataSchema.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ExtensionListRequest.java",
+      "sourceBlob": "98465fe95743da49a605661b62658ec15701a2c9",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ExtensionListRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/GameActionPayloads.java",
+      "sourceBlob": "8320974afb0d652cb22e0623c5ec01ba4bd4573d",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/GameActionPayloads.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/GameMode.java",
+      "sourceBlob": "d8db194541a0de9ea4d1ab9f2b804092d4e24ce8",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/GameMode.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/HealthPingRequest.java",
+      "sourceBlob": "9c9ef554eff56575d3f664cccfe2275b35f1d39b",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/HealthPingRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/HealthPingResponse.java",
+      "sourceBlob": "bb62c35aaa73843ce62da4a6254050dc63d1b890",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/HealthPingResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/HudSeverity.java",
+      "sourceBlob": "596d71b78878227db8aa08270d5ade7287d0dfec",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/HudSeverity.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/HudShowRequest.java",
+      "sourceBlob": "e87ada31d7c0baf905381028430527f7cf9c8295",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/HudShowRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/HudShowResponse.java",
+      "sourceBlob": "73f0a99d7ecd4d41224d1fd5e375487fdd88c35e",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/HudShowResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/InventorySlot.java",
+      "sourceBlob": "9a66d5a2b4383c5b924ffe680227c173112ae362",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/InventorySlot.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/InventorySnapshotRequest.java",
+      "sourceBlob": "e7e995f4018979e2c9f1e898ff1e7e41d2ad9927",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/InventorySnapshotRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/InventorySnapshotResponse.java",
+      "sourceBlob": "3b84c5cfaf3b593a560ea13240704133b90390c0",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/InventorySnapshotResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/KeybindingPayloads.java",
+      "sourceBlob": "c85f56338eb8f1c73da06ac76a834c10672c43b7",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/KeybindingPayloads.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/KnownProtocolAction.java",
+      "sourceBlob": "ee1960aa02549d9c31c0792363a55f70683a8522",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/KnownProtocolAction.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/KnownRequest.java",
+      "sourceBlob": "840acc14a84398581562c0c12d2fbfb320c01ed4",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/KnownRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ModVersionsResolveRequest.java",
+      "sourceBlob": "fd71eb2a39207a425de98d7878cde0c900f89558",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ModVersionsResolveRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ModVersionsResolveResponse.java",
+      "sourceBlob": "3e202105f268915c1a61ef5d4f4c96210ed1de01",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ModVersionsResolveResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/PlayerObservationPayloads.java",
+      "sourceBlob": "02829a03d885674dc1bee86ac8dcd86e26e33886",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/PlayerObservationPayloads.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/PlayerSnapshotRequest.java",
+      "sourceBlob": "2af054df98cf2e35feb9b1bd4ea843b8c9a95843",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/PlayerSnapshotRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/PlayerSnapshotResponse.java",
+      "sourceBlob": "9ceebad036bdf3fe3265b28a72b61fb5b46f44d5",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/PlayerSnapshotResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/Position.java",
+      "sourceBlob": "f849c847b7d5bcc04d0ff5e2db886c3c20e67372",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/Position.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolAction.java",
+      "sourceBlob": "33edcb530a88f686e8f1dc4ccf068d1747ba6915",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolAction.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolActionBudget.java",
+      "sourceBlob": "ff3404aee98733cc8280721ba04dc24154509bb1",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolActionBudget.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolConstants.java",
+      "sourceBlob": "362e0a36d27daeaa8ed63e936328cb1b830db863",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolConstants.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolError.java",
+      "sourceBlob": "004994b0e8468a0e0e8341f901cfc47316d26fa7",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolError.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolErrorCode.java",
+      "sourceBlob": "49282d222bf01b2ab43901c3b8e152dc2fd0939e",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolErrorCode.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolJson.java",
+      "sourceBlob": "a438709cdebe3a64537980f0825de4131c1cdfae",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolJson.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolRuntimeLimits.java",
+      "sourceBlob": "0401595f39f7fb7ef420918f31704a7758d448fe",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolRuntimeLimits.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolRuntimeLimitsLoader.java",
+      "sourceBlob": "d87d8c5aaa2d38264c4fdf46f131e0bf42f7753a",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolRuntimeLimitsLoader.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolValidationFailure.java",
+      "sourceBlob": "bbab4936ddc5124fc344d50242a93c5ac77796aa",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolValidationFailure.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolValidator.java",
+      "sourceBlob": "7556cb4080a9da93ec82a7b37cea58f7c39cb464",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ProtocolValidator.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestContractValidation.java",
+      "sourceBlob": "fa5d183fd8c277d7b624d4d28acc8c66b39dadd5",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestContractValidation.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestDependency.java",
+      "sourceBlob": "198d965937208188b29d5927b3cc1894581f0042",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestDependency.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestDescriptionVisibility.java",
+      "sourceBlob": "71f22fe722087ba12fe8fdc7764d7a2e9076ae49",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestDescriptionVisibility.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestDetailRequest.java",
+      "sourceBlob": "5807fc5a06b487cf3095149a7f23844db3dc56b4",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestDetailRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestDetailResponse.java",
+      "sourceBlob": "ae50384d7fc89342788306787a47bec82d77711c",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestDetailResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestObjective.java",
+      "sourceBlob": "9815508fee1009ad028529037e62d8650874908b",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestObjective.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestQueryEntry.java",
+      "sourceBlob": "3f6faf09f1db947af3c72c6e427427ce77db1f3b",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestQueryEntry.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestQueryRequest.java",
+      "sourceBlob": "a45cfa180d04faa10352d15566c85b6dcd614ba7",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestQueryRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestQueryResponse.java",
+      "sourceBlob": "fa8ef07a93766d5c7736f5b85b200e665b0de601",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestQueryResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestQueryScope.java",
+      "sourceBlob": "5be3f629c26529f5559c6381a166e8c9f62bd08c",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestQueryScope.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestReward.java",
+      "sourceBlob": "03e829ed159805d438b3cf37a75e8b666419d92c",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestReward.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestRewardClaimState.java",
+      "sourceBlob": "3b57107153f2508d197d6b4c843f16d6a5d39c8a",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestRewardClaimState.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestState.java",
+      "sourceBlob": "618647f864684c8f5d135723d6c0cf055ed3612d",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/QuestState.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ReceiveStamp.java",
+      "sourceBlob": "65293e8e010728608dfb106e4d50ce6169b15e9c",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ReceiveStamp.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeAlternativeDto.java",
+      "sourceBlob": "a9ddf904d36d796106efbb3e659a7d051910e744",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeAlternativeDto.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeClassificationDto.java",
+      "sourceBlob": "7ec7eccd1d97e4b311f218c0710e18c9ea0a0d7d",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeClassificationDto.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeDto.java",
+      "sourceBlob": "ba11b440e1eed17257d66055c86894e565a28061",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeDto.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeIdentityDto.java",
+      "sourceBlob": "36c9611de6b543a3016d1edbb61c41bad6184b5e",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeIdentityDto.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeProcessDto.java",
+      "sourceBlob": "0009c2c8c21fe8fe497d0de55ef4725ae17032ab",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeProcessDto.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeProvidersListRequest.java",
+      "sourceBlob": "0b53f3074ec421380245554b3ca8dd494048b23a",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeProvidersListRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeProvidersListResponse.java",
+      "sourceBlob": "2ddf6f309c7ad49fbc8dd3e4cee12b6e618ce4fd",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeProvidersListResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeQueryRequest.java",
+      "sourceBlob": "ff9c2ec601ae3dc1400188e47f6b7bf52516102e",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeQueryRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeResourceDto.java",
+      "sourceBlob": "3e75aa171bfa6512b0881dfd495ea4f24d0fc5ad",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeResourceDto.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeResponse.java",
+      "sourceBlob": "e27881019b05df2afca98749071b01ff1a2ca179",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeSelectionRequest.java",
+      "sourceBlob": "da573daa44952722a7937310930f563b8369bb62",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeSelectionRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeSlotDto.java",
+      "sourceBlob": "792c11c7b8b8183a07336b38ff4622f6fe3085c1",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeSlotDto.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeSourceRequest.java",
+      "sourceBlob": "eab76976809f80dd097b2175f1c1afd14472c81b",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeSourceRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeUsesRequest.java",
+      "sourceBlob": "be88ab1f18f07759d8a80820b2bf44aae8875867",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RecipeUsesRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RequestCancelRequest.java",
+      "sourceBlob": "dec97f95c062c97c1407e7d1e90f67aad877ea18",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RequestCancelRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RequestCancelResponse.java",
+      "sourceBlob": "f7afcdffc45df563357eb096a1c8100738b60e66",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RequestCancelResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RequestEnvelope.java",
+      "sourceBlob": "b38f30ffb3951edf6ddfc3f7f9c3ea69c8929a37",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/RequestEnvelope.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ResponseEnvelope.java",
+      "sourceBlob": "2eb368e860dc2683ec14cbe944fc9860ce0c4fba",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/ResponseEnvelope.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SchemaRegistry.java",
+      "sourceBlob": "3cd23306c116a8b82a1a53e83a7c9f7ed3844b9a",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SchemaRegistry.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SessionPairApproved.java",
+      "sourceBlob": "1ee54d4845f8e7ddfde9872d087cda582095f725",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SessionPairApproved.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SessionPairRequest.java",
+      "sourceBlob": "87b0ede44c3711eadf9b5473c0f890fa4cfa58bd",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SessionPairRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SessionRevokeReason.java",
+      "sourceBlob": "0621d6d137391fbe43592f16008d7d0c06e8b1ec",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SessionRevokeReason.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SessionRevokeRequest.java",
+      "sourceBlob": "38043558d0a49caf5656df0265c4d58cb378dc12",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SessionRevokeRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SessionRevokeResponse.java",
+      "sourceBlob": "c4516960d8a4e5e78586ea45cca8667df2049233",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/SessionRevokeResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/TerminologyPayloads.java",
+      "sourceBlob": "a8c84fed799d46513f3887d8f06d296fcdfde17d",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/TerminologyPayloads.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldBlockPosition.java",
+      "sourceBlob": "2d5d52aa1ac16e62cf481c8e1a5b6f0aff020335",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldBlockPosition.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldChunkRange.java",
+      "sourceBlob": "ca2297a1a44f217499f651b7f4e8c34d4edc0d96",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldChunkRange.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldContainerObservation.java",
+      "sourceBlob": "89a8d3ee450a9eee13e3ebd05370466ce75d70b9",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldContainerObservation.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldContainerSide.java",
+      "sourceBlob": "cae0e3d3d7c4cf060547258515b1dab2c7335dc7",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldContainerSide.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldContainerStack.java",
+      "sourceBlob": "d5057a3274beea1836c357b4e021fd091c615bd3",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldContainerStack.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldContainerView.java",
+      "sourceBlob": "d383d6418e459c8198b4453c351968bc2cd40654",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldContainerView.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldContainersResponse.java",
+      "sourceBlob": "e3e876c448bc2f666904aa96e201ead3a3dae4ef",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldContainersResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldLocateRequest.java",
+      "sourceBlob": "50019c7e7b04682702b15c5f4fe2f88a5af07e76",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldLocateRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldLocatedResponse.java",
+      "sourceBlob": "c00d8fc87fc5d2cac5c124e6a38be6292b453dd9",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldLocatedResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldLocatorRange.java",
+      "sourceBlob": "e7e30d4aef781c42f03279864ac35d31ddded7c4",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldLocatorRange.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldMachineCandidateDomain.java",
+      "sourceBlob": "98710fc269d63b9980b88e00a7524cd2943d73c2",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldMachineCandidateDomain.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldMachineFeature.java",
+      "sourceBlob": "d74e1c5a15c645e9d95623bb521dd5e769afae33",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldMachineFeature.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldMachineObservation.java",
+      "sourceBlob": "2ef80105f8cc4dd7ec6ebfdf4c7cbc0caef9cd01",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldMachineObservation.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldMachineState.java",
+      "sourceBlob": "4bb3fe981ac46f773cf34436f0924b6c35b5ec9c",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldMachineState.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldMachinesResponse.java",
+      "sourceBlob": "3054f45d865599c8de30cd70b9e35822895bd4fa",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldMachinesResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldNearbyScanRequest.java",
+      "sourceBlob": "466a26c68cca807545f17b3179f5079739497f8a",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldNearbyScanRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryAuthority.java",
+      "sourceBlob": "11dada2b680d7924c2f0a45998518586f4e1a656",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryAuthority.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryProgressLane.java",
+      "sourceBlob": "cc8df4ed0ef772e678d0ec11df2e23c028683cc4",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryProgressLane.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryProgressRequest.java",
+      "sourceBlob": "eaeaba658989d04d4c772df1a09e17fdbfc8588e",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryProgressRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryProgressResponse.java",
+      "sourceBlob": "207f920a8a95308d05f8d7e05d0970466a6f7150",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryProgressResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQuerySummary.java",
+      "sourceBlob": "366b8eef4289be1defde06da06a593b190655542",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQuerySummary.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryTargetKind.java",
+      "sourceBlob": "47f65d70fa0d442b7f25a3d877a5ed800468adfb",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryTargetKind.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryValidation.java",
+      "sourceBlob": "4734f257ae81777b50c5e13e80fe304f9b9336d1",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldQueryValidation.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryDescribeRequest.java",
+      "sourceBlob": "b622e224e3876a6da5ff1c99109f1eeb6ec8f885",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryDescribeRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryDescribeResponse.java",
+      "sourceBlob": "070624cedb69dcc69672072f920afadddd9aaa59",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryDescribeResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryKind.java",
+      "sourceBlob": "bbed6859cb2b8ca56814fe92cd849c9b12938d27",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryKind.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryMatch.java",
+      "sourceBlob": "f8d738a7fcbac6ce65d6359948fffcac1ffc9f0b",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryMatch.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryReference.java",
+      "sourceBlob": "ab5d293211450ed798fd5aef8de40936f60b2a6a",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryReference.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryResolveRequest.java",
+      "sourceBlob": "5c071474f138ed7a61d785089b5b427ad662a198",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryResolveRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryResolveResponse.java",
+      "sourceBlob": "639bda74dd95e4b883bb963fa441e4594b8c0c07",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistryResolveResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistrySearchRequest.java",
+      "sourceBlob": "65721376b38ab6954e6a2ec88b9ecde4a421b663",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistrySearchRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistrySearchResponse.java",
+      "sourceBlob": "4ae0e573600d5954e2ab0ca23d0bd1016793005a",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldRegistrySearchResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldScanWindow.java",
+      "sourceBlob": "baeeccc0177c36f7c032096dab275ffe145f5b11",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldScanWindow.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldStructureTargetsRequest.java",
+      "sourceBlob": "95c09284d03ae9837f91fea0eec7968ac221905e",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldStructureTargetsRequest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldStructureTargetsResponse.java",
+      "sourceBlob": "fad6adc417f684cf4671194ff3cebc440d8e6596",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldStructureTargetsResponse.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldTargetObservation.java",
+      "sourceBlob": "3478cc4676fc6b689669ccc9568c4d317b2b067a",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldTargetObservation.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldVerticalRange.java",
+      "sourceBlob": "d7cf4760e78c7fcfe55106deebbf3e501a96048b",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/main/java/dev/miaxion/protocol/WorldVerticalRange.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/CapabilityCatalogSchemaTest.java",
+      "sourceBlob": "6c45fb7fcb91057c1c712d2afb75b670f4c34073",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/CapabilityCatalogSchemaTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/CastingProtocolTest.java",
+      "sourceBlob": "580884ac7a13e172d6b3c6c6a5a81e5e92cd83f7",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/CastingProtocolTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/EntityDescribeContractTest.java",
+      "sourceBlob": "110024830021a849cf8bc11d319a14f81c5454c7",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/EntityDescribeContractTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ExtensionDataSchemaTest.java",
+      "sourceBlob": "c36c362ab8b8e6a3f4d412f49a325655e72332fd",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ExtensionDataSchemaTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ItemDetailsProtocolTest.java",
+      "sourceBlob": "04674804c201ce4611e6f99f2a6b274f5d1fc676",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ItemDetailsProtocolTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolActionBudgetTest.java",
+      "sourceBlob": "97506e1759debe19cdf7294d141342c8440dcace",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolActionBudgetTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolCorpusTest.java",
+      "sourceBlob": "0f232d7815b6a317034a2af84204931efc549653",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolCorpusTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolDtoRoundTripTest.java",
+      "sourceBlob": "9fc9d1eba75d1a08cebe4f1002d4f6397f4373d8",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolDtoRoundTripTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolJsonTest.java",
+      "sourceBlob": "b16b5fc022e9533f5e81e99b90de1a529303918e",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolJsonTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolRuntimeLimitsTest.java",
+      "sourceBlob": "9aac020338e9b2d198779bac7bc53143283ad96b",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolRuntimeLimitsTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolValidatorTest.java",
+      "sourceBlob": "7cf3d44a84619094ef5befc9ee31df9198b5fd68",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/ProtocolValidatorTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/QuestContractTest.java",
+      "sourceBlob": "6a9227f13071f5d6a3d0a1fd876b017e316a7f7c",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/QuestContractTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/RawProtocolCorpusTest.java",
+      "sourceBlob": "c774f729749f7f2f11fb1c1bea6e43534c390241",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/RawProtocolCorpusTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/RecipeResourceSchemaTest.java",
+      "sourceBlob": "8d30920c9482ef8dd6b1205f4a1082fd02f49f4d",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/RecipeResourceSchemaTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/RecipeV11ContractTest.java",
+      "sourceBlob": "386d1126df3070921ff60f0b936172fb329f5a6b",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/RecipeV11ContractTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/SchemaRegistryTest.java",
+      "sourceBlob": "e93bf784c4d61a5959755d9a1e7f21d6ab9cf122",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/SchemaRegistryTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/WorldNearbyPagingContractTest.java",
+      "sourceBlob": "0d66b97375552d2caefd92ac14d11546dd1c3a19",
+      "decision": "copy",
+      "destination": "src/mod/protocol-java/src/test/java/dev/miaxion/protocol/WorldNearbyPagingContractTest.java",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "src/mod/test-fixtures/bridge-extension-example/build.gradle",
+      "sourceBlob": "bb91aac41c8a023760fba94c07a14939113478e7",
+      "decision": "adapt",
+      "destination": "examples/neoforge-1.21.1-readonly/build.gradle",
+      "reason": "Turn test-only specimen into separately built MIT example; preserve loaded-world read guards."
+    },
+    {
+      "source": "src/mod/test-fixtures/bridge-extension-example/gradle-linux.lockfile",
+      "sourceBlob": "feecbc61daaa1151189e1ae0ba0e183a5ba8d970",
+      "decision": "adapt",
+      "destination": "examples/neoforge-1.21.1-readonly/gradle.lockfile",
+      "reason": "Use reviewed Linux lock as standalone baseline; add independent-consumer configuration names without changing component versions."
+    },
+    {
+      "source": "src/mod/test-fixtures/bridge-extension-example/src/main/java/dev/miaxion/extension/example/StandingBlockExtension.java",
+      "sourceBlob": "d1482b1c92270d4f106e56df8e7f56d03b882173",
+      "decision": "adapt",
+      "destination": "examples/neoforge-1.21.1-readonly/src/main/java/dev/miaxion/extension/example/StandingBlockExtension.java",
+      "reason": "Turn test-only specimen into separately built MIT example; preserve loaded-world read guards."
+    },
+    {
+      "source": "src/mod/test-fixtures/bridge-extension-example/src/main/resources/META-INF/neoforge.mods.toml",
+      "sourceBlob": "e8e30a402502d8425fe655e85b957b8abe04276f",
+      "decision": "adapt",
+      "destination": "examples/neoforge-1.21.1-readonly/src/main/resources/META-INF/neoforge.mods.toml",
+      "reason": "Turn test-only specimen into separately built MIT example; preserve loaded-world read guards."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/AssemblyInfo.cs",
+      "sourceBlob": "217120083bfa1b5b5a6400bb585b33f3651510f9",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/AssemblyInfo.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/CastingProtocolTests.cs",
+      "sourceBlob": "69531de1af78c6b1254133b209e87d4a5862885a",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/CastingProtocolTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/DiscoverySchemaTests.cs",
+      "sourceBlob": "95b03cd299b6eb1d39ce3b8a82c33e8371dd3bbc",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/DiscoverySchemaTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/DtoRoundTripTests.cs",
+      "sourceBlob": "dd60b5c12714479fd0c9462a9ec7e8f8b25b81ca",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/DtoRoundTripTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/EmbeddedDiscoverySchemaTests.cs",
+      "sourceBlob": "3acf8c427f7f19e5c5305635b500c0a4bdda2e7d",
+      "decision": "adapt",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/EmbeddedDiscoverySchemaTests.cs",
+      "reason": "Move unchanged identity examples to a static array for existing CA1861 analyzer; assertions preserved."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/EntityDescribeContractTests.cs",
+      "sourceBlob": "81ec777aea3eedb091944358a544a9757ec74b02",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/EntityDescribeContractTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/ExtensionPreviewContractTests.cs",
+      "sourceBlob": "31fea09c58752cb97eee56682c31efce34e5ac47",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/ExtensionPreviewContractTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/ItemDetailsContractTests.cs",
+      "sourceBlob": "cf6b519fe83298572c7e0a2e0a9df492a7145796",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/ItemDetailsContractTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/MiAxion.Protocol.Tests.csproj",
+      "sourceBlob": "a1f113273df28c7c43ef51ab96434a6d07a3786c",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/MiAxion.Protocol.Tests.csproj",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/ModVersionsResolveContractTests.cs",
+      "sourceBlob": "d5237e587ed7f69d298e6258fdd7fe207e4c50b4",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/ModVersionsResolveContractTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/ProtocolActionBudgetTests.cs",
+      "sourceBlob": "2fce57e434bb546c237e628e625e5aef336a11c4",
+      "decision": "adapt",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/ProtocolActionBudgetTests.cs",
+      "reason": "Preserve implementation/tests; adapt standalone version/toolchain or fixture-root discovery only."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/ProtocolCorpusStructureTests.cs",
+      "sourceBlob": "720e88826a76f8311831a001231656c36cb04cb0",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/ProtocolCorpusStructureTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/QuestContractTests.cs",
+      "sourceBlob": "bf624f2b22f93e5ed874f84563135faf14486f27",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/QuestContractTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/RawProtocolCorpusTests.cs",
+      "sourceBlob": "15958ffba27e3698c34ab6c2cce1e0c3c4599916",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/RawProtocolCorpusTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/RecipeClassificationContractTests.cs",
+      "sourceBlob": "b185d39cf835668055925ec4df1a3df04dd32599",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/RecipeClassificationContractTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/RuntimeLimitsConsistencyTests.cs",
+      "sourceBlob": "420a5334d1fcdbedad09ad2a43c17ee02e19f440",
+      "decision": "adapt",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/RuntimeLimitsConsistencyTests.cs",
+      "reason": "Discover actual protocol fixture root rather than private whole-product solution; assertions unchanged."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/SchemaFixtureTests.cs",
+      "sourceBlob": "4244ebb331298346e94fc07734eb3f7c53c0e840",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/SchemaFixtureTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/SerializationTests.cs",
+      "sourceBlob": "4094cfab3c23bd5059dee63f3c6617693c6252ff",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/SerializationTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input. Contract inventory/fixture correction from pinned follow-up commit; production contract unchanged.",
+      "sourceCommit": "a4cbb396f7e2990e7505dd7035b274297de854a9"
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/StrictUtf8.cs",
+      "sourceBlob": "46dfaa98374e4c971180cc6d16573682650e6ca2",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/StrictUtf8.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/WorldQueryContractTests.cs",
+      "sourceBlob": "f4835d3e2535a4b748f871b1160301d616a2432c",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/WorldQueryContractTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/WorldQueryProgressTests.cs",
+      "sourceBlob": "65f04620e613a60d1a372403f5df66ba8fda43c0",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/WorldQueryProgressTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/WorldScanWindowTests.cs",
+      "sourceBlob": "6ea1e0f23001d6be1c3778e1e309854e844e5c18",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/WorldScanWindowTests.cs",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/dotnet/MiAxion.Protocol.Tests/packages.lock.json",
+      "sourceBlob": "5ceb145fff2b4a884577676c3941d9894b7afa4d",
+      "decision": "copy",
+      "destination": "tests/dotnet/MiAxion.Protocol.Tests/packages.lock.json",
+      "reason": "Public contract implementation, deterministic test corpus or selected standalone build input."
+    },
+    {
+      "source": "tests/fixtures/bridge/action-budget-policy.json",
+      "sourceBlob": "ff1639455932fbed60502a67437da127e14dae46",
+      "decision": "copy",
+      "destination": "tests/fixtures/bridge/action-budget-policy.json",
+      "reason": "Required shared protocol test fixture or pinned wrapper; reviewed separately from original candidate list. Contract inventory/fixture correction from pinned follow-up commit; production contract unchanged.",
+      "sourceCommit": "a4cbb396f7e2990e7505dd7035b274297de854a9"
+    },
+    {
+      "source": "tests/fixtures/bridge/fabric121-capabilities.json",
+      "sourceBlob": "1a11418ce9ea2f874ebdcd7c513585de62ad0ac4",
+      "decision": "copy",
+      "destination": "tests/fixtures/bridge/fabric121-capabilities.json",
+      "reason": "Required shared protocol test fixture or pinned wrapper; reviewed separately from original candidate list."
+    }
+  ],
+  "excluded": [
+    {
+      "source": "Directory.Build.props",
+      "sourceBlob": "747a20fdbdbca09def63135748054d1f0476a0e0",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    },
+    {
+      "source": "Directory.Packages.props",
+      "sourceBlob": "bcb75793ba51cd9bf931482ae6e1df4a9a75bfea",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    },
+    {
+      "source": "THIRD-PARTY-NOTICES.md",
+      "sourceBlob": "21210c994a0c66756982018025a6ad1cf15c3198",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    },
+    {
+      "source": "docs/current/bridge-addon-compatibility.md",
+      "sourceBlob": "f527ea88b9aee8bb730664a4541617c4449bcd68",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    },
+    {
+      "source": "docs/current/bridge-build.md",
+      "sourceBlob": "2e64ca754aaea45a48732e944e8038f6f09600a2",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    },
+    {
+      "source": "docs/current/game-extension-authoring.md",
+      "sourceBlob": "1b9208f0697b0442439105994e6214e72a59ae77",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    },
+    {
+      "source": "docs/current/protocol.md",
+      "sourceBlob": "d577e139e4edb36791d2026fb7ec23fb7ce3aef4",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    },
+    {
+      "source": "src/mod/bridge-extension-api/gradle.lockfile",
+      "sourceBlob": "8ccf21c9ed6acc9cfe04751c601365ceccd1ec21",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Original product Windows lock not used for the Linux-verified independent candidate; not a Windows build acceptance claim."
+    },
+    {
+      "source": "src/mod/build.gradle",
+      "sourceBlob": "14170160cbf9556fd055b71a3a5b7837752a2f73",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    },
+    {
+      "source": "src/mod/gradle.properties",
+      "sourceBlob": "87edf62a3a96907c4f7d167074ae33c81462e81b",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    },
+    {
+      "source": "src/mod/gradle/verification-metadata.xml",
+      "sourceBlob": "27ce7f20c5fce221509a5558ea65de3d103f2482",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    },
+    {
+      "source": "src/mod/protocol-java/gradle.lockfile",
+      "sourceBlob": "d2722826680bfa7ec40e9d23dd463f7247131389",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Original product Windows lock not used for the Linux-verified independent candidate; not a Windows build acceptance claim."
+    },
+    {
+      "source": "src/mod/settings.gradle",
+      "sourceBlob": "769b3d2d47a58bf3917dbd523a3aa7bc3475785c",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    },
+    {
+      "source": "src/mod/test-fixtures/bridge-extension-example/gradle.lockfile",
+      "sourceBlob": "2793fd08c7f487abca1bc75b399bee03487f5eae",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Original product Windows lock not used for the Linux-verified independent candidate; not a Windows build acceptance claim."
+    },
+    {
+      "source": "tools/new-protocol-fixtures.ps1",
+      "sourceBlob": "664cbf39b59aeac9697fc81d484d3f3267d366c4",
+      "decision": "exclude",
+      "destination": null,
+      "reason": "Internal build/docs: replaced with standalone templates; not copied wholesale."
+    }
+  ],
+  "generatedTemplates": [
+    "README.zh-CN.md",
+    ".gitignore",
+    "Directory.Packages.props",
+    "THIRD-PARTY-NOTICES.md",
+    "Directory.Build.props",
+    "third-party/.gitattributes",
+    "docs/BUILD.zh-CN.md",
+    "docs/VALIDATION.zh-CN.md",
+    "docs/PROTOCOL.zh-CN.md",
+    "docs/INTEGRATION.zh-CN.md",
+    "examples/neoforge-1.21.1-readonly/gradle.properties",
+    "examples/neoforge-1.21.1-readonly/build.gradle",
+    "examples/neoforge-1.21.1-readonly/settings.gradle",
+    "examples/neoforge-1.21.1-readonly/src/main/resources/META-INF/neoforge.mods.toml",
+    "skills/bridge-mod-integration/SKILL.md",
+    "skills/bridge-mod-integration/references/addons.md",
+    "skills/bridge-mod-integration/references/platform-port.md",
+    "src/mod/gradle.properties",
+    "src/mod/build.gradle",
+    "src/mod/settings.gradle",
+    "src/mod/protocol-java/gradle.lockfile",
+    "src/mod/bridge-extension-api/gradle.lockfile",
+    "src/mod/bridge-extension-api/src/aggregate-api-link/java/example/ExternalAggregateConsumer.java",
+    "src/mod/protocol-java/src/independent-consumer/java/example/ProtocolConsumer.java",
+    "third-party/build-tools/upstream-sources.json",
+    "third-party/additional-upstream/xunit-xunit.analyzers-a2260df3-LICENSE",
+    "third-party/additional-upstream/json-everything-json-everything-8b8ab340-LICENSE",
+    "third-party/additional-upstream/xunit-xunit-728c1dce-LICENSE",
+    "third-party/additional-upstream/microsoft-testfx-cb5afc3b-LICENSE",
+    "third-party/additional-upstream/manifest.json",
+    "third-party/additional-upstream/Humanizr-Humanizer-90f0cb1d-license.txt",
+    "third-party/additional-upstream/Microsoft-ApplicationInsights-dotnet-2faa7e8b-LICENSE",
+    "third-party/additional-upstream/json-everything-json-everything-0b08e9d0-LICENSE",
+    "third-party/build-tools/gradle-8.14.5/NOTICE",
+    "third-party/build-tools/gradle-8.14.5/LICENSE",
+    "third-party/build-tools/neoform-runtime-2.0.22/neoform-runtime-2.0.22.pom",
+    "third-party/build-tools/neoform-runtime-2.0.22/materials.json",
+    "third-party/build-tools/moddev-gradle-2.0.142/589-NOTICE.txt",
+    "third-party/build-tools/moddev-gradle-2.0.142/482-thoughtworks.TXT",
+    "third-party/build-tools/moddev-gradle-2.0.142/438-LICENSE",
+    "third-party/build-tools/moddev-gradle-2.0.142/moddev-gradle-2.0.142.pom",
+    "third-party/build-tools/moddev-gradle-2.0.142/477-NOTICE",
+    "third-party/build-tools/moddev-gradle-2.0.142/480-extreme.indiana.edu.license.TXT",
+    "third-party/build-tools/moddev-gradle-2.0.142/481-javolution.license.TXT",
+    "third-party/build-tools/moddev-gradle-2.0.142/588-LICENSE.txt",
+    "third-party/build-tools/moddev-gradle-2.0.142/439-NOTICE",
+    "third-party/build-tools/moddev-gradle-2.0.142/materials.json",
+    "third-party/build-tools/moddev-gradle-2.0.142/476-LICENSE",
+    "third-party/build-tools/neoforge-21.1.238/neoforge-21.1.238.pom",
+    "third-party/build-tools/neoforge-21.1.238/materials.json"
+  ]
+}

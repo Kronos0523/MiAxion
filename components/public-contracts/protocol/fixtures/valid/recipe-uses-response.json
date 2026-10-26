@@ -1,0 +1,72 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "recipe.uses",
+  "sessionToken": null,
+  "payload": {
+    "recipes": [
+      {
+        "recipeId": "minecraft:diamond_pickaxe",
+        "type": "minecraft:crafting_shaped",
+        "sourceModId": "minecraft",
+        "identity": {
+          "kind": "registered"
+        },
+        "inputs": [
+          {
+            "alternatives": [
+              {
+                "itemId": "minecraft:oak_planks",
+                "count": 2
+              },
+              {
+                "itemId": "minecraft:spruce_planks",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "alternatives": [
+              {
+                "itemId": "minecraft:stick",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "alternatives": [
+              {
+                "itemId": "minecraft:stick",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "catalysts": [
+          {
+            "alternatives": [
+              {
+                "itemId": "minecraft:crafting_table",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "alternatives": [
+              {
+                "itemId": "minecraft:diamond_pickaxe",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "truncated": false
+  },
+  "error": null
+}

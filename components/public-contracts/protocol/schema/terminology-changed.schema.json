@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.miaxion.dev/bridge/v1/terminology-changed.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocolVersion", "action", "payload"],
+  "properties": {
+    "protocolVersion": { "$ref": "common.schema.json#/$defs/protocolVersion" },
+    "action": { "enum": ["terminology.changed", "terminology.v2.changed"] },
+    "payload": { "type": "object" }
+  },
+  "oneOf": [
+    { "properties": { "action": { "const": "terminology.changed" }, "payload": { "$ref": "response.schema.json#/$defs/terminologySnapshot" } } },
+    { "properties": { "action": { "const": "terminology.v2.changed" }, "payload": { "$ref": "response.schema.json#/$defs/terminologySnapshotV2" } } }
+  ]
+}

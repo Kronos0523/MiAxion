@@ -1,0 +1,21 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "entities.resolve",
+  "sessionToken": null,
+  "payload": {
+    "revision": "r1",
+    "matches": [
+      {
+        "kind": "item",
+        "resourceId": "create:deployer",
+        "translationKey": "block.create.deployer",
+        "displayName": "动力臂"
+      }
+    ],
+    "truncated": false
+  },
+  "error": null
+}

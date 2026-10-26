@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "exchanges": [
+    {
+      "name": "list-first",
+      "request": {
+        "protocolVersion": "1.0",
+        "requestId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1",
+        "timestamp": "2026-09-07T00:00:00.1234567Z",
+        "deadline": "2026-09-07T00:00:10.1234567Z",
+        "action": "extensions.list",
+        "sessionToken": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "payload": {
+          "cursor": null,
+          "catalogRevision": null
+        },
+        "error": null
+      },
+      "response": {
+        "protocolVersion": "1.0",
+        "requestId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1",
+        "timestamp": "2026-09-07T00:00:00.2234567Z",
+        "deadline": "2026-09-07T00:00:10.1234567Z",
+        "action": "extensions.list",
+        "sessionToken": null,
+        "payload": {
+          "catalogRevision": "catalog-1",
+          "capabilities": [
+            {
+              "extensionId": "example",
+              "extensionVersion": "1.0",
+              "capabilityId": "example:standing_block",
+              "capabilityVersion": "1.0",
+              "title": "Standing block",
+              "description": "Returns one observed block identifier without coordinates.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "outputSchema": {
+                "type": "object",
+                "properties": {
+                  "blockId": {
+                    "type": "string",
+                    "maxLength": 128
+                  }
+                },
+                "required": [
+                  "blockId"
+                ],
+                "additionalProperties": false
+              },
+              "dataClass": "ExtensionGameData",
+              "dependencies": [],
+              "executionContext": "integrated-server",
+              "available": true,
+              "unavailableReason": null,
+              "maximumDurationMs": 1000,
+              "maximumResultBytes": 1024
+            }
+          ],
+          "nextCursor": "page-2"
+        },
+        "error": null
+      }
+    },
+    {
+      "name": "list-last",
+      "request": {
+        "protocolVersion": "1.0",
+        "requestId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2",
+        "timestamp": "2026-09-07T00:00:00.1234567Z",
+        "deadline": "2026-09-07T00:00:10.1234567Z",
+        "action": "extensions.list",
+        "sessionToken": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "payload": {
+          "cursor": "page-2",
+          "catalogRevision": "catalog-1"
+        },
+        "error": null
+      },
+      "response": {
+        "protocolVersion": "1.0",
+        "requestId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2",
+        "timestamp": "2026-09-07T00:00:00.2234567Z",
+        "deadline": "2026-09-07T00:00:10.1234567Z",
+        "action": "extensions.list",
+        "sessionToken": null,
+        "payload": {
+          "catalogRevision": "catalog-1",
+          "capabilities": [],
+          "nextCursor": null
+        },
+        "error": null
+      }
+    },
+    {
+      "name": "call-success",
+      "request": {
+        "protocolVersion": "1.0",
+        "requestId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3",
+        "timestamp": "2026-09-07T00:00:00.1234567Z",
+        "deadline": "2026-09-07T00:00:10.1234567Z",
+        "action": "extensions.call",
+        "sessionToken": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "payload": {
+          "capabilityId": "example:standing_block",
+          "capabilityVersion": "1.0",
+          "catalogRevision": "catalog-1",
+          "arguments": {}
+        },
+        "error": null
+      },
+      "response": {
+        "protocolVersion": "1.0",
+        "requestId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3",
+        "timestamp": "2026-09-07T00:00:00.2234567Z",
+        "deadline": "2026-09-07T00:00:10.1234567Z",
+        "action": "extensions.call",
+        "sessionToken": null,
+        "payload": {
+          "status": "SUCCESS",
+          "data": {
+            "blockId": "minecraft:stone"
+          }
+        },
+        "error": null
+      }
+    },
+    {
+      "name": "call-failure",
+      "request": {
+        "protocolVersion": "1.0",
+        "requestId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa4",
+        "timestamp": "2026-09-07T00:00:00.1234567Z",
+        "deadline": "2026-09-07T00:00:10.1234567Z",
+        "action": "extensions.call",
+        "sessionToken": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "payload": {
+          "capabilityId": "example:standing_block",
+          "capabilityVersion": "1.0",
+          "catalogRevision": "catalog-1",
+          "arguments": {}
+        },
+        "error": null
+      },
+      "response": {
+        "protocolVersion": "1.0",
+        "requestId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa4",
+        "timestamp": "2026-09-07T00:00:00.2234567Z",
+        "deadline": "2026-09-07T00:00:10.1234567Z",
+        "action": "extensions.call",
+        "sessionToken": null,
+        "payload": {
+          "status": "EXECUTION_FAILED",
+          "data": null
+        },
+        "error": null
+      }
+    },
+    {
+      "name": "wire-rate-limited",
+      "request": {
+        "protocolVersion": "1.0",
+        "requestId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa5",
+        "timestamp": "2026-09-07T00:00:00.1234567Z",
+        "deadline": "2026-09-07T00:00:10.1234567Z",
+        "action": "extensions.call",
+        "sessionToken": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "payload": {
+          "capabilityId": "example:standing_block",
+          "capabilityVersion": "1.0",
+          "catalogRevision": "catalog-1",
+          "arguments": {}
+        },
+        "error": null
+      },
+      "response": {
+        "protocolVersion": "1.0",
+        "requestId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa5",
+        "timestamp": "2026-09-07T00:00:00.2234567Z",
+        "deadline": "2026-09-07T00:00:10.1234567Z",
+        "action": "extensions.call",
+        "sessionToken": null,
+        "payload": null,
+        "error": {
+          "code": "RATE_LIMITED",
+          "message": "Rate limited.",
+          "retryable": false,
+          "details": null
+        }
+      }
+    }
+  ]
+}

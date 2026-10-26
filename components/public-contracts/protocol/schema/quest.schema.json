@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.miaxion.dev/bridge/v1/quest.schema.json",
+  "$defs": {
+    "continuation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "pattern": "^[A-Za-z0-9_-]+$"
+    },
+    "questId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+    "boundedText": {
+      "type": "string",
+      "maxLength": 256
+    },
+    "questState": {
+      "enum": ["locked", "available", "active", "completed"]
+    },
+    "queryEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "questId", "chapterTitle", "title", "state", "progress",
+        "taskCount", "completedTaskCount", "repeatable"
+      ],
+      "properties": {
+        "questId": { "$ref": "#/$defs/questId" },
+        "chapterTitle": { "$ref": "#/$defs/boundedText" },
+        "title": { "$ref": "#/$defs/boundedText" },
+        "state": { "$ref": "#/$defs/questState" },
+        "progress": { "type": "number", "minimum": 0, "maximum": 1 },
+        "taskCount": { "type": "integer", "minimum": 0, "maximum": 128 },
+        "completedTaskCount": { "type": "integer", "minimum": 0, "maximum": 128 },
+        "repeatable": { "type": "boolean" }
+      }
+    },
+    "objective": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "taskId", "typeId", "title", "currentProgress", "maximumProgress",
+        "formattedProgress", "completed", "optional"
+      ],
+      "properties": {
+        "taskId": { "$ref": "#/$defs/questId" },
+        "typeId": { "$ref": "common.schema.json#/$defs/resourceLocation" },
+        "title": { "$ref": "#/$defs/boundedText" },
+        "currentProgress": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "maximumProgress": { "type": "integer", "minimum": 1, "maximum": 9007199254740991 },
+        "formattedProgress": { "$ref": "#/$defs/boundedText" },
+        "completed": { "type": "boolean" },
+        "optional": { "type": "boolean" }
+      }
+    },
+    "reward": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rewardId", "typeId", "title", "teamReward", "autoClaim", "claimState"
+      ],
+      "properties": {
+        "rewardId": { "$ref": "#/$defs/questId" },
+        "typeId": { "$ref": "common.schema.json#/$defs/resourceLocation" },
+        "title": { "$ref": "#/$defs/boundedText" },
+        "teamReward": { "type": "boolean" },
+        "autoClaim": { "type": "boolean" },
+        "claimState": { "enum": ["claimed", "claimable", "blocked"] }
+      }
+    },
+    "dependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["questId", "title"],
+      "properties": {
+        "questId": { "$ref": "#/$defs/questId" },
+        "title": { "$ref": "#/$defs/boundedText" }
+      }
+    },
+    "queryResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["quests", "matchedCount", "truncated"],
+      "properties": {
+        "quests": {
+          "type": "array",
+          "maxItems": 32,
+          "items": { "$ref": "#/$defs/queryEntry" }
+        },
+        "matchedCount": { "type": "integer", "minimum": 0, "maximum": 2147483647 },
+        "truncated": { "type": "boolean" },
+        "nextContinuation": { "$ref": "#/$defs/continuation" }
+      }
+    },
+    "detailResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "questId", "chapterTitle", "title", "subtitle", "descriptionVisibility",
+        "description", "state", "progress", "repeatable", "optional", "objectives",
+        "rewards", "dependencies"
+      ],
+      "properties": {
+        "questId": { "$ref": "#/$defs/questId" },
+        "chapterTitle": { "$ref": "#/$defs/boundedText" },
+        "title": { "$ref": "#/$defs/boundedText" },
+        "subtitle": { "$ref": "#/$defs/boundedText" },
+        "descriptionVisibility": { "enum": ["visible", "hidden_until_complete"] },
+        "description": {
+          "type": "array",
+          "maxItems": 128,
+          "items": { "type": "string", "maxLength": 1024 }
+        },
+        "state": { "$ref": "#/$defs/questState" },
+        "progress": { "type": "number", "minimum": 0, "maximum": 1 },
+        "repeatable": { "type": "boolean" },
+        "optional": { "type": "boolean" },
+        "objectives": {
+          "type": "array",
+          "maxItems": 128,
+          "items": { "$ref": "#/$defs/objective" }
+        },
+        "rewards": {
+          "type": "array",
+          "maxItems": 128,
+          "items": { "$ref": "#/$defs/reward" }
+        },
+        "dependencies": {
+          "type": "array",
+          "maxItems": 128,
+          "items": { "$ref": "#/$defs/dependency" }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "descriptionVisibility": { "const": "hidden_until_complete" } },
+            "required": ["descriptionVisibility"]
+          },
+          "then": {
+            "properties": { "description": { "maxItems": 0 } }
+          }
+        }
+      ]
+    }
+  }
+}

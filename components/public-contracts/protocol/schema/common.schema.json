@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.miaxion.dev/bridge/v1/common.schema.json",
+  "$defs": {
+    "protocolVersion": { "const": "1.0" },
+    "uuid": { "type": "string", "format": "uuid" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "token": { "type": "string", "minLength": 43, "maxLength": 512, "pattern": "^[A-Za-z0-9_-]+$" },
+    "resourceLocation": { "type": "string", "maxLength": 128, "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$" },
+    "action": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 64,
+      "pattern": "^[a-z][a-z0-9]*(?:\\.[a-z][a-z0-9]*)+$"
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message", "retryable", "details"],
+      "properties": {
+        "code": {
+          "enum": [
+            "INVALID_REQUEST", "UNAUTHORIZED", "UNSUPPORTED_VERSION",
+            "CAPABILITY_UNAVAILABLE", "GAME_NOT_READY", "NOT_FOUND",
+            "TIMEOUT", "RATE_LIMITED", "DETAILS_HIDDEN",
+            "RESULT_TOO_LARGE", "INTERNAL_ERROR"
+          ]
+        },
+        "message": { "type": "string", "minLength": 1, "maxLength": 256 },
+        "retryable": { "type": "boolean" },
+        "details": { "type": ["object", "null"] }
+      }
+    },
+    "inventorySlot": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["slot", "empty"],
+          "properties": {
+            "slot": { "type": "integer", "minimum": 0, "maximum": 255 },
+            "empty": { "const": true }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["slot", "empty", "itemId", "count"],
+          "properties": {
+            "slot": { "type": "integer", "minimum": 0, "maximum": 255 },
+            "empty": { "const": false },
+            "itemId": { "$ref": "#/$defs/resourceLocation" },
+            "count": { "type": "integer", "minimum": 1, "maximum": 2147483647 }
+          }
+        }
+      ]
+    }
+  }
+}

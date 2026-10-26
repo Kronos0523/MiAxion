@@ -2,7 +2,7 @@
 
 ## 选择真实合同
 
-下列名称来自既有接入设计，用于识别 API 类型；它们不表示当前公开目录已经提供相应类型或 SDK。签名、版本和平台入口须以用户实际取得的公开 SDK 为准。
+下列名称用于识别 API 类型。实际签名、版本和入口从 [SDK 源码](../../../components/public-contracts/src/mod/bridge-extension-api/) 与 [接入说明](../../../components/public-contracts/docs/INTEGRATION.zh-CN.md) 核对；可参考已构建的 [NeoForge 1.21.1 只读示例](../../../components/public-contracts/examples/neoforge-1.21.1-readonly/)。该示例游戏内注册和一次查询仍未实测，其他平台的接口存在不等于已提供对应示例。
 
 | 需求 | 接口类型与核对重点 |
 |---|---|

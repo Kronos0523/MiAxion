@@ -1,0 +1,14 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:00Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "world.structure.targets",
+  "sessionToken": null,
+  "payload": {
+    "summary": { "authority": "loaded_observed", "dimensionId": "minecraft:overworld", "observedAtTick": 120, "queryGeneration": "z1", "requested": 1, "loaded": 1, "examined": 1, "matched": 1, "complete": true, "truncated": false, "warnings": [] },
+    "structureId": "minecraft:ancient_city", "coverage": "structure_covered_chunks",
+    "targets": [{ "targetId": "minecraft:gold_block", "displayName": "Block of Gold", "position": { "x": 1, "y": 64, "z": 2 }, "distanceBlocks": 3, "kind": "metal_storage_block", "priority": 10 }]
+  },
+  "error": null
+}

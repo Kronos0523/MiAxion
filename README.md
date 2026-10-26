@@ -72,13 +72,13 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。它把模型对话、知
 
 ## 源码开放范围
 
-MiAxion 计划选择部分组件开源。自有 SDK、通信协议、示例和公开接入 skill 已确定采用 MIT；具体源码导出清单与第三方材料仍在审查，SDK、协议和示例尚未导出。Bridge 公共层与平台实现继续按组件审查。
+MiAxion 选择部分组件开源。首批 [SDK、Java／C# 协议与 NeoForge 只读示例源码](components/public-contracts/README.zh-CN.md) 已整合，自有选定组件及公开接入 skill 采用 MIT，第三方依赖保留原许可证。当前仍为本地发布候选，Bridge 公共层与平台实现继续按组件审查。
 
 客户端核心、模型编排、记忆和检索实现暂不在默认开放范围内。知识内容、模型权重、语音模型和参考音频的分发说明分别核对，不随项目的部分开源自动采用同一许可证。
 
-本仓库先用于项目介绍、用户文档、问题反馈和下载发布。组件开放后会单独说明源码位置、构建方法、依赖及许可证。
+本仓库用于项目介绍、用户文档、问题反馈、下载发布和选定组件源码。开发者可查看 [独立构建说明](components/public-contracts/docs/BUILD.zh-CN.md) 与 [组件许可声明](components/public-contracts/THIRD-PARTY-NOTICES.md)。SDK 与协议 JAR 不是可安装 Mod；源码目录中的示例也不代替基础 Bridge。
 
-接入开发的整理进度见 [Bridge 与附属开发入口](docs/BRIDGE-DEVELOPMENT.zh-CN.md)，具体边界见 [组件开放方案](docs/OPEN-SOURCE-SCOPE.zh-CN.md)。公开版接入 skill 已形成草稿，SDK、协议与示例源码仍在准备。
+接入开发见 [Bridge 与附属开发入口](docs/BRIDGE-DEVELOPMENT.zh-CN.md)，具体边界见 [组件开放方案](docs/OPEN-SOURCE-SCOPE.zh-CN.md)。首批源码已通过 Linux 独立构建与协议测试；Windows 独立构建和示例游戏实测尚未完成，不代表五端基础 Bridge 源码均已开放。
 
 ## 已知边界与反馈
 

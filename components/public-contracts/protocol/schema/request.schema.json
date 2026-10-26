@@ -1,0 +1,1472 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.miaxion.dev/bridge/v1/request.schema.json",
+  "allOf": [
+    { "$ref": "request-envelope.schema.json" }
+  ],
+  "oneOf": [
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "inventory.view"
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": {
+            "$ref": "common.schema.json#/$defs/token"
+          },
+          "payload": {
+            "$ref": "player-observation.schema.json#/$defs/request"
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "player.status"
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": {
+            "$ref": "common.schema.json#/$defs/token"
+          },
+          "payload": {
+            "$ref": "player-observation.schema.json#/$defs/emptyRequest"
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "world.context"
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": {
+            "$ref": "common.schema.json#/$defs/token"
+          },
+          "payload": {
+            "$ref": "player-observation.schema.json#/$defs/emptyRequest"
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "screen.snapshot"
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": {
+            "$ref": "common.schema.json#/$defs/token"
+          },
+          "payload": {
+            "$ref": "player-observation.schema.json#/$defs/request"
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "target.snapshot"
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": {
+            "$ref": "common.schema.json#/$defs/token"
+          },
+          "payload": {
+            "$ref": "player-observation.schema.json#/$defs/emptyRequest"
+          }
+        }
+      },
+      "else": false
+    },
+{
+  "properties": {
+    "action": {
+      "const": "actions.configuration"
+    },
+    "sessionToken": {
+      "$ref": "common.schema.json#/$defs/token"
+    },
+    "payload": {
+      "$ref": "#/$defs/actionConfigurationRequest"
+    }
+  }
+},
+
+    {
+      "properties": {
+        "action": {
+          "const": "actions.context"
+        },
+        "sessionToken": {
+          "$ref": "common.schema.json#/$defs/token"
+        },
+        "payload": {
+          "$ref": "#/$defs/castingActionContextRequest"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "keybindings.catalog"
+        },
+        "sessionToken": {
+          "$ref": "common.schema.json#/$defs/token"
+        },
+        "payload": {
+          "$ref": "#/$defs/castingCatalogRequest"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "keybindings.preview"
+        },
+        "sessionToken": {
+          "$ref": "common.schema.json#/$defs/token"
+        },
+        "payload": {
+          "$ref": "#/$defs/castingPreviewRequest"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "keybindings.apply"
+        },
+        "sessionToken": {
+          "$ref": "common.schema.json#/$defs/token"
+        },
+        "payload": {
+          "$ref": "#/$defs/castingApplyRequest"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "keybindings.rollback"
+        },
+        "sessionToken": {
+          "$ref": "common.schema.json#/$defs/token"
+        },
+        "payload": {
+          "$ref": "#/$defs/castingRollbackRequest"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "actions.catalog"
+        },
+        "sessionToken": {
+          "$ref": "common.schema.json#/$defs/token"
+        },
+        "payload": {
+          "$ref": "#/$defs/castingCatalogRequest"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "actions.grant"
+        },
+        "sessionToken": {
+          "$ref": "common.schema.json#/$defs/token"
+        },
+        "payload": {
+          "$ref": "#/$defs/castingGrantRequest"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "actions.revoke"
+        },
+        "sessionToken": {
+          "$ref": "common.schema.json#/$defs/token"
+        },
+        "payload": {
+          "$ref": "#/$defs/castingRevokeRequest"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "actions.execute"
+        },
+        "sessionToken": {
+          "$ref": "common.schema.json#/$defs/token"
+        },
+        "payload": {
+          "$ref": "#/$defs/castingExecuteRequest"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": {
+          "const": "actions.status"
+        },
+        "sessionToken": {
+          "$ref": "common.schema.json#/$defs/token"
+        },
+        "payload": {
+          "$ref": "#/$defs/castingStatusRequest"
+        }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "extensions.list" },
+        "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+        "payload": { "$ref": "extensions.schema.json#/$defs/listRequest" }
+      }
+    },
+    {
+      "properties": {
+        "action": { "const": "extensions.call" },
+        "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+        "payload": { "$ref": "extensions.schema.json#/$defs/callRequest" }
+      }
+    },
+    {
+      "if": { "properties": { "action": { "enum": ["terminology.configure", "terminology.v2.configure"] } }, "required": ["action"] },
+      "then": { "properties": { "sessionToken": { "$ref": "common.schema.json#/$defs/token" }, "payload": {
+        "type": "object", "additionalProperties": false, "required": ["settings"], "properties": { "settings": { "$ref": "#/$defs/terminologySettings" } } } } },
+      "else": false
+    },
+    {
+      "if": { "properties": { "action": { "enum": ["terminology.snapshot", "terminology.clear"] } }, "required": ["action"] },
+      "then": { "properties": { "sessionToken": { "$ref": "common.schema.json#/$defs/token" }, "payload": { "type": "object", "additionalProperties": false, "maxProperties": 0 } } },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "session.pair.request" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "type": "null" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["clientName", "clientVersion"],
+            "properties": {
+              "clientName": { "type": "string", "minLength": 1, "maxLength": 64 },
+              "clientVersion": { "type": "string", "minLength": 1, "maxLength": 32 }
+            }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "session.revoke" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["reason"],
+            "properties": {
+              "reason": { "enum": ["user_requested", "app_shutdown"] }
+            }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "request.cancel" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": {
+            "oneOf": [
+              { "$ref": "common.schema.json#/$defs/token" },
+              { "type": "null" }
+            ]
+          },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["targetRequestId"],
+            "properties": {
+              "targetRequestId": { "$ref": "common.schema.json#/$defs/uuid" }
+            }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "capabilities.list" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "maxProperties": 0
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": { "properties": { "action": { "const": "recipe.providers.list" } }, "required": ["action"] },
+      "then": { "properties": {
+        "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+        "payload": { "type": "object", "additionalProperties": false, "maxProperties": 0 }
+      } },
+      "else": false
+    },
+    {
+      "if": { "properties": { "action": { "enum": ["recipe.query.source", "recipe.uses.source"] } }, "required": ["action"] },
+      "then": { "properties": {
+        "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+        "payload": {
+          "type": "object", "additionalProperties": false,
+          "required": ["addonId", "sourceGeneration", "itemId"],
+          "properties": {
+            "addonId": { "type": "string", "minLength": 2, "maxLength": 64, "pattern": "^[a-z][a-z0-9_]{1,63}$" },
+            "sourceGeneration": { "type": "integer", "minimum": 0 },
+            "itemId": { "$ref": "common.schema.json#/$defs/resourceLocation" },
+              "resourceKind": { "enum": ["item", "fluid", "chemical", "energy", "custom"] },
+              "ingredientTypeUid": { "type": "string", "minLength": 1, "maxLength": 512 },
+            "components": { "type": "object", "propertyNames": { "$ref": "common.schema.json#/$defs/resourceLocation" }, "additionalProperties": true },
+            "matchMode": { "enum": ["item", "subset-components", "exact-components"] },
+            "selection": {
+              "type": "object", "additionalProperties": false,
+              "required": ["mode", "maxResults"],
+              "properties": {
+                "mode": { "enum": ["recommended-direct", "recommended-process-families", "planning-direct"] },
+                "maxResults": { "type": "integer", "minimum": 1, "maximum": 5 },
+                "preferredRecipeId": { "$ref": "common.schema.json#/$defs/resourceLocation" }
+              }
+            },
+            "sourcePageSize": { "type": "integer", "minimum": 1, "maximum": 4096 },
+            "sourceCursor": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-z0-9]+$" }
+          }
+        }
+      } },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": {
+          "action": { "enum": ["recipe.query", "recipe.uses"] }
+        },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["itemId"],
+            "properties": {
+              "itemId": { "$ref": "common.schema.json#/$defs/resourceLocation" },
+              "resourceKind": { "enum": ["item", "fluid", "chemical", "energy", "custom"] },
+              "ingredientTypeUid": { "type": "string", "minLength": 1, "maxLength": 512 },
+              "components": {
+                "type": "object",
+                "propertyNames": { "$ref": "common.schema.json#/$defs/resourceLocation" },
+                "additionalProperties": true
+              },
+              "matchMode": {
+                "enum": ["item", "subset-components", "exact-components"]
+              },
+              "selection": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["mode", "maxResults"],
+                "properties": {
+                  "mode": {
+                    "enum": ["recommended-direct", "recommended-process-families", "planning-direct"]
+                  },
+                  "maxResults": { "type": "integer", "minimum": 1, "maximum": 5 },
+                  "preferredRecipeId": {
+                    "$ref": "common.schema.json#/$defs/resourceLocation"
+                  }
+                }
+              },
+              "sourcePageSize": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 4096
+              },
+              "sourceCursor": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128,
+                "pattern": "^[a-z0-9]+$"
+              }
+            }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "quests.query" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["scope"],
+            "properties": {
+              "scope": { "enum": ["overview", "active", "available", "completed", "search"] },
+              "continuation": { "$ref": "quest.schema.json#/$defs/continuation" },
+              "filter": { "type": "string", "minLength": 1, "maxLength": 256 }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": { "scope": { "const": "search" } },
+                  "required": ["scope"]
+                },
+                "then": { "required": ["filter"] },
+                "else": { "not": { "required": ["filter"] } }
+              }
+            ]
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "quests.detail" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["questId"],
+            "properties": {
+              "questId": { "$ref": "quest.schema.json#/$defs/questId" }
+            }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "inventory.snapshot" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "includeEmpty": { "type": "boolean", "default": false }
+            }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "player.snapshot" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "maxProperties": 0
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "entities.resolve" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["query", "namespaces"],
+            "properties": {
+              "query": { "type": "string", "minLength": 1, "maxLength": 512 },
+              "scope": { "enum": ["registry", "browser"] },
+              "kind": { "enum": ["item", "block", "fluid", "any", "custom"] },
+              "continuation": { "type": "string", "minLength": 1, "maxLength": 256, "pattern": "^[A-Za-z0-9_-]+$" },
+              "namespaces": {
+                "type": "array",
+                "maxItems": 128,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 64,
+                  "pattern": "^[a-z0-9_.-]+$"
+                }
+              }
+            }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "entities.describe" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["entities"],
+            "properties": {
+              "entities": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 128,
+                "uniqueItems": true,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["kind", "resourceId"],
+                  "properties": {
+                    "kind": { "enum": ["item", "block"] },
+                    "resourceId": { "$ref": "common.schema.json#/$defs/resourceLocation" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "mods.versions.resolve" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["modIds"],
+            "properties": {
+              "modIds": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 32,
+                "uniqueItems": true,
+                "items": { "type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-z0-9_.-]+$" }
+              }
+            }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "hud.show" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["text", "severity", "durationMs"],
+            "properties": {
+              "text": { "type": "string", "minLength": 1, "maxLength": 280 },
+              "severity": { "enum": ["info", "warning", "error"] },
+              "durationMs": { "type": "integer", "minimum": 1000, "maximum": 15000 }
+            }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "health.ping" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["nonce"],
+            "properties": {
+              "nonce": { "type": "string", "minLength": 1, "maxLength": 64 }
+            }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": {
+          "action": { "enum": ["world.structure.locate", "world.biome.locate"] }
+        },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": { "$ref": "world-query.schema.json#/$defs/locateRequest" }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": {
+          "action": { "enum": ["world.machines.scan", "world.containers.scan"] }
+        },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": { "$ref": "world-query.schema.json#/$defs/nearbyRequest" }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "world.structure.targets" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": { "$ref": "world-query.schema.json#/$defs/structureTargetsRequest" }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "world.registry.search" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": { "$ref": "world-query.schema.json#/$defs/registrySearchRequest" }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "world.registry.resolve" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": { "$ref": "world-query.schema.json#/$defs/registryResolveRequest" }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "world.registry.describe" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": { "$ref": "world-query.schema.json#/$defs/registryDescribeRequest" }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": { "action": { "const": "world.query.progress" } },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["lane"],
+            "properties": { "lane": { "enum": ["locator", "nearby"] } }
+          }
+        }
+      },
+      "else": false
+    },
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "not": {
+              "enum": [
+                "session.pair.request",
+                "keybindings.catalog",
+                "keybindings.preview",
+                "keybindings.apply",
+                "keybindings.rollback",
+                "actions.context",
+                "actions.catalog",
+                "actions.configuration",
+                "actions.grant",
+                "actions.revoke",
+                "actions.execute",
+                "actions.status",
+                "session.pair.approved",
+                "session.revoke",
+                "request.cancel",
+                "capabilities.list",
+                "extensions.list",
+                "extensions.call",
+                "recipe.query",
+                "recipe.uses",
+                "recipe.query.source",
+                "recipe.uses.source",
+                "recipe.providers.list",
+                "quests.query",
+                "quests.detail",
+                "inventory.snapshot",
+              "inventory.view",
+              "player.status",
+              "world.context",
+              "screen.snapshot",
+              "target.snapshot",
+                "terminology.configure",
+                "terminology.v2.configure",
+                "terminology.snapshot",
+                "terminology.clear",
+                "player.snapshot",
+                "entities.resolve",
+                "entities.describe",
+                "mods.versions.resolve",
+                "world.structure.locate",
+                "world.biome.locate",
+                "world.machines.scan",
+                "world.containers.scan",
+                "world.structure.targets",
+                "world.registry.resolve", "world.registry.search",
+                "world.registry.describe",
+                "world.query.progress",
+                "hud.show",
+                "health.ping"
+              ]
+            }
+          }
+        },
+        "required": ["action"]
+      },
+      "then": {
+        "properties": {
+          "sessionToken": { "$ref": "common.schema.json#/$defs/token" },
+          "payload": { "type": "object" }
+        }
+      },
+      "else": false
+    }
+  ],
+  "$defs": {
+  "actionConfigurationRequest": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "schemaVersion"
+    ],
+    "properties": {
+      "schemaVersion": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 16
+      }
+    }
+  },
+  "actionConfigurationField": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "type",
+      "label",
+      "required",
+      "readOnly",
+      "storageScope"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[a-zA-Z0-9_.-]+$"
+      },
+      "type": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[a-zA-Z0-9_.-]+$"
+      },
+      "label": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 128
+      },
+      "required": {
+        "type": "boolean"
+      },
+      "readOnly": {
+        "type": "boolean"
+      },
+      "storageScope": {
+        "enum": [
+          "runtime",
+          "instanceProfileMode"
+        ]
+      }
+    }
+  },
+  "actionConfigurationGroup": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "label",
+      "fields"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[a-zA-Z0-9_.-]+$"
+      },
+      "label": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 128
+      },
+      "fields": {
+        "type": "array",
+        "maxItems": 8,
+        "items": {
+          "$ref": "#/$defs/actionConfigurationField"
+        },
+        "minItems": 1
+      }
+    }
+  },
+  "actionConfigurationPage": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "schemaVersion",
+      "pageId",
+      "displayName",
+      "actionKind",
+      "supportedModes",
+      "requiredCapabilities",
+      "groups"
+    ],
+    "properties": {
+      "schemaVersion": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 16
+      },
+      "pageId": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[a-zA-Z0-9_.-]+$"
+      },
+      "displayName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 128
+      },
+      "actionKind": {
+        "enum": [
+          "keyAction",
+          "arsPage",
+          "ironSpell"
+        ]
+      },
+      "supportedModes": {
+        "type": "array",
+        "maxItems": 2,
+        "items": {
+          "enum": [
+            "casting",
+            "conversation"
+          ]
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "requiredCapabilities": {
+        "type": "array",
+        "maxItems": 8,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[a-zA-Z0-9_.-]+$"
+        },
+        "uniqueItems": true
+      },
+      "groups": {
+        "type": "array",
+        "maxItems": 4,
+        "items": {
+          "$ref": "#/$defs/actionConfigurationGroup"
+        },
+        "minItems": 1
+      }
+    }
+  },
+  "actionConfigurationEntry": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "addonId",
+      "addonVersion",
+      "targetModId",
+      "page",
+      "unavailableReason"
+    ],
+    "properties": {
+      "addonId": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[a-zA-Z0-9_.-]+$"
+      },
+      "addonVersion": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64
+      },
+      "targetModId": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[a-zA-Z0-9_.-]+$"
+      },
+      "page": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/actionConfigurationPage"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "unavailableReason": {
+        "oneOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    }
+  },
+  "actionConfigurationResponse": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "schemaVersion",
+      "instanceDirectory",
+      "entries"
+    ],
+    "properties": {
+      "schemaVersion": {
+        "const": 1
+      },
+      "instanceDirectory": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4096
+      },
+      "entries": {
+        "type": "array",
+        "maxItems": 64,
+        "items": {
+          "$ref": "#/$defs/actionConfigurationEntry"
+        }
+      }
+    }
+  },
+    "castingActionContextRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "profileId",
+        "profileRevision",
+        "mappingRevision"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "conversation",
+            "knowledge",
+            "game",
+            "casting"
+          ]
+        },
+        "profileId": {
+          "oneOf": [
+            {
+              "$ref": "common.schema.json#/$defs/uuid"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "profileRevision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "mappingRevision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "profileId": {
+                "type": "null"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "profileRevision": {
+                "const": 0
+              },
+              "mappingRevision": {
+                "const": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "castingActionContextResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "grantRevision"
+      ],
+      "properties": {
+        "grantRevision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      }
+    },
+    "castingId": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["providerId", "rawActionId", "compatibilityFamily"],
+      "properties": {
+        "providerId": {"type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[a-z][a-z0-9_.-]*$"},
+        "rawActionId": {"type": "string", "minLength": 1, "maxLength": 256},
+        "compatibilityFamily": {"type": "string", "minLength": 1, "maxLength": 128}
+      }
+    },
+    "castingValue": {
+      "oneOf": [
+        {"type": "object", "additionalProperties": false, "required": ["kind"], "properties": {"kind": {"const": "unbound"}}},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "inputType", "code", "modifier"],
+          "properties": {
+            "kind": {"const": "bound"},
+            "inputType": {"enum": ["keysym", "scancode", "mouse"]},
+            "code": {"type": "integer", "minimum": 0, "maximum": 65535},
+            "modifier": {"enum": ["none", "shift", "control", "alt"]}
+          }
+        }
+      ]
+    },
+    "castingContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nativeConflictContext", "compatibilityEvidence"],
+      "properties": {"nativeConflictContext": {"type": "string", "minLength": 1, "maxLength": 128}, "compatibilityEvidence": {"type": "string", "minLength": 1, "maxLength": 256}}
+    },
+    "castingCatalogRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {
+        "catalogRevision": {"type": "string", "minLength": 1, "maxLength": 64},
+        "continuation": {"type": "string", "minLength": 1, "maxLength": 256, "pattern": "^[A-Za-z0-9_-]+$"}
+      },
+      "dependentRequired": {"continuation": ["catalogRevision"]}
+    },
+    "castingBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "value", "context"],
+      "properties": {"id": {"$ref": "#/$defs/castingId"}, "value": {"$ref": "#/$defs/castingValue"}, "context": {"$ref": "#/$defs/castingContext"}}
+    },
+    "castingKeyCatalogEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rawActionId", "id", "displayName", "currentValue", "context", "available", "unavailableReason"],
+      "properties": {
+        "rawActionId": {"type": "string", "minLength": 1, "maxLength": 256},
+        "id": {"oneOf": [{"$ref": "#/$defs/castingId"},{"type": "null"}]},
+        "displayName": {"type": "string", "minLength": 1, "maxLength": 256},
+        "currentValue": {"oneOf": [{"$ref": "#/$defs/castingValue"},{"type": "null"}]},
+        "context": {"oneOf": [{"$ref": "#/$defs/castingContext"},{"type": "null"}]},
+        "available": {"type": "boolean"},
+        "unavailableReason": {"oneOf": [{"type": "string", "minLength": 1, "maxLength": 256},{"type": "null"}]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"available": {"const": true}}},
+          "then": {
+            "properties": {
+              "id": {"$ref": "#/$defs/castingId"},
+              "currentValue": {"$ref": "#/$defs/castingValue"},
+              "context": {"$ref": "#/$defs/castingContext"},
+              "unavailableReason": {"type": "null"}
+            }
+          },
+          "else": {"properties": {"unavailableReason": {"type": "string", "minLength": 1, "maxLength": 256}}}
+        }
+      ]
+    },
+    "castingKeyCatalogResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["instanceDirectory", "catalogRevision", "entries", "nextContinuation"],
+      "properties": {
+        "instanceDirectory": {"type": "string", "minLength": 1, "maxLength": 4096},
+        "catalogRevision": {"type": "string", "minLength": 1, "maxLength": 64},
+        "entries": {"type": "array", "minItems": 0, "maxItems": 128, "items": {"$ref": "#/$defs/castingKeyCatalogEntry"}},
+        "nextContinuation": {"oneOf": [{"type": "string", "minLength": 1, "maxLength": 256, "pattern": "^[A-Za-z0-9_-]+$"},{"type": "null"}]}
+      }
+    },
+    "castingPreviewRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["instanceDirectory", "catalogRevision", "profileId", "profileRevision", "bindings"],
+      "properties": {
+        "instanceDirectory": {"type": "string", "minLength": 1, "maxLength": 4096},
+        "catalogRevision": {"type": "string", "minLength": 1, "maxLength": 64},
+        "profileId": {"$ref": "common.schema.json#/$defs/uuid"},
+        "profileRevision": {"type": "integer", "minimum": 0, "maximum": 9007199254740991},
+        "bindings": {"type": "array", "minItems": 1, "maxItems": 128, "items": {"$ref": "#/$defs/castingBinding"}}
+      }
+    },
+    "castingPreviewEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "currentValue", "targetValue", "status", "reason"],
+      "properties": {
+        "id": {"$ref": "#/$defs/castingId"},
+        "currentValue": {"oneOf": [{"$ref": "#/$defs/castingValue"},{"type": "null"}]},
+        "targetValue": {"$ref": "#/$defs/castingValue"},
+        "status": {"enum": ["change", "unchanged", "missing", "unsupported", "ambiguous", "conflict"]},
+        "reason": {"oneOf": [{"type": "string", "minLength": 1, "maxLength": 256},{"type": "null"}]}
+      }
+    },
+    "castingPreviewResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["previewToken", "instanceDirectory", "catalogRevision", "entries"],
+      "properties": {
+        "previewToken": {"$ref": "common.schema.json#/$defs/uuid"},
+        "instanceDirectory": {"type": "string", "minLength": 1, "maxLength": 4096},
+        "catalogRevision": {"type": "string", "minLength": 1, "maxLength": 64},
+        "entries": {"type": "array", "minItems": 0, "maxItems": 128, "items": {"$ref": "#/$defs/castingPreviewEntry"}}
+      }
+    },
+    "castingApplyRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["instanceDirectory", "catalogRevision", "previewToken"],
+      "properties": {
+        "instanceDirectory": {"type": "string", "minLength": 1, "maxLength": 4096},
+        "catalogRevision": {"type": "string", "minLength": 1, "maxLength": 64},
+        "previewToken": {"$ref": "common.schema.json#/$defs/uuid"}
+      }
+    },
+    "castingRollbackRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["instanceDirectory", "receiptId"],
+      "properties": {"instanceDirectory": {"type": "string", "minLength": 1, "maxLength": 4096}, "receiptId": {"$ref": "common.schema.json#/$defs/uuid"}}
+    },
+    "castingChange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "oldValue", "newValue"],
+      "properties": {"id": {"$ref": "#/$defs/castingId"}, "oldValue": {"$ref": "#/$defs/castingValue"}, "newValue": {"$ref": "#/$defs/castingValue"}}
+    },
+    "castingSkip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "reason"],
+      "properties": {"id": {"$ref": "#/$defs/castingId"}, "reason": {"type": "string", "minLength": 1, "maxLength": 256}}
+    },
+    "castingReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["receiptId", "instanceDirectory", "finalCatalogRevision", "changed", "skipped", "status", "completedAt"],
+      "properties": {
+        "receiptId": {"$ref": "common.schema.json#/$defs/uuid"},
+        "instanceDirectory": {"type": "string", "minLength": 1, "maxLength": 4096},
+        "finalCatalogRevision": {"type": "string", "minLength": 1, "maxLength": 64},
+        "changed": {"type": "array", "minItems": 0, "maxItems": 128, "items": {"$ref": "#/$defs/castingChange"}},
+        "skipped": {"type": "array", "minItems": 0, "maxItems": 128, "items": {"$ref": "#/$defs/castingSkip"}},
+        "status": {"enum": ["applied", "noChange", "incomplete", "needsReview", "incompatible"]},
+        "completedAt": {"$ref": "common.schema.json#/$defs/timestamp"}
+      }
+    },
+    "castingApplyResponse": {"type": "object", "additionalProperties": false, "required": ["receipt"], "properties": {"receipt": {"$ref": "#/$defs/castingReceipt"}}},
+    "castingRollbackResponse": {"type": "object", "additionalProperties": false, "required": ["receipt"], "properties": {"receipt": {"$ref": "#/$defs/castingReceipt"}}},
+    "castingTarget": {
+      "oneOf": [
+        {"type": "object", "additionalProperties": false, "required": ["kind", "id"], "properties": {"kind": {"const": "keyAction"}, "id": {"$ref": "#/$defs/castingId"}}},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "pageOneBased"],
+          "properties": {"kind": {"const": "arsPage"}, "pageOneBased": {"type": "integer", "minimum": 1, "maximum": 2147483647}}
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "namespacedSpellId"],
+          "properties": {"kind": {"const": "ironSpell"}, "namespacedSpellId": {"$ref": "common.schema.json#/$defs/resourceLocation"}}
+        }
+      ]
+    },
+    "castingScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["instanceDirectory", "bridgeSessionGeneration", "worldEpoch", "localPlayerUuid", "mode", "profileId", "profileRevision", "mappingRevision", "grantRevision"],
+      "properties": {
+        "instanceDirectory": {"type": "string", "minLength": 1, "maxLength": 4096},
+        "bridgeSessionGeneration": {"type": "integer", "minimum": 0, "maximum": 9007199254740991},
+        "worldEpoch": {"type": "integer", "minimum": 0, "maximum": 9007199254740991},
+        "localPlayerUuid": {"$ref": "common.schema.json#/$defs/uuid"},
+        "mode": {"enum": ["casting", "conversation"]},
+        "profileId": {"$ref": "common.schema.json#/$defs/uuid"},
+        "profileRevision": {"type": "integer", "minimum": 0, "maximum": 9007199254740991},
+        "mappingRevision": {"type": "integer", "minimum": 0, "maximum": 9007199254740991},
+        "grantRevision": {"type": "integer", "minimum": 0, "maximum": 9007199254740991}
+      }
+    },
+    "castingActionCatalogEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target", "displayName", "available", "unavailableReason"],
+      "properties": {
+        "target": {"$ref": "#/$defs/castingTarget"},
+        "displayName": {"type": "string", "minLength": 1, "maxLength": 256},
+        "available": {"type": "boolean"},
+        "unavailableReason": {"oneOf": [{"type": "string", "minLength": 1, "maxLength": 256},{"type": "null"}]},
+        "categoryId": {"oneOf": [{"type": "string", "minLength": 1, "maxLength": 256},{"type": "null"}]},
+        "categoryDisplayName": {"oneOf": [{"type": "string", "minLength": 1, "maxLength": 256},{"type": "null"}]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"available": {"const": true}}},
+          "then": {"properties": {"unavailableReason": {"type": "null"}}},
+          "else": {"properties": {"unavailableReason": {"type": "string", "minLength": 1, "maxLength": 256}}}
+        }
+      ]
+    },
+    "castingActionCatalogResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scope", "catalogRevision", "entries", "nextContinuation"],
+      "properties": {
+        "scope": {"$ref": "#/$defs/castingScope"},
+        "catalogRevision": {"type": "string", "minLength": 1, "maxLength": 64},
+        "entries": {"type": "array", "minItems": 0, "maxItems": 128, "items": {"$ref": "#/$defs/castingActionCatalogEntry"}},
+        "nextContinuation": {"oneOf": [{"type": "string", "minLength": 1, "maxLength": 256, "pattern": "^[A-Za-z0-9_-]+$"},{"type": "null"}]}
+      }
+    },
+    "castingGrantRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scope", "targets"],
+      "properties": {
+        "scope": {"$ref": "#/$defs/castingScope"},
+        "targets": {"type": "array", "minItems": 1, "maxItems": 128, "items": {"$ref": "#/$defs/castingTarget"}, "uniqueItems": true}
+      }
+    },
+    "castingGrantResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["grantId", "scope", "expiresAt"],
+      "properties": {"grantId": {"$ref": "common.schema.json#/$defs/uuid"}, "scope": {"$ref": "#/$defs/castingScope"}, "expiresAt": {"$ref": "common.schema.json#/$defs/timestamp"}}
+    },
+    "castingRevokeRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["grantId", "scope"],
+      "properties": {"grantId": {"$ref": "common.schema.json#/$defs/uuid"}, "scope": {"$ref": "#/$defs/castingScope"}}
+    },
+    "castingRevokeResponse": {"type": "object", "additionalProperties": false, "required": ["revoked"], "properties": {"revoked": {"type": "boolean"}}},
+    "castingExecuteRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["grantId", "scope", "captureId", "executionId", "target", "releasedAt"],
+      "properties": {
+        "grantId": {"$ref": "common.schema.json#/$defs/uuid"},
+        "scope": {"$ref": "#/$defs/castingScope"},
+        "captureId": {"$ref": "common.schema.json#/$defs/uuid"},
+        "executionId": {"$ref": "common.schema.json#/$defs/uuid"},
+        "target": {"$ref": "#/$defs/castingTarget"},
+        "releasedAt": {"$ref": "common.schema.json#/$defs/timestamp"}
+      }
+    },
+    "castingOutcome": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["state", "reason"],
+          "properties": {"state": {"const": "rejected"}, "reason": {"type": "string", "minLength": 1, "maxLength": 256}}
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["state", "reason"],
+          "properties": {"state": {"enum": ["accepted", "dispatched", "started", "unknown"]}, "reason": {"type": "null"}}
+        }
+      ]
+    },
+    "castingExecutionResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["executionId", "outcome"],
+      "properties": {"executionId": {"$ref": "common.schema.json#/$defs/uuid"}, "outcome": {"$ref": "#/$defs/castingOutcome"}}
+    },
+    "castingStatusRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["grantId", "executionId"],
+      "properties": {"grantId": {"$ref": "common.schema.json#/$defs/uuid"}, "executionId": {"$ref": "common.schema.json#/$defs/uuid"}}
+    },
+    "terminologySettings": { "type": "object", "additionalProperties": false, "required": ["enabled", "sources", "capacity", "browserWindowSeconds", "retentionSeconds"], "properties": {
+      "enabled": { "type": "boolean" }, "sources": { "type": "array", "maxItems": 4, "uniqueItems": true, "items": { "enum": ["native_crosshair", "player_inventory", "item_browser", "hotbar"] } },
+      "capacity": { "type": "integer", "minimum": 1, "maximum": 4096 }, "browserWindowSeconds": { "type": "integer", "minimum": 1, "maximum": 3600 }, "retentionSeconds": { "type": "integer", "minimum": 0, "maximum": 86400 } } }
+  }
+}

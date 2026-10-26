@@ -1,0 +1,51 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "recipe.query",
+  "sessionToken": null,
+  "payload": {
+    "recipes": [
+      {
+        "recipeId": "miaxion:derived/0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+        "type": "minecraft:crafting_shaped",
+        "sourceModId": "unknown",
+        "identity": {
+          "kind": "derived",
+          "algorithm": "sha256-canonical-v1",
+          "contentSha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+        },
+        "inputs": [
+          {
+            "alternatives": [
+              {
+                "itemId": "minecraft:oak_planks",
+                "count": 2,
+                "components": {
+                  "minecraft:custom_data": {
+                    "source": "fixture",
+                    "value": 1
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "catalysts": [],
+        "outputs": [
+          {
+            "alternatives": [
+              {
+                "itemId": "minecraft:stick",
+                "count": 4
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "truncated": false
+  },
+  "error": null
+}

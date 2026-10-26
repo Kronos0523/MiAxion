@@ -7,6 +7,7 @@
 *.zip
 *.7z
 *.jar
+!/components/public-contracts/src/mod/gradle/wrapper/gradle-wrapper.jar
 *.exe
 *.dll
 *.pdb

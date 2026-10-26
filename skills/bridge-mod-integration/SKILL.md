@@ -9,7 +9,7 @@ description: 为 MiAxion 开发独立 Minecraft 附属或适配新的 Minecraft�
 
 ## 先确认可用材料
 
-阅读 [公开材料状态](../../docs/BRIDGE-DEVELOPMENT.zh-CN.md) 和实际工作仓库规则。仅以当前 checkout 中存在的代码、协议、构建文件和已发布 SDK 为依据。**当前公开工作区尚未包含 SDK、Bridge 源码或可发行示例**；此时可完成需求与缺口清单，不能生成猜测接口的“可运行模板”或声称构建完成。未来材料发布后，以状态表链接的具体版本为准。
+阅读 [公开材料状态](../../docs/BRIDGE-DEVELOPMENT.zh-CN.md) 和实际工作仓库规则。当前 [独立组件源码](../../components/public-contracts/README.zh-CN.md) 包含 SDK、协议与 NeoForge 1.21.1 只读示例；按其 [构建说明](../../components/public-contracts/docs/BUILD.zh-CN.md) 获取本地制品，不能假设已经上传 Maven／NuGet。**基础 Bridge 实现尚未包含**，新平台移植仍需已授权的宿主源码。仅以 checkout 中真实类型、入口和验证结果为依据，不猜测方法签名，不把构建通过当作游戏实测。
 
 公开目录应支持独立使用；不要求访问私有开发仓库、内部交接、Graphify 或作者的电脑。用户另有已授权源码或 SDK 时，先核对其版本和来源，再判断是否足够实施。
 

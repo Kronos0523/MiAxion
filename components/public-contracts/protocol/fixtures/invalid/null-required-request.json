@@ -1,0 +1,10 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": null,
+  "timestamp": "2026-07-26T05:30:00Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "capabilities.list",
+  "sessionToken": "QmFzZTY0dXJsLXNlc3Npb24tdG9rZW4tdjEtMzItYnl0ZXM",
+  "payload": {},
+  "error": null
+}

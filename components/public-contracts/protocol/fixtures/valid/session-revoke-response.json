@@ -1,0 +1,12 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "9c84c889-4766-412d-8c5a-235dd7d52cb4",
+  "timestamp": "2026-07-26T05:30:01Z",
+  "deadline": "2026-07-26T05:30:03Z",
+  "action": "session.revoke",
+  "sessionToken": null,
+  "payload": {
+    "revoked": true
+  },
+  "error": null
+}

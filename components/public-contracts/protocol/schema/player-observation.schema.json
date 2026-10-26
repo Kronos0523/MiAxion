@@ -1,0 +1,1053 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.miaxion.dev/bridge/v1/player-observation.schema.json",
+  "$defs": {
+    "Enchant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "displayName",
+        "level"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "displayName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "level": {
+          "type": "integer"
+        },
+        "stored": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "Item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "itemId",
+        "displayName",
+        "count",
+        "damage",
+        "maxDamage",
+        "durabilityStatus",
+        "enchantments",
+        "detailsStatus"
+      ],
+      "properties": {
+        "itemId": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "displayName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "damage": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "maxDamage": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "durabilityStatus": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "enchantments": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/Enchant"
+          }
+        },
+        "detailsStatus": {
+          "type": "string",
+          "maxLength": 1024
+        }
+      }
+    },
+    "Slot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slotId",
+        "source",
+        "area",
+        "index",
+        "legacySlot",
+        "status",
+        "item",
+        "failureCode",
+        "containerSlot"
+      ],
+      "properties": {
+        "slotId": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "source": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "area": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "legacySlot": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "item",
+            "empty",
+            "unavailable",
+            "read_failed",
+            "none",
+            "gui_masked",
+            "present",
+            "truncated"
+          ]
+        },
+        "item": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Item"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "failureCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "containerSlot": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "Equipment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "location",
+        "slotId",
+        "status"
+      ],
+      "properties": {
+        "location": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "slotId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "item",
+            "empty",
+            "unavailable",
+            "read_failed",
+            "none",
+            "gui_masked",
+            "present",
+            "truncated"
+          ]
+        }
+      }
+    },
+    "Details": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slotId",
+        "status",
+        "tooltipLines"
+      ],
+      "properties": {
+        "slotId": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "item",
+            "empty",
+            "unavailable",
+            "read_failed",
+            "none",
+            "gui_masked",
+            "present",
+            "truncated"
+          ]
+        },
+        "tooltipLines": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "type": "string",
+            "maxLength": 16384
+          }
+        }
+      }
+    },
+    "BlockPosition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "properties": {
+        "x": {
+          "type": "integer"
+        },
+        "y": {
+          "type": "integer"
+        },
+        "z": {
+          "type": "integer"
+        }
+      }
+    },
+    "Position": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    },
+    "Effect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "displayName",
+        "level",
+        "durationTicks",
+        "infinite"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "displayName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "level": {
+          "type": "integer"
+        },
+        "durationTicks": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "infinite": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Property": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "value"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "value": {
+          "type": "string",
+          "maxLength": 1024
+        }
+      }
+    },
+    "ScreenText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "elementId",
+        "kind",
+        "text",
+        "x",
+        "y",
+        "visible",
+        "active",
+        "tooltipLines"
+      ],
+      "properties": {
+        "source": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "elementId": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "kind": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 16384
+        },
+        "x": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "y": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "visible": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "active": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tooltipLines": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "type": "string",
+            "maxLength": 16384
+          }
+        }
+      }
+    },
+    "InventoryView": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capturedAt",
+        "status",
+        "sources",
+        "selectedSlot",
+        "slots",
+        "equipment",
+        "details"
+      ],
+      "properties": {
+        "capturedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "item",
+            "empty",
+            "unavailable",
+            "read_failed",
+            "none",
+            "gui_masked",
+            "present",
+            "truncated"
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "type": "string",
+            "maxLength": 1024
+          }
+        },
+        "selectedSlot": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "slots": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/Slot"
+          }
+        },
+        "equipment": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/Equipment"
+          }
+        },
+        "details": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Details"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "PlayerStatus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capturedAt",
+        "status",
+        "player",
+        "effects",
+        "armor",
+        "toughness",
+        "experienceProgress",
+        "saturation",
+        "air",
+        "maxAir",
+        "unknownFields"
+      ],
+      "properties": {
+        "capturedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "item",
+            "empty",
+            "unavailable",
+            "read_failed",
+            "none",
+            "gui_masked",
+            "present",
+            "truncated"
+          ]
+        },
+        "player": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "dimensionId",
+            "position",
+            "health",
+            "food",
+            "experienceLevel",
+            "gameMode"
+          ],
+          "properties": {
+            "dimensionId": {
+              "$ref": "common.schema.json#/$defs/resourceLocation"
+            },
+            "position": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "x",
+                "y",
+                "z"
+              ],
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                },
+                "z": {
+                  "type": "number"
+                }
+              }
+            },
+            "health": {
+              "type": "number"
+            },
+            "maxHealth": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "food": {
+              "type": "number"
+            },
+            "experienceLevel": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "gameMode": {
+              "enum": [
+                "survival",
+                "creative",
+                "adventure",
+                "spectator"
+              ]
+            }
+          }
+        },
+        "effects": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/Effect"
+          }
+        },
+        "armor": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "toughness": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "experienceProgress": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "saturation": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "air": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "maxAir": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unknownFields": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "type": "string",
+            "maxLength": 1024
+          }
+        }
+      }
+    },
+    "WorldContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capturedAt",
+        "status",
+        "dimensionId",
+        "position",
+        "blockPosition",
+        "chunkPosition",
+        "relativePosition",
+        "direction",
+        "yaw",
+        "pitch",
+        "biomeId",
+        "skyLight",
+        "blockLight",
+        "combinedLight",
+        "gameTime",
+        "dayTime",
+        "daylight",
+        "weather",
+        "unknownFields"
+      ],
+      "properties": {
+        "capturedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "item",
+            "empty",
+            "unavailable",
+            "read_failed",
+            "none",
+            "gui_masked",
+            "present",
+            "truncated"
+          ]
+        },
+        "dimensionId": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "position": {
+          "$ref": "#/$defs/Position"
+        },
+        "blockPosition": {
+          "$ref": "#/$defs/BlockPosition"
+        },
+        "chunkPosition": {
+          "$ref": "#/$defs/BlockPosition"
+        },
+        "relativePosition": {
+          "$ref": "#/$defs/BlockPosition"
+        },
+        "direction": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "yaw": {
+          "type": "number"
+        },
+        "pitch": {
+          "type": "number"
+        },
+        "biomeId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "skyLight": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "blockLight": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "combinedLight": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "gameTime": {
+          "type": "integer"
+        },
+        "dayTime": {
+          "type": "integer"
+        },
+        "daylight": {
+          "type": "boolean"
+        },
+        "weather": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "unknownFields": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "type": "string",
+            "maxLength": 1024
+          }
+        }
+      }
+    },
+    "ScreenSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capturedAt",
+        "status",
+        "title",
+        "screenType",
+        "menuId",
+        "slots",
+        "carried",
+        "elements",
+        "details",
+        "coverageNotes"
+      ],
+      "properties": {
+        "capturedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "item",
+            "empty",
+            "unavailable",
+            "read_failed",
+            "none",
+            "gui_masked",
+            "present",
+            "truncated"
+          ]
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "screenType": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "menuId": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "slots": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/Slot"
+          }
+        },
+        "carried": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Item"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "elements": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/ScreenText"
+          }
+        },
+        "details": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Details"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "coverageNotes": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "type": "string",
+            "maxLength": 1024
+          }
+        }
+      }
+    },
+    "TargetSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capturedAt",
+        "status",
+        "kind",
+        "registryId",
+        "displayName",
+        "blockPosition",
+        "entityId",
+        "properties"
+      ],
+      "properties": {
+        "capturedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "item",
+            "empty",
+            "unavailable",
+            "read_failed",
+            "none",
+            "gui_masked",
+            "present",
+            "truncated"
+          ]
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "registryId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "displayName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "blockPosition": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BlockPosition"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "entityId": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "properties": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/Property"
+          }
+        }
+      }
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "detailsSlot": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      }
+    },
+    "emptyRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "maxProperties": 0
+    }
+  }
+}

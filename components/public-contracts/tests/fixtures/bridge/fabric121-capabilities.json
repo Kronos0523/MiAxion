@@ -1,0 +1,147 @@
+{
+  "capabilities" : [ {
+    "name" : "health.ping",
+    "version" : "1.0",
+    "available" : true
+  }, {
+    "name" : "player.snapshot",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "inventory.snapshot",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "mods.versions.resolve",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "recipe.query",
+    "version" : "1.8",
+    "available" : false
+  }, {
+    "name" : "recipe.uses",
+    "version" : "1.8",
+    "available" : false
+  }, {
+    "name" : "runtime.query.budget",
+    "version" : "1.0",
+    "available" : true
+  }, {
+    "name" : "recipe.providers.list",
+    "version" : "1.1",
+    "available" : true
+  }, {
+    "name" : "recipe.query.source",
+    "version" : "1.2",
+    "available" : false
+  }, {
+    "name" : "recipe.uses.source",
+    "version" : "1.2",
+    "available" : false
+  }, {
+    "name" : "terminology.configure",
+    "version" : "1.0",
+    "available" : true
+  }, {
+    "name" : "terminology.v2.configure",
+    "version" : "1.0",
+    "available" : true
+  }, {
+    "name" : "terminology.snapshot",
+    "version" : "1.0",
+    "available" : true
+  }, {
+    "name" : "terminology.clear",
+    "version" : "1.0",
+    "available" : true
+  }, {
+    "name" : "quests.query",
+    "version" : "1.1",
+    "available" : false
+  }, {
+    "name" : "quests.detail",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "entities.resolve",
+    "version" : "1.1",
+    "available" : false
+  }, {
+    "name" : "entities.describe",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "hud.show",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "world.registry.resolve",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "world.registry.describe",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "world.structure.locate",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "world.biome.locate",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "world.machines.scan",
+    "version" : "1.2",
+    "available" : false
+  }, {
+    "name" : "world.containers.scan",
+    "version" : "1.2",
+    "available" : false
+  }, {
+    "name" : "keybindings.catalog",
+    "version" : "1.0",
+    "available" : true
+  }, {
+    "name" : "keybindings.preview",
+    "version" : "1.0",
+    "available" : true
+  }, {
+    "name" : "keybindings.apply",
+    "version" : "1.0",
+    "available" : true
+  }, {
+    "name" : "keybindings.rollback",
+    "version" : "1.0",
+    "available" : true
+  }, {
+    "name" : "extensions.list",
+    "version" : "1.0",
+    "available" : true
+  }, {
+    "name" : "extensions.call",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "inventory.view",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "player.status",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "world.context",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "screen.snapshot",
+    "version" : "1.0",
+    "available" : false
+  }, {
+    "name" : "target.snapshot",
+    "version" : "1.0",
+    "available" : false
+  } ]
+}

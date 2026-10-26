@@ -1,0 +1,52 @@
+{
+  "protocolVersion": "1.0",
+  "requestId": "b8b88ff4-36c0-4bdc-a5c1-8a976dc7d2cf",
+  "timestamp": "2026-08-26T05:30:01Z",
+  "deadline": "2026-08-26T05:30:03Z",
+  "action": "quests.detail",
+  "sessionToken": null,
+  "payload": {
+    "questId": "chapter-1:quest-1",
+    "chapterTitle": "Getting Started",
+    "title": "Make Power",
+    "subtitle": "Create basics",
+    "descriptionVisibility": "visible",
+    "description": [
+      "Build a water wheel.",
+      "Connect it with shafts."
+    ],
+    "state": "active",
+    "progress": 0.5,
+    "repeatable": false,
+    "optional": false,
+    "objectives": [
+      {
+        "taskId": "task-1",
+        "typeId": "ftbquests:item",
+        "title": "Craft a shaft",
+        "currentProgress": 1,
+        "maximumProgress": 1,
+        "formattedProgress": "1 / 1",
+        "completed": true,
+        "optional": false
+      }
+    ],
+    "rewards": [
+      {
+        "rewardId": "reward-1",
+        "typeId": "ftbquests:item",
+        "title": "8 Andesite Alloy",
+        "teamReward": false,
+        "autoClaim": false,
+        "claimState": "claimable"
+      }
+    ],
+    "dependencies": [
+      {
+        "questId": "chapter-1:quest-0",
+        "title": "Welcome"
+      }
+    ]
+  },
+  "error": null
+}

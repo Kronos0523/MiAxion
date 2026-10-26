@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.miaxion.dev/bridge/v2/discovery.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "instanceId", "processId", "processStartEpochMs", "createdAt", "endpoint", "subprotocol", "protocolVersion", "modVersion", "minecraftVersion", "gameDirectory"],
+  "properties": {
+    "schemaVersion": { "const": 2 },
+    "instanceId": { "type": "string", "format": "uuid" },
+    "processId": { "type": "integer", "minimum": 1, "maximum": 2147483647 },
+    "processStartEpochMs": { "type": "integer", "minimum": 1 },
+    "createdAt": { "type": "string", "format": "date-time", "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]\\.[0-9]{3}Z$" },
+    "endpoint": { "type": "string", "pattern": "^ws://127\\.0\\.0\\.1:(?:[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])/miaxion/bridge/v1$" },
+    "subprotocol": { "const": "miaxion.bridge.v1" },
+    "protocolVersion": { "const": "1.0" },
+    "modVersion": { "type": "string", "minLength": 1, "maxLength": 32, "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:[-+][0-9A-Za-z.-]+)?$" },
+    "minecraftVersion": {"type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[0-9A-Za-z][0-9A-Za-z._+-]*$"},
+    "gameDirectory": { "type": "string", "minLength": 1, "maxLength": 4096, "pattern": "^[^\\u0000-\\u001f\\u007f]+$" },
+    "displayNameHint": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[^\\u0000-\\u001f\\u007f]+$" }
+  }
+}

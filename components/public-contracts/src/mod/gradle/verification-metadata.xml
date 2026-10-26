@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='utf-8'?>
+<verification-metadata xmlns="https://schema.gradle.org/dependency-verification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://schema.gradle.org/dependency-verification https://schema.gradle.org/dependency-verification/dependency-verification-1.3.xsd">
+  <configuration>
+    <verify-metadata>true</verify-metadata>
+    <verify-signatures>false</verify-signatures>
+  </configuration>
+  <components>
+    <component group="com.ethlo.time" name="itu" version="1.14.0">
+      <artifact name="itu-1.14.0.jar">
+        <sha256 value="5cf40ab0cc77828ab2b875b1f3ecd71c8295d7721933476abc2e08fddcea164a" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="itu-1.14.0.pom">
+        <sha256 value="0d5ae0bec09495529c63cc8a6c13253870686832a4e3b206c138165035ae4bc5" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="com.fasterxml" name="oss-parent" version="79">
+      <artifact name="oss-parent-79.pom">
+        <sha256 value="9206b7dd67fb138036576c3dfca947a2a8f3e2c4d2d9c1f2d1dea519b3a4dae1" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="com.fasterxml.jackson" name="jackson-base" version="2.22.1">
+      <artifact name="jackson-base-2.22.1.pom">
+        <sha256 value="3f5f597c7474d90fe27060477f243b804bec705dc60feca4de27ca326386448a" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="com.fasterxml.jackson" name="jackson-bom" version="2.22.1">
+      <artifact name="jackson-bom-2.22.1.pom">
+        <sha256 value="b366aa5fd26958e2308a4807e5d42b14706b001b3ccbf138e31b8698dc0ac0ec" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="com.fasterxml.jackson" name="jackson-parent" version="2.22">
+      <artifact name="jackson-parent-2.22.pom">
+        <sha256 value="7d45a7efb69df207bed7cc54b87a0bb012f10952c095570a273b49485da0d129" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="com.fasterxml.jackson.core" name="jackson-annotations" version="2.22">
+      <artifact name="jackson-annotations-2.22.jar">
+        <sha256 value="21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="jackson-annotations-2.22.module">
+        <sha256 value="3d22704448e98dfd578c5df5646dd0a98aec04080b08a3245cf8beb8a25dcb5d" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="com.fasterxml.jackson.core" name="jackson-core" version="2.22.1">
+      <artifact name="jackson-core-2.22.1.jar">
+        <sha256 value="941ff029bcdb93e83d209ce516c1a7fb8bbac07d0a2fa122f5bf194b2cd7b4f4" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="jackson-core-2.22.1.module">
+        <sha256 value="da706671a7e968f36aa2c0c3c42397751ce47cc952b264bc2a7446da275d8e0b" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="com.fasterxml.jackson.core" name="jackson-databind" version="2.22.1">
+      <artifact name="jackson-databind-2.22.1.jar">
+        <sha256 value="7dcd7e53bec1f56c7ad278bd1ca0840bebcc595d61ce44d6a8439abb75b965b2" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="jackson-databind-2.22.1.module">
+        <sha256 value="054f10501bd363e5fd88223b6a8280109f8bfa0c7610681e58669d5720b71ab2" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310" version="2.22.1">
+      <artifact name="jackson-datatype-jsr310-2.22.1.jar">
+        <sha256 value="85da45b7e5e565418963ff8f0dcb184365b0557c15468933f4318dde5c3ce845" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="jackson-datatype-jsr310-2.22.1.module">
+        <sha256 value="3678773c27ac954fab63a4794295da6935a2cdda0b1b740e53d57623fa5b8c7e" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="com.fasterxml.jackson.module" name="jackson-modules-java8" version="2.22.1">
+      <artifact name="jackson-modules-java8-2.22.1.pom">
+        <sha256 value="a241a21d568fc3aa4ec2c46ec99e3a622b3665d8d8e9d8170992ad1c6931e96f" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="com.networknt" name="json-schema-validator" version="3.0.4">
+      <artifact name="json-schema-validator-3.0.4.jar">
+        <sha256 value="ff6c24f5cb88b019109ee6a4e78938e713f0fdfe8558ac65bc980343c05f8605" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="json-schema-validator-3.0.4.pom">
+        <sha256 value="798458da314d9bd2c67f1d4392ce2a4064fa0a68462d65187ad83bdc33a5d2c2" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.apiguardian" name="apiguardian-api" version="1.1.2">
+      <artifact name="apiguardian-api-1.1.2.jar">
+        <sha256 value="b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="apiguardian-api-1.1.2.module">
+        <sha256 value="e08028131375b357d1d28734e9a4fb4216da84b240641cb3ef7e7c7d628223fc" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.junit" name="junit-bom" version="5.14.2">
+      <artifact name="junit-bom-5.14.2.module">
+        <sha256 value="5d26f4440392326dd2483cf490143eea1495d5095459a0b9651a7b1b38e24ebf" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="junit-bom-5.14.2.pom">
+        <sha256 value="ed2dcc7855bd460bccc93a1bf0c962e63b566ff7d8f1ded0f1f2593ba8183aaf" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.junit.jupiter" name="junit-jupiter" version="5.14.2">
+      <artifact name="junit-jupiter-5.14.2.jar">
+        <sha256 value="ee04c9b0c532136a4bc4a8531fe54a22c637b93a690bc064718357584d1e71ae" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="junit-jupiter-5.14.2.module">
+        <sha256 value="ca33bb4f83814da4ba89f7d1f70d333627a8fcf69be46d9c7fdf7bdd7002a6bf" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.junit.jupiter" name="junit-jupiter-api" version="5.14.2">
+      <artifact name="junit-jupiter-api-5.14.2.jar">
+        <sha256 value="704cda1857316bb791199b1a1bf8173b0778b938a8445c85be1154c5f8813a0a" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="junit-jupiter-api-5.14.2.module">
+        <sha256 value="0b0f58d001b4ccf41dbaff662ff08f04640b9f5156b215d2dc57cee93692e826" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.junit.jupiter" name="junit-jupiter-engine" version="5.14.2">
+      <artifact name="junit-jupiter-engine-5.14.2.jar">
+        <sha256 value="024d9b06d31b90fb9c5a7c0bc62cfa2d49c673a68a7a75be9b52548ba6283509" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="junit-jupiter-engine-5.14.2.module">
+        <sha256 value="541f62fc540b259c687c0bde51b54184b72f946248a40e82e49f64557612b065" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.junit.jupiter" name="junit-jupiter-params" version="5.14.2">
+      <artifact name="junit-jupiter-params-5.14.2.jar">
+        <sha256 value="06d8673ab16174117ebaea7cc9dc08809db7a394f5d93efd240362d883d01df0" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="junit-jupiter-params-5.14.2.module">
+        <sha256 value="f551d5789aea350cdfb18164ca9d9aff56e0c9822c7c6df61d317764be8b400d" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.junit.platform" name="junit-platform-commons" version="1.14.2">
+      <artifact name="junit-platform-commons-1.14.2.jar">
+        <sha256 value="9117f9aadc663ac550ae5e81d8d3ab9f1e09bb2e34c16e60a1eb1633a17bcc06" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="junit-platform-commons-1.14.2.module">
+        <sha256 value="2c8a73004410db2d27914101abe8672dc69c9211c3d338ae3471d94a2b2b6ad2" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.junit.platform" name="junit-platform-engine" version="1.14.2">
+      <artifact name="junit-platform-engine-1.14.2.jar">
+        <sha256 value="5a45c430763a26c6c55471e192d8afbb6443956bc116b7e6796b8d789a5a146d" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="junit-platform-engine-1.14.2.module">
+        <sha256 value="ac94471095396f5dac158526a12563fdd50492ae7b2a6f491fada2c51b074beb" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.junit.platform" name="junit-platform-launcher" version="1.14.2">
+      <artifact name="junit-platform-launcher-1.14.2.jar">
+        <sha256 value="1dfc577620dd131e83765f662acaa109a2df5752a0399f034c868ac873323af2" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="junit-platform-launcher-1.14.2.module">
+        <sha256 value="4e56d843de9b6d43b7082fd4c742070d2a7dfab5192fba1a2900980f06be3139" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.opentest4j" name="opentest4j" version="1.3.0">
+      <artifact name="opentest4j-1.3.0.jar">
+        <sha256 value="48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="opentest4j-1.3.0.module">
+        <sha256 value="48bf1d6c8b5dc94f74652bd17900f654deb714350248cf5e8fca27b9090c8e0d" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.slf4j" name="slf4j-api" version="2.0.9">
+      <artifact name="slf4j-api-2.0.9.jar">
+        <sha256 value="0818930dc8d7debb403204611691da58e49d42c50b6ffcfdce02dadb7c3c2b6c" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="slf4j-api-2.0.9.pom">
+        <sha256 value="9c3a654f9d0aa1a34b3178ebe53a89c76792e1d81fc1e9739cbe9b1610523385" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.slf4j" name="slf4j-bom" version="2.0.9">
+      <artifact name="slf4j-bom-2.0.9.pom">
+        <sha256 value="eaef4584807d812c6a0b6cf839d5e47f50c754327719b9ce081e271d15da6243" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.slf4j" name="slf4j-parent" version="2.0.9">
+      <artifact name="slf4j-parent-2.0.9.pom">
+        <sha256 value="c307f0424141f1c500ae5cf0d3868e4866cb219ed5e399b66c5a07c61ea21fd5" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="org.snakeyaml" name="snakeyaml-engine" version="3.0.1">
+      <artifact name="snakeyaml-engine-3.0.1.jar">
+        <sha256 value="0b638c8806112215e02e58e95cbd9e9a69d4bd540991f47553d053919994cc94" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="snakeyaml-engine-3.0.1.pom">
+        <sha256 value="03559cfc71af8ef4af83385d25d93bf38dfc7a43169b83defc70acdfde14b6d9" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="tools.jackson" name="jackson-base" version="3.1.1">
+      <artifact name="jackson-base-3.1.1.pom">
+        <sha256 value="ef9a4482b6fbac227dfe9115e1d4db9e4967798f96c7557cdf8c1f80011ebe4d" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="tools.jackson" name="jackson-bom" version="3.1.1">
+      <artifact name="jackson-bom-3.1.1.pom">
+        <sha256 value="fd1cc21d60ad33b9a30fe57428dd447de171208ca2fc09c179f801c4bebae9a6" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="tools.jackson.core" name="jackson-core" version="3.1.1">
+      <artifact name="jackson-core-3.1.1.jar">
+        <sha256 value="4cd270bee1a1aa34be18da78268f3879355b6ea09154beff496831785b6194c9" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="jackson-core-3.1.1.module">
+        <sha256 value="c3439b0816947ad34de7d74151f0525ea7d8a6f3b883128f3ba9f825363d68bc" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="tools.jackson.core" name="jackson-databind" version="3.1.1">
+      <artifact name="jackson-databind-3.1.1.jar">
+        <sha256 value="a80302c80cb02803e33d7b3301a0d619146d3191d285e6bbd39fa17d3aa5f24a" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="jackson-databind-3.1.1.module">
+        <sha256 value="ca3b41f5cf7774b87d9e97d8f6a2533212923db126b80b7f760a3b61267e87cd" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="tools.jackson.dataformat" name="jackson-dataformat-yaml" version="3.1.1">
+      <artifact name="jackson-dataformat-yaml-3.1.1.jar">
+        <sha256 value="6da1297d1020c245697ed73302b052366ffa48344bcf0565bc10f1c49f380717" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+      <artifact name="jackson-dataformat-yaml-3.1.1.module">
+        <sha256 value="22e9360e22ba4f35e8751282973bf123a5de8bee6c24a6b4f083e9d46afc730e" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+    <component group="tools.jackson.dataformat" name="jackson-dataformats-text" version="3.1.1">
+      <artifact name="jackson-dataformats-text-3.1.1.pom">
+        <sha256 value="780687e60093ed8a25ac4086b27d08214ed259b6463f18c51ae800fa6fd6e9c3" origin="Retained from reviewed source verification metadata" />
+      </artifact>
+    </component>
+  </components>
+</verification-metadata>
