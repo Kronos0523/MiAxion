@@ -1,0 +1,16 @@
+# 工作区内部约定、交接及准备记录，不默认公开。
+/AGENTS.md
+/HANDOFF.zh-CN.md
+/.local/
+
+# 发布包另行管理，防止混入源码仓库。
+*.zip
+*.7z
+*.jar
+*.exe
+*.dll
+*.pdb
+**/data/
+**/logs/
+.env
+.env.*
