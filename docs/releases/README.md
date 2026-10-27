@@ -1,6 +1,6 @@
 # 发布材料
 
-本目录使用 MiAxion 展示仓库的 Git 管理发布文案与清单。[v0.2.0](https://github.com/agbushuo/MiAxion/releases/tag/v0.2.0) 提供客户端、模组合集、六个知识包及统一校验文件。
+本目录使用 MiAxion 展示仓库的 Git 管理发布文案与清单。[v0.2.0](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.0) 提供客户端、模组合集、六个知识包及统一校验文件。
 
 - [0.2.0 自包含公测版](0.2.0.zh-CN.md)
 - [0.2.0 客户端 SHA256SUMS](0.2.0-SHA256SUMS.txt)

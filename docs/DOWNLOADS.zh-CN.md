@@ -1,6 +1,6 @@
 # 下载与组件选择
 
-**[0.2.0 自包含公测版](https://github.com/agbushuo/MiAxion/releases/tag/v0.2.0) 已发布。** 客户端、模组合集和六个知识包从 GitHub Release 下载；语音包继续使用百度网盘。源码开放范围见 [开发入口](BRIDGE-DEVELOPMENT.zh-CN.md)。
+**[0.2.0 自包含公测版](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.0) 已发布。** 客户端、模组合集和六个知识包从 GitHub Release 下载；语音包继续使用百度网盘。源码开放范围见 [开发入口](BRIDGE-DEVELOPMENT.zh-CN.md)。
 
 本批附件为客户端、模组合集和六个知识包，共 8 个 ZIP；文件及 SHA-256 已核对。见 [附件总清单](releases/0.2.0-assets.json) 与 [统一校验文件](releases/0.2.0-all-SHA256SUMS.txt)。语音包继续使用百度网盘，按需选择，不必下载所有附件。
 
@@ -9,7 +9,7 @@
 | 项目 | 内容 |
 |---|---|
 | 文件 | `MiAXion-0.2.0-win-x64.zip` |
-| 下载状态 | [下载客户端](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip) |
+| 下载状态 | [下载客户端](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip) |
 | 大小 | 368,825,942 字节，约 351.74 MiB |
 | 来源提交 | `4d1add3f1438d1d0267e07d10c74874157513ec7` |
 | 启动入口 | 完整解压后运行 `client/MiAXion.exe` |
@@ -32,9 +32,9 @@ SHA-256：
 
 | 内容 | 何时需要 | 安装位置或用途 | 当前入口 |
 |---|---|---|---|
-| Windows x64 完整客户端 | 使用桌面助手 | 完整解压到独立目录，运行 client/MiAXion.exe | [下载客户端](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip) |
-| 基础 Bridge | 连接游戏、读取其提供的状态 | 匹配 Minecraft／加载器的实例 `mods` | [五端组件明细](releases/0.2.0-mods.zh-CN.md)；[下载模组合集](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip) |
-| JEI／REI 配方附属及其他模组附属 | 使用对应配方或模组能力 | 同一实例 `mods`；核对目标模组及前置依赖 | [8 个附属组件明细](releases/0.2.0-mods.zh-CN.md)；[下载模组合集](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip) |
+| Windows x64 完整客户端 | 使用桌面助手 | 完整解压到独立目录，运行 client/MiAXion.exe | [下载客户端](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip) |
+| 基础 Bridge | 连接游戏、读取其提供的状态 | 匹配 Minecraft／加载器的实例 `mods` | [五端组件明细](releases/0.2.0-mods.zh-CN.md)；[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip) |
+| JEI／REI 配方附属及其他模组附属 | 使用对应配方或模组能力 | 同一实例 `mods`；核对目标模组及前置依赖 | [8 个附属组件明细](releases/0.2.0-mods.zh-CN.md)；[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip) |
 | 语音包 | 语音输入／输出 | 按该包说明，在客户端语音设置中导入 | [百度网盘](https://pan.baidu.com/s/1Attd0pmh-a8Bm9AV95nrvg?pwd=9999)，提取码 `9999` |
 | 知识包 | 需要对应资料 | 在“知识库”导入并启用；超市先解压选包 | [散包超市、3 个整合包合集及原版中文／英文包](#知识包获取) |
 | SDK／协议源码与开发示例 | 开发附属或接入协议 | 独立开发工程；SDK／协议 JAR 不是 Mod | [源码入口](../components/public-contracts/README.zh-CN.md) |
@@ -47,12 +47,12 @@ SHA-256：
 
 | 入口 | 实际文件 | 小包数 | 下载大小 | 当前状态 |
 |---|---|---:|---:|---|
-| 散包超市 | `knowledge-packs.zip` | 763 | 468.68 MiB | [下载](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/knowledge-packs.zip) |
-| ATM10 合集 | `atm10.zip` | 216 | 148.71 MiB | 中文资料，部分覆盖；[下载](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/atm10.zip) |
-| BMC2 合集 | `bmc2.zip` | 306 | 28.11 MiB | 中文资料，部分覆盖；[下载](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/bmc2.zip) |
-| Create-Delight-Remake 合集 | `Create-Delight-Remake.zip` | 319 | 83.31 MiB | 中文资料，部分覆盖；[下载](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/Create-Delight-Remake.zip) |
-| 原版中文资料 | `minecraft_zh.zip` | 14 | 29.34 MiB | 中文资料合集；[下载](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/minecraft_zh.zip) |
-| 原版英文资料 | `minecraft_en.zip` | 8 | 203.67 MiB | 英文资料合集；[下载](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/minecraft_en.zip) |
+| 散包超市 | `knowledge-packs.zip` | 763 | 468.68 MiB | [下载](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/knowledge-packs.zip) |
+| ATM10 合集 | `atm10.zip` | 216 | 148.71 MiB | 中文资料，部分覆盖；[下载](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/atm10.zip) |
+| BMC2 合集 | `bmc2.zip` | 306 | 28.11 MiB | 中文资料，部分覆盖；[下载](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/bmc2.zip) |
+| Create-Delight-Remake 合集 | `Create-Delight-Remake.zip` | 319 | 83.31 MiB | 中文资料，部分覆盖；[下载](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/Create-Delight-Remake.zip) |
+| 原版中文资料 | `minecraft_zh.zip` | 14 | 29.34 MiB | 中文资料合集；[下载](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/minecraft_zh.zip) |
+| 原版英文资料 | `minecraft_en.zip` | 8 | 203.67 MiB | 英文资料合集；[下载](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/minecraft_en.zip) |
 
 **散包超市先解压，再选择需要的小包 ZIP 导入**，不要将外层 `knowledge-packs.zip` 作为单个知识包导入。三个整合包合集及原版中文、英文包均包含客户端支持的合集清单，可在“知识库”的导入入口选择对应 ZIP；客户端按合集清单处理成员包，无需手动拆成编号小包。本轮核对了包结构及 0.2.0 导入代码入口，未实际执行整包导入。
 
@@ -64,7 +64,7 @@ SHA-256：
 
 ## 基础 Bridge 要匹配实例
 
-本批模组使用 `MiAXion-JAR-collection.zip`，含 5 个基础 Bridge 和 8 个附属，约 42.00 MiB；[大小与 SHA-256 记录](releases/0.2.0-mod-archive.json)。[下载模组合集](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip)，解压后只安装匹配平台的 JAR。
+本批模组使用 `MiAXion-JAR-collection.zip`，含 5 个基础 Bridge 和 8 个附属，约 42.00 MiB；[大小与 SHA-256 记录](releases/0.2.0-mod-archive.json)。[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip)，解压后只安装匹配平台的 JAR。
 
 | Minecraft | 加载器 | 正式附件状态 |
 |---|---|---|

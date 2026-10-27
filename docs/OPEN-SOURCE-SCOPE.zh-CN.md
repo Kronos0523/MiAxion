@@ -51,6 +51,6 @@ GitHub 展示、用户文档和 Release 说明可以先准备。源码导出、�
 
 ## 仓库放置建议
 
-首期公开 skill 与协议、SDK、示例放在同一个 `agbushuo/MiAxion` 仓库。根 `skills/bridge-mod-integration/` 提供中文导航；`components/public-contracts/` 保留独立组件构建根、许可与随包 skill。实际状态见 [开发入口](BRIDGE-DEVELOPMENT.zh-CN.md)。公开接口变化时，同一提交更新 skill、示例和相关文档，发布时一起标明适配的 API 版本。
+首期公开 skill 与协议、SDK、示例放在同一个 `Kronos0523/MiAxion` 仓库。根 `skills/bridge-mod-integration/` 提供中文导航；`components/public-contracts/` 保留独立组件构建根、许可与随包 skill。实际状态见 [开发入口](BRIDGE-DEVELOPMENT.zh-CN.md)。公开接口变化时，同一提交更新 skill、示例和相关文档，发布时一起标明适配的 API 版本。
 
 内部完整版仍保留在开发仓库，不与公开版做无审查的全量同步。只有当 skill 独立服务多个项目、出现独立维护团队或确需独立发行时，再考虑拆分仓库。当前不新增仓库。

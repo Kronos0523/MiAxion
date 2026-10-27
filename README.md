@@ -6,9 +6,9 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。它把模型对话、知
 
 当前客户端面向 Windows x64。游戏连接通过与 Minecraft 版本和加载器匹配的 Bridge 实现，配方和部分模组能力由附属提供。
 
-> 当前版本为 **[0.2.0 Windows x64 自包含公测版](https://github.com/agbushuo/MiAxion/releases/tag/v0.2.0)**。内含 .NET/WPF 10.0.13，完整解压后运行 `client/MiAXion.exe`；检索引擎另需 VC++ v14 x64。已整合的源码仅覆盖选定组件，不是完整客户端或基础 Bridge。
+> 当前版本为 **[0.2.0 Windows x64 自包含公测版](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.0)**。内含 .NET/WPF 10.0.13，完整解压后运行 `client/MiAXion.exe`；检索引擎另需 VC++ v14 x64。已整合的源码仅覆盖选定组件，不是完整客户端或基础 Bridge。
 
-[0.2.0 发布说明](docs/releases/0.2.0.zh-CN.md)记录本次变化、包校验信息和验证范围。客户端下载包约 351.74 MiB，[下载客户端](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip)。
+[0.2.0 发布说明](docs/releases/0.2.0.zh-CN.md)记录本次变化、包校验信息和验证范围。客户端下载包约 351.74 MiB，[下载客户端](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip)。
 
 [下载与组件选择](docs/DOWNLOADS.zh-CN.md) · [安装入门](docs/QUICKSTART.zh-CN.md) · [模型配置](docs/MODEL-SETUP.zh-CN.md) · [常见问题](docs/FAQ.zh-CN.md) · [开发接入](docs/BRIDGE-DEVELOPMENT.zh-CN.md)
 
@@ -83,4 +83,4 @@ MiAxion 选择部分组件开源。首批 [SDK、Java／C# 协议与 NeoForge �
 
 模型回答可能出错；资料版本、当前游戏状态和工具执行结果需要结合实际情况判断。基础 Bridge 能连接，不代表所有附属能力都可用；构建通过也不代表所有平台和整合包都经过实测。
 
-遇到问题先查看 [常见问题](docs/FAQ.zh-CN.md)。按 [反馈模板](docs/FEEDBACK.zh-CN.md) 提供版本、复现步骤、预期与实际结果；可通过 [Issues](https://github.com/agbushuo/MiAxion/issues) 提交。请移除 API Key、配对凭据和个人信息，不上传完整 data 或聊天数据库。
+遇到问题先查看 [常见问题](docs/FAQ.zh-CN.md)。按 [反馈模板](docs/FEEDBACK.zh-CN.md) 提供版本、复现步骤、预期与实际结果；可通过 [Issues](https://github.com/Kronos0523/MiAxion/issues) 提交。请移除 API Key、配对凭据和个人信息，不上传完整 data 或聊天数据库。
