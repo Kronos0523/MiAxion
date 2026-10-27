@@ -6,7 +6,9 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。它把模型对话、知
 
 当前客户端面向 Windows x64。游戏连接通过与 Minecraft 版本和加载器匹配的 Bridge 实现，配方和部分模组能力由附属提供。
 
-> 正式下载尚未发布，最终包和演示素材正在整理。已整合的源码仅覆盖选定组件，不是完整客户端或基础 Bridge。
+> 当前版本为 **[0.2.0 Windows x64 自包含公测版](https://github.com/agbushuo/MiAxion/releases/tag/v0.2.0)**。内含 .NET/WPF 10.0.13，完整解压后运行 `client/MiAXion.exe`；检索引擎另需 VC++ v14 x64。已整合的源码仅覆盖选定组件，不是完整客户端或基础 Bridge。
+
+[0.2.0 发布说明](docs/releases/0.2.0.zh-CN.md)记录本次变化、包校验信息和验证范围。客户端下载包约 351.74 MiB，[下载客户端](https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip)。
 
 [下载与组件选择](docs/DOWNLOADS.zh-CN.md) · [安装入门](docs/QUICKSTART.zh-CN.md) · [模型配置](docs/MODEL-SETUP.zh-CN.md) · [常见问题](docs/FAQ.zh-CN.md) · [开发接入](docs/BRIDGE-DEVELOPMENT.zh-CN.md)
 
@@ -38,7 +40,7 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。它把模型对话、知
 
 ## 支持的平台
 
-以下为已有适配的平台范围。正式发布时会列出各平台实际 Bridge、附属版本及验证边界。
+以下为已有适配的平台范围。[模组清单](docs/releases/0.2.0-mods.zh-CN.md)列出各平台实际 Bridge、附属版本及验证边界。
 
 | Minecraft | 加载器 |
 |---|---|
@@ -59,7 +61,7 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。它把模型对话、知
 
 客户端、基础 Bridge、附属和语音包分别管理，更新客户端不代表它们都需要更新。下载说明会明确每类文件的用途、适用范围、安装位置与更新要求。
 
-大体积语音包沿用百度网盘分发，分享链接和提取码将在确认后补充。知识包的可分发内容及获取方式另行说明。
+语音包通过 [百度网盘](https://pan.baidu.com/s/1Attd0pmh-a8Bm9AV95nrvg?pwd=9999) 分发，提取码 **9999**，按包内说明选择档位和安装方式。知识包提供散包超市，ATM10、BMC2、Create-Delight-Remake 三个整合包合集，以及原版中文、英文资料包，可按需挑选；包信息和导入方式见 [知识包目录](docs/DOWNLOADS.zh-CN.md#知识包获取)。
 
 已有用户先查看 [升级、备份与回退](docs/UPGRADE.zh-CN.md)。使用在线模型前了解 [数据使用与分享边界](docs/DATA-USAGE.zh-CN.md)：本地知识中的相关片段也可能作为模型上下文发送到所配置的服务。
 
@@ -69,7 +71,7 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。它把模型对话、知
 
 ## 源码开放范围
 
-MiAxion 选择部分组件开源。首批 [SDK、Java／C# 协议与 NeoForge 只读示例源码](components/public-contracts/README.zh-CN.md) 已整合，自有选定组件及公开接入 skill 采用 MIT，第三方依赖保留原许可证。当前仍为本地发布候选，Bridge 公共层与平台实现继续按组件审查。
+MiAxion 选择部分组件开源。首批 [SDK、Java／C# 协议与 NeoForge 只读示例源码](components/public-contracts/README.zh-CN.md) 已整合，自有选定组件及公开接入 skill 采用 MIT，第三方依赖保留原许可证。Bridge 公共层与平台实现继续按组件审查。
 
 客户端核心、模型编排、记忆和检索实现暂不在默认开放范围内。知识内容、模型权重、语音模型和参考音频的分发说明分别核对，不随项目的部分开源自动采用同一许可证。
 
@@ -81,4 +83,4 @@ MiAxion 选择部分组件开源。首批 [SDK、Java／C# 协议与 NeoForge �
 
 模型回答可能出错；资料版本、当前游戏状态和工具执行结果需要结合实际情况判断。基础 Bridge 能连接，不代表所有附属能力都可用；构建通过也不代表所有平台和整合包都经过实测。
 
-遇到问题先查看 [常见问题](docs/FAQ.zh-CN.md)。按 [反馈模板](docs/FEEDBACK.zh-CN.md) 提供版本、复现步骤、预期与实际结果；仓库公开后可通过 Issues 提交。请移除 API Key、配对凭据和个人信息，不上传完整 data 或聊天数据库。
+遇到问题先查看 [常见问题](docs/FAQ.zh-CN.md)。按 [反馈模板](docs/FEEDBACK.zh-CN.md) 提供版本、复现步骤、预期与实际结果；可通过 [Issues](https://github.com/agbushuo/MiAxion/issues) 提交。请移除 API Key、配对凭据和个人信息，不上传完整 data 或聊天数据库。

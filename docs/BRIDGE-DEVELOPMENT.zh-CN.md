@@ -1,6 +1,6 @@
 # Bridge 与附属开发入口
 
-首批 SDK、协议和 NeoForge 只读示例已整合到 [独立组件目录](../components/public-contracts/README.zh-CN.md)，仍为本地候选，尚未推送或正式发布。自有选定组件采用 MIT，第三方材料单列；完整客户端和基础 Bridge 实现不在此次源码范围内。
+首批 SDK、协议和 NeoForge 只读示例已整合到 [独立组件目录](../components/public-contracts/README.zh-CN.md)，随 v0.2.0 公开。自有选定组件采用 MIT，第三方材料单列；完整客户端和基础 Bridge 实现不在此次源码范围内。
 
 ## 编码 Agent 使用
 
@@ -12,7 +12,7 @@
 
 | 材料 | 当前状态 | 外部作者现在能做什么 |
 |---|---|---|
-| 接入 skill 与工作流程 | 已接入真实源码路径，尚未推送 | 按实际接口准备附属，检查验证范围 |
+| 接入 skill 与工作流程 | 已公开，接入真实源码路径 | 按实际接口准备附属，检查验证范围 |
 | 聚合／动作／配方 SDK | [源码与构建](../components/public-contracts/docs/BUILD.zh-CN.md) 已整合 | 构建本地 JAR；版本分别为 0.1.0／1.2.0／0.1.9，不安装到 mods |
 | Bridge 公共层与平台源码 | 尚未导出 | 新平台移植仍需另行提供已授权宿主源码 |
 | 通信协议 schema 与实现 | [协议导航](../components/public-contracts/docs/PROTOCOL.zh-CN.md) 已整合 | 阅读真实合同，构建 Java／C# 协议库 |

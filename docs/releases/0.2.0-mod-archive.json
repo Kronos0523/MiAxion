@@ -1,0 +1,12 @@
+{
+  "file": "MiAXion-JAR-collection.zip",
+  "bytes": 44037929,
+  "sha256": "2c91ae820ae5631c0d4644379a611175528a808e83fd62641fe2af812c174373",
+  "jarCount": 13,
+  "selection": "user_selected_archive_documentation_cleaned",
+  "uploaded": true,
+  "documentationUpdated": "2026-10-27",
+  "jarBytesUnchanged": true,
+  "clientReleaseContext": "0.2.0",
+  "downloadUrl": "https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip"
+}

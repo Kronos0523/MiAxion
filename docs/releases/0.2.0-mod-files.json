@@ -1,0 +1,411 @@
+{
+  "state": "local_draft_not_published",
+  "assemblySource": "3cd06633",
+  "sourceNote": "Per-artifact source revisions retained from delivery record; not inferred from client version.",
+  "artifacts": [
+    {
+      "target": "mc-1.21.1-neoforge",
+      "role": "base",
+      "modId": "miaxion_bridge",
+      "version": "0.1.27",
+      "path": "mods/mc-1.21.1-neoforge/base/MiAXion-Bridge-mc1.21.1-neoforge-0.1.27.jar",
+      "bytes": 7576377,
+      "sourceCommit": "3cd06633",
+      "nativeAcceptance": "user_reported_success_limited_scope",
+      "sha256": "6049eea7de590c64db6e46fc6a5c496f503acaf5d91196b172a5f4eb1459923b",
+      "declaredDependencies": [
+        {
+          "id": "neoforge",
+          "range": "[21.1.238,21.1.244]",
+          "required": true
+        },
+        {
+          "id": "minecraft",
+          "range": "[1.21.1]",
+          "required": true
+        },
+        {
+          "id": "create",
+          "range": "[6.0.10,6.1)",
+          "required": false
+        }
+      ]
+    },
+    {
+      "target": "mc-1.20.1-forge",
+      "role": "base",
+      "modId": "miaxion_bridge",
+      "version": "0.1.31",
+      "path": "mods/mc-1.20.1-forge/base/MiAXion-Bridge-mc1.20.1-forge-0.1.31-all.jar",
+      "bytes": 9466334,
+      "sourceCommit": "3cd06633",
+      "nativeAcceptance": "not_retested_user_waived",
+      "sha256": "4b73ec1de5fe6a53b0ef084ee1d3e5f2d3bd100405aec7e0485b3524eba4c4da",
+      "declaredDependencies": [
+        {
+          "id": "forge",
+          "range": "[47.4.0,47.5.0)",
+          "required": true
+        },
+        {
+          "id": "minecraft",
+          "range": "[1.20.1,1.20.2)",
+          "required": true
+        }
+      ]
+    },
+    {
+      "target": "mc-1.21.1-fabric",
+      "role": "base",
+      "modId": "miaxion_bridge",
+      "version": "0.1.25",
+      "path": "mods/mc-1.21.1-fabric/base/MiAXion-Bridge-mc1.21.1-fabric-0.1.25.jar",
+      "bytes": 10200986,
+      "sourceCommit": "3cd06633",
+      "nativeAcceptance": "user_reported_success_limited_scope",
+      "sha256": "b24217ad8d9a1ca8d43b3da369a0cb789b7d49eac16d90a12ab72b9f99349b4a",
+      "declaredDependencies": [
+        {
+          "id": "fabricloader",
+          "range": ">=0.16.14",
+          "required": true
+        },
+        {
+          "id": "minecraft",
+          "range": "1.21.x",
+          "required": true
+        },
+        {
+          "id": "java",
+          "range": ">=21",
+          "required": true
+        },
+        {
+          "id": "fabric-api",
+          "range": ">=0.116.1+1.21.1",
+          "required": true
+        }
+      ]
+    },
+    {
+      "target": "mc-1.20.1-fabric",
+      "role": "base",
+      "modId": "miaxion_bridge",
+      "version": "0.1.26",
+      "path": "mods/mc-1.20.1-fabric/base/MiAXion-Bridge-mc1.20.1-fabric-0.1.26.jar",
+      "bytes": 10196242,
+      "sourceCommit": "3cd06633",
+      "nativeAcceptance": "user_reported_success_limited_scope",
+      "sha256": "0e54c958131e190da2afa9ee25f42282f0c866c280d1c07c03cbe07552096b6c",
+      "declaredDependencies": [
+        {
+          "id": "fabricloader",
+          "range": ">=0.19.3",
+          "required": true
+        },
+        {
+          "id": "minecraft",
+          "range": "1.20.1",
+          "required": true
+        },
+        {
+          "id": "java",
+          "range": ">=17",
+          "required": true
+        },
+        {
+          "id": "fabric-api",
+          "range": ">=0.92.7+1.20.1",
+          "required": true
+        }
+      ]
+    },
+    {
+      "target": "mc-26.3-neoforge",
+      "role": "base",
+      "modId": "miaxion_bridge",
+      "version": "0.1.13",
+      "path": "mods/mc-26.3-neoforge/base/MiAXion-Bridge-mc26.3-neoforge-0.1.13.jar",
+      "bytes": 6912891,
+      "sourceCommit": "3cd06633",
+      "nativeAcceptance": "user_reported_success_limited_scope",
+      "sha256": "85bec37ae9369922fd0bdc19a3ea93f881b55ac60e2aae5478f69443cf96b9b8",
+      "declaredDependencies": [
+        {
+          "id": "minecraft",
+          "range": "[26.3]",
+          "required": true
+        },
+        {
+          "id": "neoforge",
+          "range": "[26.3.0.92]",
+          "required": true
+        }
+      ]
+    },
+    {
+      "target": "mc-26.3-neoforge",
+      "role": "addon",
+      "modId": "miaxion_jei",
+      "version": "0.1.4",
+      "path": "mods/mc-26.3-neoforge/addons/MiAXion-Addon-jei-mc26.3-neoforge-0.1.4.jar",
+      "bytes": 58166,
+      "sourceCommit": "86a931a48c53c31ddf26150ad0927f298c2e93c3",
+      "nativeAcceptance": "pending",
+      "sha256": "c81af5775ef88dd419f2a659bde37617a36ecd809583543e83651c382971b540",
+      "declaredDependencies": [
+        {
+          "id": "minecraft",
+          "range": "[26.3]",
+          "required": true
+        },
+        {
+          "id": "neoforge",
+          "range": "[26.3,26.4)",
+          "required": true
+        },
+        {
+          "id": "miaxion_bridge",
+          "range": "[0.1.12,)",
+          "required": true
+        },
+        {
+          "id": "jei",
+          "range": "[31,32)",
+          "required": true
+        }
+      ]
+    },
+    {
+      "target": "mc-1.21.1-neoforge",
+      "role": "addon",
+      "modId": "miaxion_jei",
+      "version": "0.1.10",
+      "path": "mods/mc-1.21.1-neoforge/addons/MiAXion-Addon-jei-mc1.21.1-neoforge-0.1.10.jar",
+      "bytes": 58481,
+      "sourceCommit": "86a931a48c53c31ddf26150ad0927f298c2e93c3",
+      "nativeAcceptance": "pending",
+      "sha256": "936a0fd438471c2f9d23e9be220b741362a68b018cd66a18c63fde1cfcac01ea",
+      "declaredDependencies": [
+        {
+          "id": "neoforge",
+          "range": "[21.1,21.2)",
+          "required": true
+        },
+        {
+          "id": "minecraft",
+          "range": "[1.21.1]",
+          "required": true
+        },
+        {
+          "id": "miaxion_bridge",
+          "range": "[0.1.26,)",
+          "required": true
+        },
+        {
+          "id": "jei",
+          "range": "[19,20)",
+          "required": true
+        }
+      ]
+    },
+    {
+      "target": "mc-1.20.1-forge",
+      "role": "addon",
+      "modId": "miaxion_jei",
+      "version": "0.1.3",
+      "path": "mods/mc-1.20.1-forge/addons/MiAXion-Addon-jei-mc1.20.1-forge-0.1.3.jar",
+      "bytes": 29535,
+      "sourceCommit": "86a931a48c53c31ddf26150ad0927f298c2e93c3",
+      "nativeAcceptance": "pending",
+      "sha256": "91638814561ff221af809de50a46257add16b4e62fa1ede7cc29e436ae6142a3",
+      "declaredDependencies": [
+        {
+          "id": "forge",
+          "range": "[47,48)",
+          "required": true
+        },
+        {
+          "id": "minecraft",
+          "range": "[1.20.1,1.20.2)",
+          "required": true
+        },
+        {
+          "id": "miaxion_bridge",
+          "range": "[0.1.30,)",
+          "required": true
+        },
+        {
+          "id": "jei",
+          "range": "[15,16)",
+          "required": true
+        }
+      ]
+    },
+    {
+      "target": "mc-1.21.1-fabric",
+      "role": "addon",
+      "modId": "miaxion_jei",
+      "version": "0.1.3",
+      "path": "mods/mc-1.21.1-fabric/addons/MiAXion-Addon-jei-mc1.21.1-fabric-0.1.3.jar",
+      "bytes": 30469,
+      "sourceCommit": "86a931a48c53c31ddf26150ad0927f298c2e93c3",
+      "nativeAcceptance": "pending",
+      "sha256": "5b9c700f8944bc47944621f07a80eeabf07b5074c9e76d527e2962857345726e",
+      "declaredDependencies": [
+        {
+          "id": "minecraft",
+          "range": "1.21.1",
+          "required": true
+        },
+        {
+          "id": "java",
+          "range": ">=21",
+          "required": true
+        },
+        {
+          "id": "fabricloader",
+          "range": ">=0.16.14",
+          "required": true
+        },
+        {
+          "id": "fabric-api",
+          "range": ">=0.116.1+1.21.1",
+          "required": true
+        },
+        {
+          "id": "miaxion_bridge",
+          "range": ">=0.1.24",
+          "required": true
+        },
+        {
+          "id": "jei",
+          "range": ">=19 <20",
+          "required": true
+        }
+      ]
+    },
+    {
+      "target": "mc-1.20.1-fabric",
+      "role": "addon",
+      "modId": "miaxion_rei",
+      "version": "0.1.13",
+      "path": "mods/mc-1.20.1-fabric/addons/MiAXion-Addon-rei-mc1.20.1-fabric-0.1.13.jar",
+      "bytes": 33175,
+      "sourceCommit": "86a931a48c53c31ddf26150ad0927f298c2e93c3",
+      "nativeAcceptance": "pending",
+      "sha256": "d034a2e2700d521a0c5eb890a5f22a1a599e1557258520646fbd10c4187a2604",
+      "declaredDependencies": [
+        {
+          "id": "fabricloader",
+          "range": ">=0.19.3",
+          "required": true
+        },
+        {
+          "id": "minecraft",
+          "range": "1.20.1",
+          "required": true
+        },
+        {
+          "id": "java",
+          "range": ">=17",
+          "required": true
+        },
+        {
+          "id": "miaxion_bridge",
+          "range": ">=0.1.25",
+          "required": true
+        },
+        {
+          "id": "roughlyenoughitems",
+          "range": ">=12 <13",
+          "required": true
+        }
+      ]
+    },
+    {
+      "target": "mc-1.21.1-neoforge",
+      "role": "addon",
+      "modId": "miaxion_ars",
+      "version": "0.1.3",
+      "path": "mods/mc-1.21.1-neoforge/addons/MiAXion-Addon-ars-nouveau-mc1.21.1-neoforge-0.1.3.jar",
+      "bytes": 9133,
+      "sourceCommit": "b09df46af24799c1af310e0b6de2e30a94f5a31f",
+      "nativeAcceptance": "pending",
+      "sha256": "9a2491ab80816dd68f332bd30e0012e5b668cde2cf6d0a3547f8cf877bf2d2bc",
+      "declaredDependencies": [
+        {
+          "id": "minecraft",
+          "range": "[1.21.1]",
+          "required": true
+        },
+        {
+          "id": "miaxion_bridge",
+          "range": "[0.1.0,)",
+          "required": true
+        },
+        {
+          "id": "ars_nouveau",
+          "range": "[0,)",
+          "required": false
+        }
+      ]
+    },
+    {
+      "target": "mc-1.21.1-neoforge",
+      "role": "addon",
+      "modId": "miaxion_iron",
+      "version": "0.1.5",
+      "path": "mods/mc-1.21.1-neoforge/addons/MiAXion-Addon-irons-spellbooks-mc1.21.1-neoforge-0.1.5.jar",
+      "bytes": 14183,
+      "sourceCommit": "b09df46af24799c1af310e0b6de2e30a94f5a31f",
+      "nativeAcceptance": "pending",
+      "sha256": "d438b5f8804f5ad34237599eb40c18f383f66030525b6a8b950ed30a84d2e57c",
+      "declaredDependencies": [
+        {
+          "id": "minecraft",
+          "range": "[1.21.1]",
+          "required": true
+        },
+        {
+          "id": "curios",
+          "range": "[0,)",
+          "required": false
+        },
+        {
+          "id": "miaxion_bridge",
+          "range": "[0.1.0,)",
+          "required": true
+        },
+        {
+          "id": "irons_spellbooks",
+          "range": "[0,)",
+          "required": false
+        }
+      ]
+    },
+    {
+      "target": "mc-1.21.1-neoforge",
+      "role": "addon",
+      "modId": "miaxion_mekanism",
+      "version": "0.1.2",
+      "path": "mods/mc-1.21.1-neoforge/addons/MiAXion-Addon-mekanism-mc1.21.1-neoforge-0.1.2.jar",
+      "bytes": 17427,
+      "sourceCommit": "b09df46af24799c1af310e0b6de2e30a94f5a31f",
+      "nativeAcceptance": "pending",
+      "sha256": "b6c66b8564aa234874a6e962551abbe728a029fb50276a5ba0be904a1d32ff7f",
+      "declaredDependencies": [
+        {
+          "id": "miaxion_bridge",
+          "range": "[0.1.0,)",
+          "required": true
+        },
+        {
+          "id": "mekanism",
+          "range": "[10,11)",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

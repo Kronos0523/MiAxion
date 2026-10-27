@@ -1,0 +1,77 @@
+{
+  "release": "0.2.0",
+  "status": "published",
+  "files": [
+    {
+      "category": "client",
+      "file": "MiAXion-0.2.0-win-x64.zip",
+      "bytes": 368825942,
+      "sha256": "0b8afaae4b0d7ab3234a84c920966413bcca847579305eb7dacde487a07e3789",
+      "uploadStatus": "uploaded",
+      "downloadUrl": "https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip"
+    },
+    {
+      "category": "mods",
+      "file": "MiAXion-JAR-collection.zip",
+      "bytes": 44037929,
+      "sha256": "2c91ae820ae5631c0d4644379a611175528a808e83fd62641fe2af812c174373",
+      "uploadStatus": "uploaded",
+      "downloadUrl": "https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip"
+    },
+    {
+      "category": "knowledge",
+      "file": "knowledge-packs.zip",
+      "bytes": 491448277,
+      "sha256": "7aeb7c6f07e60fe72e7305c6988fc3e3466bc27da1c28031a1e2e773e150d879",
+      "uploadStatus": "uploaded",
+      "downloadUrl": "https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/knowledge-packs.zip"
+    },
+    {
+      "category": "knowledge",
+      "file": "atm10.zip",
+      "bytes": 155937927,
+      "sha256": "055dca871aa62dd2e1eb6cb3f60b737eba0d284a348868ddf28e65d491e98dfb",
+      "uploadStatus": "uploaded",
+      "downloadUrl": "https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/atm10.zip"
+    },
+    {
+      "category": "knowledge",
+      "file": "bmc2.zip",
+      "bytes": 29472390,
+      "sha256": "60f2f711b7b605fa28f9b0f5269ad26c41406395d923bf2fcbab2ac67f354bc5",
+      "uploadStatus": "uploaded",
+      "downloadUrl": "https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/bmc2.zip"
+    },
+    {
+      "category": "knowledge",
+      "file": "Create-Delight-Remake.zip",
+      "bytes": 87358748,
+      "sha256": "32b7a68e0e93970455602e476dc56c057c671f991d67db379ac5b33fe86d09c0",
+      "uploadStatus": "uploaded",
+      "downloadUrl": "https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/Create-Delight-Remake.zip"
+    },
+    {
+      "category": "knowledge",
+      "file": "minecraft_en.zip",
+      "bytes": 213564897,
+      "sha256": "192f3deb7bba6a7fb71ac467d4656998a046b865c373bb899adbfc44c781e57d",
+      "uploadStatus": "uploaded",
+      "downloadUrl": "https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/minecraft_en.zip"
+    },
+    {
+      "category": "knowledge",
+      "file": "minecraft_zh.zip",
+      "bytes": 30762709,
+      "sha256": "b7087f72fd7c4d9696a90f21169b0f694492f2569ada41c6422194a4c93aba0a",
+      "uploadStatus": "uploaded",
+      "downloadUrl": "https://github.com/agbushuo/MiAxion/releases/download/v0.2.0/minecraft_zh.zip"
+    }
+  ],
+  "speechDistribution": "Existing Baidu share; not included in GitHub asset upload list.",
+  "distributionReview": {
+    "status": "publisher_confirmed_complete",
+    "confirmedDate": "2026-10-27",
+    "independentReauditPerformed": false
+  },
+  "releaseUrl": "https://github.com/agbushuo/MiAxion/releases/tag/v0.2.0"
+}
