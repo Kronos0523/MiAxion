@@ -1,85 +1,97 @@
 # MiAxion
 
-在 Minecraft 里，开口查世界、看机器、问配方，也能用自己的口令施法。
+**[简体中文 / Chinese](README.zh-CN.md)** | English
 
-MiAxion 是一款面向 Minecraft 的桌面 AI 助手。它把模型对话、本地知识、实时游戏查询和语音动作连接起来：探索时查询结构与群系，建工厂时查看机器与材料，研究模组时追问配方和任务，也可以把常用游戏动作绑定成自己的语音口令。
+Bring mod knowledge into your conversations. Connect your questions to the world you are playing.
 
-当前客户端面向 Windows x64。游戏连接通过与 Minecraft 版本和加载器匹配的 Bridge 实现，配方和部分模组能力由附属提供。
+MiAxion is a desktop AI assistant for Minecraft, built around **knowledge packs**. Import reference material for your mods and modpacks, ask questions, inspect sources, and keep exploring through follow-up questions. Connect the game to add live world information, recipes, machine states, and voice-triggered actions.
 
-> 当前版本为 **[0.2.0 Windows x64 自包含公测版](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.0)**。内含 .NET/WPF 10.0.13，完整解压后运行 `client/MiAXion.exe`；检索引擎另需 VC++ v14 x64。已整合的源码仅覆盖选定组件，不是完整客户端或基础 Bridge。
+**[Download 0.2.0](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.0)** · [Knowledge packs](#available-knowledge-packs) · [Getting started](#getting-started) · [Developer integration](docs/BRIDGE-DEVELOPMENT.zh-CN.md)
 
-[0.2.0 发布说明](docs/releases/0.2.0.zh-CN.md)记录本次变化、包校验信息和验证范围。客户端下载包约 351.74 MiB，[下载客户端](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip)。
+The desktop client runs on **Windows x64**. The release includes .NET/WPF 10.0.13; extract the complete archive and run `client/MiAXion.exe`. ONNX-based retrieval also requires [Microsoft Visual C++ v14 x64](https://aka.ms/vc14/vc_redist.x64.exe). The English overview below links to detailed guides currently written in Chinese.
 
-[下载与组件选择](docs/DOWNLOADS.zh-CN.md) · [安装入门](docs/QUICKSTART.zh-CN.md) · [模型配置](docs/MODEL-SETUP.zh-CN.md) · [常见问题](docs/FAQ.zh-CN.md) · [开发接入](docs/BRIDGE-DEVELOPMENT.zh-CN.md)
+## Knowledge packs: the core of MiAxion
 
-## 可以怎样使用
+Modded Minecraft questions go beyond crafting recipes: *What does this machine do? How does this mechanic work? What should I read next?* Knowledge packs give the assistant searchable reference material to draw on when explaining the content you play with.
 
-下面的问法用于说明使用场景，不是录制好的演示结果。自然语言回答依赖所选模型；游戏查询和动作需连接实例并启用对应能力。
+- **Choose the knowledge you need.** Import individual packs for selected mods or a collection for a modpack. Filter, enable, disable, and manage packs in batches.
+- **Ask, then follow up.** Start with an unfamiliar item or machine and continue asking about its purpose and requirements without repeating its full name every time.
+- **Inspect the sources.** Expand the reference material attached to an answer to check what the explanation is based on.
+- **Connect reference material with your game.** When a usable mod list is available, pack activation can be adapted to the instance. Bridge queries and JEI/REI add-ons can then provide current game information and instance-specific recipes.
 
-| 玩法 | 可以这样问／配置 | 能帮你做什么 |
+A conversation might begin with **“Look up how the machine in my hand works in the knowledge library,”** continue with **“Check its recipe in this instance,”** and then ask **“What is the nearby machine's current state?”** These are example prompts: the knowledge pack supplies reference material, the recipe add-on supplies recipes, and a supported machine adapter supplies readable state. Each step requires the relevant content and capabilities.
+
+### Available knowledge packs
+
+Six downloadable files are included in the [0.2.0 Release](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.0). Choose what fits your game; you do not need all six.
+
+| Pack | Contents | How to import |
 |---|---|---|
-| 探索世界 | “附近哪里有村庄？”“帮我找这个群系。” | 查询结构与群系目录，定位目标并查看位置、距离和查询范围 |
-| 认识当前结构 | “我现在在哪个结构里？”“这个结构里有哪些可查询的目标？” | 识别当前位置所属的已加载结构，查询覆盖范围内可识别的目标 |
-| 查看工厂 | “附近有哪些机器？”“这台机器是什么状态？” | 按可用适配读取附近机器状态及能量、流体等信息 |
-| 研究配方 | “这个怎么做？”“还能用来做什么？”“做这些还缺哪些材料？” | 查询配方、用途、合成树与材料缺口 |
-| 查看玩家状态 | “我手上拿的是什么？”“背包里还有多少铁锭？” | 查询主副手、背包、装备及可用的玩家／环境信息 |
-| 跟进任务 | “我现在有哪些任务？”“这个任务需要先完成什么？” | 读取 FTB Quests 可见任务、目标、进度、奖励与直接依赖 |
-| 语音施法 | 把自己的口令绑定到可用法术或快捷施法页 | 固定口令匹配后提交对应动作，无需大模型理解 |
-| 操作界面 | “打开任务书。” | 在当前动作目录支持时打开界面，或执行已适配的单次游戏动作 |
+| [Individual-pack marketplace](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/knowledge-packs.zip) | 763 individual packs to choose from | Extract the outer ZIP, then import the packs you want |
+| [ATM10](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/atm10.zip) | Chinese reference collection; partial coverage | Import the collection ZIP directly |
+| [BMC2](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/bmc2.zip) | Chinese reference collection; partial coverage | Import the collection ZIP directly |
+| [Create-Delight-Remake](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/Create-Delight-Remake.zip) | Chinese reference collection; partial coverage | Import the collection ZIP directly |
+| [Vanilla Minecraft — Chinese](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/minecraft_zh.zip) | Chinese reference material | Import the collection ZIP directly |
+| [Vanilla Minecraft — English](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/minecraft_en.zip) | English reference material | Import the collection ZIP directly |
 
-### 世界查询：找地点，也看懂脚下的结构
+Pack counts are not mod counts. Coverage varies by content and version, and the two vanilla collections are not line-by-line translations. Modpacks may change recipes; current inventory and machine state still require game queries. See the [pack catalog](docs/DOWNLOADS.zh-CN.md#知识包获取) and [file sizes and SHA-256 hashes](docs/releases/knowledge-pack-files.json).
 
-可以搜索游戏里的结构、群系名称，再定位目标；也可以查询**当前所在结构**，了解其覆盖范围内可识别的目标。找一个结构的位置，与检查自己已经走进的结构，是两种不同的查询。
+Knowledge content is stored locally. If you use an online model, relevant retrieved passages may be sent to the service you configure. See [data use and sharing](docs/DATA-USAGE.zh-CN.md).
 
-附近查询还可提供可见容器的位置、类型等信息，方便探索时确认周围有什么。结构目标依赖游戏注册信息、已加载范围和已有规则；不会把任意玩家建筑都识别成结构，也不会为了查宝箱而生成战利品或直接读取其中的物品。
+## Explore, build, and interact
 
-世界定位、附近机器／容器及结构查询受本机集成服务端和已加载范围等条件限制；远程服务器上不保证可用。实际结果会受到当前实例权限、范围和数据可读性的影响。
+The prompts below illustrate use cases, rather than recorded test results. Natural-language answers depend on your chosen model; game queries and actions require the matching connection and enabled capabilities.
 
-### 机器状态：从“它怎么用”问到“它现在怎样”
+| Feature | Example | What it provides |
+|---|---|---|
+| World queries | “Find a nearby village.” “Locate this biome.” | Structure and biome lookup, with location, distance, and query scope |
+| Current structure | “What structure am I inside?” | Identification of a loaded structure and supported targets in its covered area |
+| Machine state | “Which machines are nearby?” “What state is this machine in?” | Available state, energy, fluid, or mechanical information from supported adapters |
+| Recipes and materials | “How do I craft this?” “What is it used for?” “What materials am I missing?” | Recipes, uses, crafting trees, and material shortfalls |
+| Player information | “What am I holding?” “How much iron is in my inventory?” | Main/off-hand items, inventory, equipment, and available player/environment information |
+| FTB Quests | “What does this quest require?” | Visible quests, objectives, progress, rewards, and direct prerequisites |
+| Voice casting | Bind your own phrase to an available spell action | Fixed-phrase matching without passing the command through an LLM |
+| Game actions | “Open the quest book.” | Supported interface operations and single game actions |
 
-知识包可以解释机器的用途，游戏连接则提供当前能够读取的状态。附近机器查询可以展示运行、空闲、阻塞等状态，以及适配器提供的能量、流体或动力信息；无法判断时保留未知状态。
+### World and structure queries
 
-不同模组和加载器可读字段不同。Create 相关信息取决于相应适配，Mekanism 专属信息需要对应附属。机器状态查询不等于自动操控机器，也不包含生产线产量、能耗或升级效率计算。
+Locate a structure or biome, or inspect the structure you are already standing in. Nearby queries can also report readable container locations and types. Structure observation relies on registered structures, loaded data, and supported target rules; it does not identify every player-built building or generate loot to inspect a chest.
 
-### 配方与材料：结合你正在玩的实例
+World location, nearby machine/container, and structure queries are subject to local integrated-server access and loaded-area constraints, depending on the operation. They are not guaranteed on remote multiplayer servers.
 
-通过 JEI／REI 附属查询实际实例提供的配方和用途，并继续查看合成树与材料缺口。物品、流体及浏览器提供的其他材料类型按各自身份处理，具体覆盖取决于对应附属和原生目录。
+### Machine state and instance-specific recipes
 
-可以从手持物品或刚查过的对象继续问：“它有什么用？”“这个配方的材料从哪里来？”可用的当前游戏结果与知识资料会各自提供依据；模组版本、整合包改配方和资料覆盖仍会影响答案。
+Use knowledge packs to understand a machine, then query the game for its readable state. Supported adapters may report running, idle, or blocked states and available energy, fluid, or mechanical information. Unreadable or unproven state remains unknown. Fields vary by mod and loader; Create information depends on the applicable adapter, while Mekanism-specific information requires its add-on.
 
-### 任务与游戏动作：边玩边问，也能发起操作
+JEI/REI add-ons expose recipes and uses from the running instance, with crafting-tree and material-shortfall queries available in the client. Supported resource types depend on the add-on and native recipe browser. Machine queries do not automatically control machines or calculate production-line throughput, energy efficiency, or upgrade efficiency.
 
-安装并启用适用的 FTB Quests 支持后，可以查看玩家可见的任务列表、完整描述、目标进度、奖励和直接依赖。任务查询是只读的，不自动提交任务或领取奖励。
+### Quests and game actions
 
-对当前动作目录中可用的功能，可以通过对话发起操作，例如打开任务书、物品栏、选择快捷栏或切换视角。模组界面支持按具体适配提供；能打开一个界面不代表支持通用关闭或任意窗口切换，也不代表支持自动移动、战斗或挂机。
+With compatible FTB Quests support, read visible task descriptions, objectives, progress, rewards, and direct dependencies. Quest queries do not submit tasks or claim rewards.
 
-### 语音交互与施法：两种不同的用法
+Available actions can open supported interfaces, select hotbar slots, or change perspective. Support is specific to the current action catalog and game conditions. Opening a mod interface does not imply universal closing or switching support, and this is not an automatic movement, combat, or AFK system.
 
-**语音对话**：按住自己配置的快捷键说话，由本地语音包转写，再交给所选模型回答。回复可自动分段朗读，也可以随时停止。识别和朗读在本机运行；是否把对话发送到在线模型，取决于你的模型配置。
+## Voice conversation and voice casting
 
-**施法模式**：使用已配置的固定口令直接匹配动作，**不经过大模型**。可以给支持的动作起自己顺口的名字，先用“只试读”检查匹配，再实际执行。普通对话中的近音辅助不会改写施法口令。
+**Voice conversation:** hold your configured push-to-talk key. A local speech pack transcribes your speech, and your selected model handles the conversation. Replies can be read aloud in segments and stopped at any time. Speech recognition and synthesis run locally; whether the conversation reaches an online model depends on your model configuration.
 
-本批 NeoForge 1.21.1 配套提供 **Iron’s Spellbooks** 和 **Ars Nouveau** 附属，可按它们提供的能力配置法术动作或快捷施法页。是否能施放仍取决于目标模组、当前装备、游戏状态及动作条件；不保证所有法术、页位和版本都已实测。
+**Casting mode:** configured phrases match actions directly, **without an LLM**. Give a supported action a phrase you find natural, check its mapping with the test-only option, then use it in-game. Approximate-name assistance in normal conversation does not rewrite casting phrases.
 
-### 知识与连续追问：不用每句话都重说物品名
+The release includes **Iron’s Spellbooks** and **Ars Nouveau** add-ons for NeoForge 1.21.1. Configure supported spell actions or quick-cast pages according to their capabilities. Casting remains subject to the target mod, equipment, game state, and action requirements; not every spell, page, or version has been tested.
 
-导入适合玩法的知识包，再按需启用、停用和筛选。回答中的资料入口可以展开查看来源；连接游戏并取得可用模组清单后，还可按实例清单适配知识包的启用范围。
+Speech packs are distributed through **[Baidu Netdisk](https://pan.baidu.com/s/1Attd0pmh-a8Bm9AV95nrvg?pwd=9999)**, access code **9999**. See [speech installation and resource usage](docs/SPEECH-PACKS.zh-CN.md) before choosing a tier.
 
-对话可以承接最近谈论的对象，围绕同一个物品继续问用途、配方和资料。已有术语、手工别名和部分近音候选可以辅助处理生僻模组名称；存在歧义时仍需要确认，不是对任意口误都能自动纠正。支持提示的语音后端还可利用相关名称改善识别。
+## Keep the conversation going
 
-历史中的背包数量、机器状态或旧配方只是过去记录。需要当前结果时，应重新查询游戏；保存过聊天不代表助手始终知道此刻的世界。
+Follow-up questions can refer to the object you were just discussing. Known game terms, manually configured aliases, and limited approximate-name matching help with unfamiliar mod names. Ambiguous matches may still need clarification, and speech hints depend on backend support.
 
-### 游戏之外：日志诊断与自己的攻略笔记
+Past inventory counts and machine readings remain historical snapshots. Ask for a new game query when you need current information.
 
-给出明确文件路径或登记资料目录后，可以让助手在指定范围查资料、读日志，整理可能的原因和下一步建议，也可以明确要求把分析或攻略保存为笔记。写入需开启相应功能并指定目标；诊断不会自动修改游戏文件或执行修复脚本。
+You can also provide a specific file path or registered document folder for the assistant to read reference material or logs, suggest next steps, and save notes when explicitly requested and enabled. Diagnosis does not automatically edit game files or run repair scripts, and saved notes do not automatically enter the knowledge-pack index.
 
-个人笔记不会因为保存下来就自动进入知识包检索。你可以把知识资料、当前游戏信息和自己的记录结合使用，同时保留各自的来源与权限边界。
+## Supported platforms
 
-## 支持的平台
-
-以下为已有适配的平台范围。[模组清单](docs/releases/0.2.0-mods.zh-CN.md)列出各平台实际 Bridge、附属版本及验证边界。
-
-| Minecraft | 加载器 |
+| Minecraft | Loader |
 |---|---|
 | 1.20.1 | Forge |
 | 1.20.1 | Fabric |
@@ -87,37 +99,34 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。它把模型对话、本
 | 1.21.1 | NeoForge |
 | 26.3 | NeoForge |
 
-这些是游戏端适配平台；当前桌面客户端为 Windows x64。各平台可用的附属与模组动作可能不同，多人环境下能取得的信息也受实际游戏条件限制。
+These are game-side platforms; the desktop release is Windows x64. Available add-ons and actions differ by platform. Check the [Bridge and add-on manifest](docs/releases/0.2.0-mods.zh-CN.md) for actual versions, dependencies, and validation boundaries.
 
-## 开始使用
+## Getting started
 
-1. **取得完整客户端。** 查看 [下载说明](docs/DOWNLOADS.zh-CN.md)，完整解压后按 [安装入门](docs/QUICKSTART.zh-CN.md) 启动，不要只复制 EXE。
-2. **配置自己的模型服务。** 在客户端设置中选择或填写服务地址、模型和必要凭据。使用本地模型服务时，需先启动相应服务。普通文字聊天不要求连接游戏，模型费用和网络要求由所选服务决定。
-3. **按需连接 Minecraft。** 选择匹配游戏版本与加载器的基础 Bridge；配方和其他模组能力再选装对应附属，不要将不同平台的 JAR 混装到同一个游戏实例。
-4. **添加知识与语音。** 根据自己的玩法导入知识包，需要语音时再安装相应语音包并配置设备。
+1. **Download the [complete client](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip)**, extract it to a separate folder, and run `client/MiAXion.exe`. Keep the assets and license files; do not copy only the EXE.
+2. **Configure your model service.** Supply the endpoint, model, and credentials required by your provider. Start your local model server first if using one. Basic text conversation does not require a game connection; service costs and network requirements depend on your choice.
+3. **Import knowledge packs for your game.** Use the knowledge library to import and enable the packs you need. Extract the marketplace ZIP first; import the five collection ZIPs directly.
+4. **Connect Minecraft when needed.** Download the [Bridge and add-on collection](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip), then install only the JARs matching your instance and desired features. Do not mix loader or Minecraft versions.
+5. **Add speech if you want it.** Get the appropriate speech pack from the Netdisk link above, then configure the tier, devices, and shortcut.
 
-客户端、基础 Bridge、附属和语音包分别管理，更新客户端不代表它们都需要更新。下载说明会明确每类文件的用途、适用范围、安装位置与更新要求。
+Client, Bridge, add-ons, knowledge packs, and speech packs are managed separately. Updating the client does not require replacing every component.
 
-语音包通过 [百度网盘](https://pan.baidu.com/s/1Attd0pmh-a8Bm9AV95nrvg?pwd=9999) 分发，提取码 **9999**，按包内说明选择档位和安装方式。知识包提供散包超市，ATM10、BMC2、Create-Delight-Remake 三个整合包合集，以及原版中文、英文资料包，可按需挑选；包信息和导入方式见 [知识包目录](docs/DOWNLOADS.zh-CN.md#知识包获取)。
+Detailed guides (Chinese): [Quick start](docs/QUICKSTART.zh-CN.md) · [Model setup](docs/MODEL-SETUP.zh-CN.md) · [Downloads](docs/DOWNLOADS.zh-CN.md) · [Upgrade and rollback](docs/UPGRADE.zh-CN.md) · [FAQ](docs/FAQ.zh-CN.md)
 
-已有用户先查看 [升级、备份与回退](docs/UPGRADE.zh-CN.md)。使用在线模型前了解 [数据使用与分享边界](docs/DATA-USAGE.zh-CN.md)：本地知识中的相关片段也可能作为模型上下文发送到所配置的服务。
+## Demos
 
-## 演示
+Real screenshots and livestream clips are being prepared, focusing on knowledge retrieval and sources, follow-up questions, world/structure queries, machine state, and voice casting. No public playable demo is linked yet.
 
-真实游戏截图和直播片段正在整理，后续优先展示世界／当前结构查询、机器状态、配方与任务追问，以及固定口令施法的实际过程。目前尚无可播放的公开演示链接。
+## Open-source scope
 
-## 源码开放范围
+MiAxion publishes selected components: **[SDKs, Java/C# protocol code, and a read-only NeoForge example](components/public-contracts/README.zh-CN.md)**, plus an [integration skill](skills/bridge-mod-integration/SKILL.md). Selected first-party components use MIT; third-party materials retain their own licenses.
 
-MiAxion 选择部分组件开源。首批 [SDK、Java／C# 协议与 NeoForge 只读示例源码](components/public-contracts/README.zh-CN.md) 已整合，自有选定组件及公开接入 skill 采用 MIT，第三方依赖保留原许可证。Bridge 公共层与平台实现继续按组件审查。
+The full desktop client, model orchestration, memory/retrieval implementation, and full base Bridge implementation are outside this source release. Knowledge content, model weights, speech models, and reference audio have separate terms; they do not inherit the SDK's MIT license.
 
-客户端核心、模型编排、记忆和检索实现暂不在默认开放范围内。知识内容、模型权重、语音模型和参考音频的分发说明分别核对，不随项目的部分开源自动采用同一许可证。
+See [build instructions](components/public-contracts/docs/BUILD.zh-CN.md), [third-party notices](components/public-contracts/THIRD-PARTY-NOTICES.md), and [integration guidance](docs/BRIDGE-DEVELOPMENT.zh-CN.md). SDK/protocol JARs are developer libraries, not installable game mods. Linux standalone builds and protocol tests passed for the exported source; Windows standalone builds and the example's in-game behavior remain unverified.
 
-本仓库用于项目介绍、用户文档、问题反馈、下载发布和选定组件源码。开发者可查看 [独立构建说明](components/public-contracts/docs/BUILD.zh-CN.md) 与 [组件许可声明](components/public-contracts/THIRD-PARTY-NOTICES.md)。SDK 与协议 JAR 不是可安装 Mod；源码目录中的示例也不代替基础 Bridge。
+## Limitations and feedback
 
-接入开发见 [Bridge 与附属开发入口](docs/BRIDGE-DEVELOPMENT.zh-CN.md)，具体边界见 [组件开放方案](docs/OPEN-SOURCE-SCOPE.zh-CN.md)。首批源码已通过 Linux 独立构建与协议测试；Windows 独立构建和示例游戏实测尚未完成，不代表五端基础 Bridge 源码均已开放。
+Model answers can be wrong. Reference coverage, game versions, adapter support, and readable game state affect results. A successful connection or build does not prove every feature works on every modpack. The [0.2.0 release notes](docs/releases/0.2.0.zh-CN.md) describe the actual validation scope.
 
-## 已知边界与反馈
-
-模型回答可能出错；资料版本、当前游戏状态和工具执行结果需要结合实际情况判断。基础 Bridge 能连接，不代表所有附属能力都可用；构建通过也不代表所有平台和整合包都经过实测。
-
-遇到问题先查看 [常见问题](docs/FAQ.zh-CN.md)。按 [反馈模板](docs/FEEDBACK.zh-CN.md) 提供版本、复现步骤、预期与实际结果；可通过 [Issues](https://github.com/Kronos0523/MiAxion/issues) 提交。请移除 API Key、配对凭据和个人信息，不上传完整 data 或聊天数据库。
+Report problems through [Issues](https://github.com/Kronos0523/MiAxion/issues), with versions and clear reproduction steps. Remove API keys, pairing credentials, and personal information; do not upload your entire `data` directory or chat database. See the [feedback guide](docs/FEEDBACK.zh-CN.md).
