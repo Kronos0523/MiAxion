@@ -1,6 +1,6 @@
 # MiAxion
 
-**[简体中文 / Chinese](README.zh-CN.md)** | English
+**[简体中文 / Chinese](README.zh-CN.md)** | English | [Support on Afdian](https://afdian.com/a/MiAxion)
 
 Bring mod knowledge into your conversations. Connect your questions to the world you are playing.
 
@@ -130,3 +130,7 @@ See [build instructions](components/public-contracts/docs/BUILD.zh-CN.md), [thir
 Model answers can be wrong. Reference coverage, game versions, adapter support, and readable game state affect results. A successful connection or build does not prove every feature works on every modpack. The [0.2.0 release notes](docs/releases/0.2.0.zh-CN.md) describe the actual validation scope.
 
 Report problems through [Issues](https://github.com/Kronos0523/MiAxion/issues), with versions and clear reproduction steps. Remove API keys, pairing credentials, and personal information; do not upload your entire `data` directory or chat database. See the [feedback guide](docs/FEEDBACK.zh-CN.md).
+
+## Support MiAxion
+
+If MiAxion helps you explore modded Minecraft, you can voluntarily support its continued development, knowledge-pack curation, and mod integration on **[Afdian](https://afdian.com/a/MiAxion)**. Thank you for supporting the project.

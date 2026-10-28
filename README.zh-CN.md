@@ -1,6 +1,6 @@
 # MiAxion
 
-**简体中文** | [English](README.md)
+**简体中文** | [English](README.md) | [爱发电支持](https://afdian.com/a/MiAxion)
 
 把模组知识带进对话，把问题连到正在玩的世界。
 
@@ -147,3 +147,7 @@ MiAxion 选择部分组件开源。首批 [SDK、Java／C# 协议与 NeoForge �
 模型回答可能出错；资料版本、当前游戏状态和工具执行结果需要结合实际情况判断。基础 Bridge 能连接，不代表所有附属能力都可用；构建通过也不代表所有平台和整合包都经过实测。
 
 遇到问题先查看 [常见问题](docs/FAQ.zh-CN.md)。按 [反馈模板](docs/FEEDBACK.zh-CN.md) 提供版本、复现步骤、预期与实际结果；可通过 [Issues](https://github.com/Kronos0523/MiAxion/issues) 提交。请移除 API Key、配对凭据和个人信息，不上传完整 data 或聊天数据库。
+
+## 支持 MiAxion
+
+如果 MiAxion 帮到了你，欢迎通过 **[爱发电](https://afdian.com/a/MiAxion)** 自愿支持持续开发、知识包整理与模组适配。感谢你对项目的支持。
