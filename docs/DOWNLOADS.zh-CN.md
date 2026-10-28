@@ -36,10 +36,13 @@ SHA-256：
 | 基础 Bridge | 连接游戏、读取其提供的状态 | 匹配 Minecraft／加载器的实例 `mods` | [五端组件明细](releases/0.2.0-mods.zh-CN.md)；[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip) |
 | JEI／REI 配方附属及其他模组附属 | 使用对应配方或模组能力 | 同一实例 `mods`；核对目标模组及前置依赖 | [8 个附属组件明细](releases/0.2.0-mods.zh-CN.md)；[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip) |
 | 语音包 | 语音输入／输出 | 按该包说明，在客户端语音设置中导入 | [百度网盘](https://pan.baidu.com/s/1Attd0pmh-a8Bm9AV95nrvg?pwd=9999)，提取码 `9999` |
+| 音色包 | 选择朗读声音 | 先安装适用语音运行包，再按格式导入音色／参考音频 | [语雀音色包入口](https://www.yuque.com/baicaigongchang1145haoyuangong/ib3g1e/nwnaga50cazb2v93) |
 | 知识包 | 需要对应资料 | 在“知识库”导入并启用；超市先解压选包 | [散包超市、3 个整合包合集及原版中文／英文包](#知识包获取) |
 | SDK／协议源码与开发示例 | 开发附属或接入协议 | 独立开发工程；SDK／协议 JAR 不是 Mod | [源码入口](../components/public-contracts/README.zh-CN.md) |
 
 只用文字聊天时，先取完整客户端并配置模型服务。语音包沿用发布者提供的 [百度网盘分享](https://pan.baidu.com/s/1Attd0pmh-a8Bm9AV95nrvg?pwd=9999)，提取码 **9999**。先阅读[语音包安装与占用说明](SPEECH-PACKS.zh-CN.md)，或网盘中的《使用说明.md》，按需选择轻量、均衡或高品质：单档可选独立包，多档可选共享底座加对应扩展，不必全部下载。网盘内说明以实际上传版本为准。
+
+音色包下载入口：[语雀音色包页面](https://www.yuque.com/baicaigongchang1145haoyuangong/ib3g1e/nwnaga50cazb2v93)。音色包用于选择朗读声音，与提供识别／朗读环境的语音运行包分开；按页面说明选择适配格式，再使用客户端对应的音色或参考音频入口导入。
 
 ## 知识包获取
 

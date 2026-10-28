@@ -81,6 +81,8 @@ The release includes **Iron’s Spellbooks** and **Ars Nouveau** add-ons for Neo
 
 Speech packs are distributed through **[Baidu Netdisk](https://pan.baidu.com/s/1Attd0pmh-a8Bm9AV95nrvg?pwd=9999)**, access code **9999**. See [speech installation and resource usage](docs/SPEECH-PACKS.zh-CN.md) before choosing a tier.
 
+Voice downloads: **[voice-pack page on Yuque (Chinese)](https://www.yuque.com/baicaigongchang1145haoyuangong/ib3g1e/nwnaga50cazb2v93)**. Voice packs are separate from the speech runtime packs above. Follow the linked instructions to choose a compatible format, then use the corresponding voice-pack or reference-audio import option in the client.
+
 ## Keep the conversation going
 
 Follow-up questions can refer to the object you were just discussing. Known game terms, manually configured aliases, and limited approximate-name matching help with unfamiliar mod names. Ambiguous matches may still need clarification, and speech hints depend on backend support.
