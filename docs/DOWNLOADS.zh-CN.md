@@ -10,8 +10,8 @@
 |---|---|
 | 文件 | `MiAXion-0.2.0-win-x64.zip` |
 | 下载状态 | [下载客户端](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip) |
-| 大小 | 368,825,942 字节，约 351.74 MiB |
-| 来源提交 | `4d1add3f1438d1d0267e07d10c74874157513ec7` |
+| 大小 | 373,332,872 字节，约 356.04 MiB |
+| 来源提交 | `fc7fe412d1b50e7050a0d766b2bf075acdf52bc8` |
 | 启动入口 | 完整解压后运行 `client/MiAXion.exe` |
 | 系统与运行环境 | Windows x64；内含 .NET/WPF 10.0.13，无需另装 .NET 或 SDK |
 | 原生依赖 | ONNX 检索引擎需要 Microsoft Visual C++ v14 x64 运行库 |
@@ -19,12 +19,12 @@
 SHA-256：
 
 ```text
-0b8afaae4b0d7ab3234a84c920966413bcca847579305eb7dacde487a07e3789
+3312f95d0f8cb30075968542ba72a30632bb49323f041f37779a288712479d73
 ```
 
 下载后可在 PowerShell 执行 `Get-FileHash .\MiAXion-0.2.0-win-x64.zip -Algorithm SHA256`，与上值比较。校验文件见 [SHA256SUMS](releases/0.2.0-SHA256SUMS.txt)。
 
-如提示缺少 MSVCP140／VCRUNTIME140，使用[微软官方 VC++ x64 安装入口](https://aka.ms/vc14/vc_redist.x64.exe)。请保留解压后的 assets、说明及许可证文件；依赖已收拢不代表只需复制 EXE。本包不含个人 data、知识正文、游戏 Mod 或语音包。
+如提示缺少 MSVCP140／VCRUNTIME140，使用[微软官方 VC++ x64 安装入口](https://aka.ms/vc14/vc_redist.x64.exe)。2026-11-01 已更新为多文件自包含部署，版本仍为 0.2.0。请保留 `client/app/`（程序、依赖与运行时）、`client/assets/`、说明及许可证文件；不能只复制 EXE。本包不含个人 data、知识正文、游戏 Mod 或语音包。
 
 变化和验证边界见 [0.2.0 发布说明](releases/0.2.0.zh-CN.md)。完全未安装 .NET 的干净 Windows 环境尚未实测，不将现有 Windows 启动检查等同于该项。
 

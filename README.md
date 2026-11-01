@@ -107,7 +107,7 @@ These are game-side platforms; the desktop release is Windows x64. Available add
 
 ## Getting started
 
-1. **Download the [complete client](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip)**, extract it to a separate folder, and run `client/MiAXion.exe`. Keep the assets and license files; do not copy only the EXE.
+1. **Download the [complete client](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip)**, extract it to a separate folder, and run `client/MiAXion.exe`. Keep `client/app/` (application libraries and bundled runtime), `client/assets/`, and license files; do not copy only the EXE. The multi-file package remains version 0.2.0.
 2. **Configure your model service.** Supply the endpoint, model, and credentials required by your provider. Start your local model server first if using one. Basic text conversation does not require a game connection; service costs and network requirements depend on your choice.
 3. **Import knowledge packs for your game.** Use the knowledge library to import and enable the packs you need. Extract the marketplace ZIP first; import the five collection ZIPs directly.
 4. **Connect Minecraft when needed.** Download the [Bridge and add-on collection](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip), then install only the JARs matching your instance and desired features. Do not mix loader or Minecraft versions.
