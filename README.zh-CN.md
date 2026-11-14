@@ -8,11 +8,13 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。**知识包是 MiAxion �
 
 当前客户端面向 Windows x64。游戏连接通过与 Minecraft 版本和加载器匹配的 Bridge 实现，配方和部分模组能力由附属提供。
 
-> 当前版本为 **[0.2.0 Windows x64 自包含公测版](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.0)**。内含 .NET/WPF 10.0.13，完整解压后运行 `client/MiAXion.exe`；检索引擎另需 VC++ v14 x64。已整合的源码仅覆盖选定组件，不是完整客户端或基础 Bridge。
+> 当前版本为 **[0.2.71 Windows x64 自包含公测版](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.71)**。内含 .NET/WPF 10.0.13，完整解压后运行 `client/MiAXion.exe`；检索引擎另需 VC++ v14 x64。已整合的源码仅覆盖选定组件，不是完整客户端或基础 Bridge。
 
-[0.2.0 发布说明](docs/releases/0.2.0.zh-CN.md)记录本次变化、包校验信息和验证范围。客户端下载包约 351.74 MiB，[下载客户端](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip)。
+[0.2.71 发布说明](docs/releases/0.2.71.zh-CN.md)记录本次变化、包校验信息和验证范围。客户端下载包约 356.55 MiB，[下载客户端](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/MiAXion-0.2.71-win-x64.zip)。
 
 [下载与组件选择](docs/DOWNLOADS.zh-CN.md) · [安装入门](docs/QUICKSTART.zh-CN.md) · [模型配置](docs/MODEL-SETUP.zh-CN.md) · [常见问题](docs/FAQ.zh-CN.md) · [开发接入](docs/BRIDGE-DEVELOPMENT.zh-CN.md)
+
+本次新增[勇者之章3知识合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/chapter-of-yuusha-3.zip)（260 个子包，整包 ZIP 导入），并更新东方女仆附属、对话对象、定时任务与回复呈现。
 
 ## 核心功能：让知识包成为你的模组资料库
 
@@ -33,7 +35,7 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。**知识包是 MiAxion �
 | ATM10、BMC2、Create-Delight-Remake | 按对应整合包选择中文资料合集 | 直接导入对应合集 ZIP |
 | 原版中文、原版英文 | 按所需资料语言选择 | 直接导入对应合集 ZIP |
 
-[下载六个知识包文件](docs/DOWNLOADS.zh-CN.md#知识包获取) · [查看大小与 SHA-256](docs/releases/knowledge-pack-files.json)
+[下载知识包](docs/DOWNLOADS.zh-CN.md#知识包获取) · [查看大小与 SHA-256](docs/releases/knowledge-pack-files.json)
 
 知识包是参考资料，不保证覆盖全部模组、版本或玩法；三个整合包合集均为部分覆盖，中英文原版包也不是逐条互译。实际整合包可能修改配方，当前库存和机器状态仍须查询游戏。知识内容存放在本地；使用在线模型时，检索到的相关片段可能发送给你配置的服务，详见[数据使用说明](docs/DATA-USAGE.zh-CN.md)。
 
@@ -107,7 +109,7 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。**知识包是 MiAxion �
 
 ## 支持的平台
 
-以下为已有适配的平台范围。[模组清单](docs/releases/0.2.0-mods.zh-CN.md)列出各平台实际 Bridge、附属版本及验证边界。
+以下为已有适配的平台范围。[模组清单](docs/releases/0.2.71.zh-CN.md)列出各平台实际 Bridge、附属版本及验证边界。
 
 | Minecraft | 加载器 |
 |---|---|

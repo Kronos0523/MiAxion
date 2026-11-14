@@ -6,7 +6,7 @@ Bring mod knowledge into your conversations. Connect your questions to the world
 
 MiAxion is a desktop AI assistant for Minecraft, built around **knowledge packs**. Import reference material for your mods and modpacks, ask questions, inspect sources, and keep exploring through follow-up questions. Connect the game to add live world information, recipes, machine states, and voice-triggered actions.
 
-**[Download 0.2.0](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.0)** · [Knowledge packs](#available-knowledge-packs) · [Getting started](#getting-started) · [Developer integration](docs/BRIDGE-DEVELOPMENT.zh-CN.md)
+**[Download 0.2.71](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.71)** · [Knowledge packs](#available-knowledge-packs) · [Getting started](#getting-started) · [Developer integration](docs/BRIDGE-DEVELOPMENT.zh-CN.md)
 
 The desktop client runs on **Windows x64**. The release includes .NET/WPF 10.0.13; extract the complete archive and run `client/MiAXion.exe`. ONNX-based retrieval also requires [Microsoft Visual C++ v14 x64](https://aka.ms/vc14/vc_redist.x64.exe). The English overview below links to detailed guides currently written in Chinese.
 
@@ -23,7 +23,7 @@ A conversation might begin with **“Look up how the machine in my hand works in
 
 ### Available knowledge packs
 
-Six downloadable files are included in the [0.2.0 Release](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.0). Choose what fits your game; you do not need all six.
+The new [Chapter of Yuusha 3 collection](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/chapter-of-yuusha-3.zip) contains 260 knowledge packs and can be imported as a whole ZIP. Six earlier downloadable files are included in the [0.2.0 Release](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.0). Choose what fits your game; you do not need every pack.
 
 | Pack | Contents | How to import |
 |---|---|---|
@@ -103,14 +103,14 @@ You can also provide a specific file path or registered document folder for the 
 | 1.21.1 | NeoForge |
 | 26.3 | NeoForge |
 
-These are game-side platforms; the desktop release is Windows x64. Available add-ons and actions differ by platform. Check the [Bridge and add-on manifest](docs/releases/0.2.0-mods.zh-CN.md) for actual versions, dependencies, and validation boundaries.
+These are game-side platforms; the desktop release is Windows x64. Available add-ons and actions differ by platform. Check the [Bridge and add-on manifest](docs/releases/0.2.71.zh-CN.md) for actual versions, dependencies, and validation boundaries.
 
 ## Getting started
 
-1. **Download the [complete client](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip)**, extract it to a separate folder, and run `client/MiAXion.exe`. Keep `client/app/` (application libraries and bundled runtime), `client/assets/`, and license files; do not copy only the EXE. The multi-file package remains version 0.2.0.
+1. **Download the [complete client](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/MiAXion-0.2.71-win-x64.zip)**, extract it to a separate folder, and run `client/MiAXion.exe`. Keep `client/app/` (application libraries and bundled runtime), `client/assets/`, and license files; do not copy only the EXE.
 2. **Configure your model service.** Supply the endpoint, model, and credentials required by your provider. Start your local model server first if using one. Basic text conversation does not require a game connection; service costs and network requirements depend on your choice.
 3. **Import knowledge packs for your game.** Use the knowledge library to import and enable the packs you need. Extract the marketplace ZIP first; import the five collection ZIPs directly.
-4. **Connect Minecraft when needed.** Download the [Bridge and add-on collection](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip), then install only the JARs matching your instance and desired features. Do not mix loader or Minecraft versions.
+4. **Connect Minecraft when needed.** Download the [Bridge and add-on collection](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/MiAXion-JAR-collection.zip), then install only the JARs matching your instance and desired features. Do not mix loader or Minecraft versions.
 5. **Add speech if you want it.** Get the appropriate speech pack from the Netdisk link above, then configure the tier, devices, and shortcut.
 
 Client, Bridge, add-ons, knowledge packs, and speech packs are managed separately. Updating the client does not require replacing every component.
@@ -131,7 +131,7 @@ See [build instructions](components/public-contracts/docs/BUILD.zh-CN.md), [thir
 
 ## Limitations and feedback
 
-Model answers can be wrong. Reference coverage, game versions, adapter support, and readable game state affect results. A successful connection or build does not prove every feature works on every modpack. The [0.2.0 release notes](docs/releases/0.2.0.zh-CN.md) describe the actual validation scope.
+Model answers can be wrong. Reference coverage, game versions, adapter support, and readable game state affect results. A successful connection or build does not prove every feature works on every modpack. The [0.2.71 release notes](docs/releases/0.2.71.zh-CN.md) describe the actual validation scope.
 
 Report problems through [Issues](https://github.com/Kronos0523/MiAxion/issues), with versions and clear reproduction steps. Remove API keys, pairing credentials, and personal information; do not upload your entire `data` directory or chat database. See the [feedback guide](docs/FEEDBACK.zh-CN.md).
 

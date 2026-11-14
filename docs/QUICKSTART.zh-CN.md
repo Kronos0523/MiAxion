@@ -1,10 +1,10 @@
 # 安装与首次使用
 
-本文对应已公开发布的 Windows x64 客户端 0.2.0 多文件自包含包。客户端与模组从 GitHub Release 下载，语音包沿用网盘，请先查看 [下载说明](DOWNLOADS.zh-CN.md)。
+本文对应已公开发布的 Windows x64 客户端 0.2.71 多文件自包含包。客户端与模组从 GitHub Release 下载，语音包沿用网盘，请先查看 [下载说明](DOWNLOADS.zh-CN.md)。
 
 ## 1. 取得并启动完整客户端
 
-将 `MiAXion-0.2.0-win-x64.zip` 完整解压到自己可读写的新目录，不在压缩包中运行，也不要只取 EXE。启动文件为 `client/MiAXion.exe`，保留 `client/app/`、`client/assets/`、说明和许可证文件。应用依赖、运行时与语言资源位于 `client/app/`，不要单独搬动 DLL；用户数据仍在 `client/data/`。
+将 `MiAXion-0.2.71-win-x64.zip` 完整解压到自己可读写的新目录，不在压缩包中运行，也不要只取 EXE。启动文件为 `client/MiAXion.exe`，保留 `client/app/`、`client/assets/`、说明和许可证文件。应用依赖、运行时与语言资源位于 `client/app/`，不要单独搬动 DLL；用户数据仍在 `client/data/`。
 
 本包附带 .NET/WPF 10.0.13 x64，无需另装 .NET 或 SDK。ONNX 检索引擎另需 VC++ v14 x64；若提示缺少 MSVCP140／VCRUNTIME140，使用[微软官方运行库入口](https://aka.ms/vc14/vc_redist.x64.exe)，不从不明网站单独补 DLL。
 

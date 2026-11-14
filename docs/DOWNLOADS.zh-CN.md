@@ -1,40 +1,26 @@
 # 下载与组件选择
 
-**[0.2.0 自包含公测版](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.0) 已发布。** 客户端、模组合集和六个知识包从 GitHub Release 下载；语音包继续使用百度网盘。源码开放范围见 [开发入口](BRIDGE-DEVELOPMENT.zh-CN.md)。
+**[0.2.71 公测版](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.71) 已发布。** 本次包含客户端、14 个 JAR 的模组合集和勇者之章3知识合集；旧版六个知识包保留，语音包沿用网盘。
 
-本批附件为客户端、模组合集和六个知识包，共 8 个 ZIP；文件及 SHA-256 已核对。见 [附件总清单](releases/0.2.0-assets.json) 与 [统一校验文件](releases/0.2.0-all-SHA256SUMS.txt)。语音包继续使用百度网盘，按需选择，不必下载所有附件。
+[发布与升级说明](releases/0.2.71.zh-CN.md) · [附件清单](releases/0.2.71-assets.json) · [SHA-256](releases/0.2.71-SHA256SUMS.txt)
 
-## Windows 客户端 0.2.0
+## Windows 客户端 0.2.71
 
-| 项目 | 内容 |
-|---|---|
-| 文件 | `MiAXion-0.2.0-win-x64.zip` |
-| 下载状态 | [下载客户端](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip) |
-| 大小 | 373,332,872 字节，约 356.04 MiB |
-| 来源提交 | `fc7fe412d1b50e7050a0d766b2bf075acdf52bc8` |
-| 启动入口 | 完整解压后运行 `client/MiAXion.exe` |
-| 系统与运行环境 | Windows x64；内含 .NET/WPF 10.0.13，无需另装 .NET 或 SDK |
-| 原生依赖 | ONNX 检索引擎需要 Microsoft Visual C++ v14 x64 运行库 |
+完整解压后运行 `client/MiAXion.exe`，保留 `client/app/`、`client/assets/` 及许可证。内含 .NET/WPF 10.0.13，检索引擎需要[VC++ v14 x64](https://aka.ms/vc14/vc_redist.x64.exe)。
 
-SHA-256：
+大小：373,866,038 字节（356.55 MiB）。来源提交：`18a0bb21a0dfd0c498f63a76e06bd2414b666194`。
 
-```text
-3312f95d0f8cb30075968542ba72a30632bb49323f041f37779a288712479d73
-```
+SHA-256：`7888b35830a7ac6e3f70c6e4400079a40e0e5cff222e92544909c59e990d1953`。
 
-下载后可在 PowerShell 执行 `Get-FileHash .\MiAXion-0.2.0-win-x64.zip -Algorithm SHA256`，与上值比较。校验文件见 [SHA256SUMS](releases/0.2.0-SHA256SUMS.txt)。
-
-如提示缺少 MSVCP140／VCRUNTIME140，使用[微软官方 VC++ x64 安装入口](https://aka.ms/vc14/vc_redist.x64.exe)。2026-11-01 已更新为多文件自包含部署，版本仍为 0.2.0。请保留 `client/app/`（程序、依赖与运行时）、`client/assets/`、说明及许可证文件；不能只复制 EXE。本包不含个人 data、知识正文、游戏 Mod 或语音包。
-
-变化和验证边界见 [0.2.0 发布说明](releases/0.2.0.zh-CN.md)。完全未安装 .NET 的干净 Windows 环境尚未实测，不将现有 Windows 启动检查等同于该项。
+升级先退出客户端并保留旧目录，完整复制 `client/data` 到新目录，勿共用同一份数据或仅复制数据库。
 
 ## 应该下载哪些内容
 
 | 内容 | 何时需要 | 安装位置或用途 | 当前入口 |
 |---|---|---|---|
-| Windows x64 完整客户端 | 使用桌面助手 | 完整解压到独立目录，运行 client/MiAXion.exe | [下载客户端](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-0.2.0-win-x64.zip) |
-| 基础 Bridge | 连接游戏、读取其提供的状态 | 匹配 Minecraft／加载器的实例 `mods` | [五端组件明细](releases/0.2.0-mods.zh-CN.md)；[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip) |
-| JEI／REI 配方附属及其他模组附属 | 使用对应配方或模组能力 | 同一实例 `mods`；核对目标模组及前置依赖 | [8 个附属组件明细](releases/0.2.0-mods.zh-CN.md)；[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip) |
+| Windows x64 完整客户端 | 使用桌面助手 | 完整解压到独立目录，运行 client/MiAXion.exe | [下载客户端](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/MiAXion-0.2.71-win-x64.zip) |
+| 基础 Bridge | 连接游戏、读取其提供的状态 | 匹配 Minecraft／加载器的实例 `mods` | [五端组件明细](releases/0.2.71.zh-CN.md)；[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/MiAXion-JAR-collection.zip) |
+| JEI／REI 配方附属及其他模组附属 | 使用对应配方或模组能力 | 同一实例 `mods`；核对目标模组及前置依赖 | [9 个附属组件明细](releases/0.2.71.zh-CN.md)；[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/MiAXion-JAR-collection.zip) |
 | 语音包 | 语音输入／输出 | 按该包说明，在客户端语音设置中导入 | [百度网盘](https://pan.baidu.com/s/1Attd0pmh-a8Bm9AV95nrvg?pwd=9999)，提取码 `9999` |
 | 音色包 | 选择朗读声音 | 先安装适用语音运行包，再按格式导入音色／参考音频 | [语雀音色包入口](https://www.yuque.com/baicaigongchang1145haoyuangong/ib3g1e/nwnaga50cazb2v93) |
 | 知识包 | 需要对应资料 | 在“知识库”导入并启用；超市先解压选包 | [散包超市、3 个整合包合集及原版中文／英文包](#知识包获取) |
@@ -48,7 +34,9 @@ SHA-256：
 
 ## 知识包获取
 
-本批知识包包括 **一个散包超市、三个整合包合集，以及原版中文、英文两包**，共六个下载文件。按自己的玩法和所需资料语言选择，不必全部下载。
+新增[勇者之章3合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/chapter-of-yuusha-3.zip)（260 个子包，85.69 MiB），直接导入整个 ZIP。
+
+上一批知识包包括 **一个散包超市、三个整合包合集，以及原版中文、英文两包**，共六个下载文件。按自己的玩法和所需资料语言选择，不必全部下载。
 
 | 入口 | 实际文件 | 小包数 | 下载大小 | 当前状态 |
 |---|---|---:|---:|---|
@@ -69,7 +57,7 @@ SHA-256：
 
 ## 基础 Bridge 要匹配实例
 
-本批模组使用 `MiAXion-JAR-collection.zip`，含 5 个基础 Bridge 和 8 个附属，约 42.00 MiB；[大小与 SHA-256 记录](releases/0.2.0-mod-archive.json)。[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/MiAXion-JAR-collection.zip)，解压后只安装匹配平台的 JAR。
+本批模组使用 `MiAXion-JAR-collection.zip`，含 5 个基础 Bridge 和 9 个附属，约 42.00 MiB；[大小与 SHA-256 记录](releases/0.2.0-mod-archive.json)。[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/MiAXion-JAR-collection.zip)，解压后只安装匹配平台的 JAR。
 
 | Minecraft | 加载器 | 正式附件状态 |
 |---|---|---|
@@ -79,7 +67,7 @@ SHA-256：
 | 1.21.1 | NeoForge | Bridge 0.1.27，JEI 0.1.10、Ars 0.1.3、Iron 0.1.5、Mekanism 0.1.2 附属；已包含在模组合集 |
 | 26.3 | NeoForge | Bridge 0.1.13，JEI 附属 0.1.4；已包含在模组合集 |
 
-完整文件名、加载器及前置版本见 [Bridge 与附属清单](releases/0.2.0-mods.zh-CN.md)。
+完整文件名、加载器及前置版本见 [Bridge 与附属清单](releases/0.2.71.zh-CN.md)。
 
 平台适配范围不等于所有附属在每端都有相同能力。下载前查看实际附件说明；不要将五个平台的 JAR 一起安装，也不要用改名方式适配不同版本。
 

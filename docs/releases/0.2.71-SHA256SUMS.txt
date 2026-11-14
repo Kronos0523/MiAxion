@@ -1,0 +1,3 @@
+99e52f0a5ed67bcb1ce5a5ef95a6a946de7126ec2e8eb29c6d1b6e16792eed0b  chapter-of-yuusha-3.zip
+7888b35830a7ac6e3f70c6e4400079a40e0e5cff222e92544909c59e990d1953  MiAXion-0.2.71-win-x64.zip
+0a53ee8680b63dc76d30ad2c280bcb790727d5a98365b691ccd8685f5c87173a  MiAXion-JAR-collection.zip
