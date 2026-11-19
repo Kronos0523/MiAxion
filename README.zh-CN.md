@@ -32,12 +32,13 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。**知识包是 MiAxion �
 | 资料入口 | 如何选择 | 导入方式 |
 |---|---|---|
 | 散包超市 | 从 763 个独立小包中按需选择 | 先解压外层 ZIP，再导入所需小包 |
+| 勇者之章3 | 0.2.71 新增，含 260 个子包 | 直接导入整个合集 ZIP |
 | ATM10、BMC2、Create-Delight-Remake | 按对应整合包选择中文资料合集 | 直接导入对应合集 ZIP |
 | 原版中文、原版英文 | 按所需资料语言选择 | 直接导入对应合集 ZIP |
 
-[下载知识包](docs/DOWNLOADS.zh-CN.md#知识包获取) · [查看大小与 SHA-256](docs/releases/knowledge-pack-files.json)
+[下载知识包](docs/DOWNLOADS.zh-CN.md#知识包获取) · [勇者之章3大小与 SHA-256](docs/releases/0.2.71-assets.json) · [0.2.0 六个知识包的大小与 SHA-256](docs/releases/knowledge-pack-files.json)
 
-知识包是参考资料，不保证覆盖全部模组、版本或玩法；三个整合包合集均为部分覆盖，中英文原版包也不是逐条互译。实际整合包可能修改配方，当前库存和机器状态仍须查询游戏。知识内容存放在本地；使用在线模型时，检索到的相关片段可能发送给你配置的服务，详见[数据使用说明](docs/DATA-USAGE.zh-CN.md)。
+知识包是参考资料，不保证覆盖全部模组、版本或玩法；ATM10、BMC2 和 Create-Delight-Remake 的资料为部分覆盖，中英文原版包也不是逐条互译。实际整合包可能修改配方，当前库存和机器状态仍须查询游戏。知识内容存放在本地；使用在线模型时，检索到的相关片段可能发送给你配置的服务，详见[数据使用说明](docs/DATA-USAGE.zh-CN.md)。
 
 ## 可以怎样使用
 
@@ -130,7 +131,7 @@ MiAxion 是一款面向 Minecraft 的桌面 AI 助手。**知识包是 MiAxion �
 
 客户端、基础 Bridge、附属和语音包分别管理，更新客户端不代表它们都需要更新。下载说明会明确每类文件的用途、适用范围、安装位置与更新要求。
 
-语音包通过 [百度网盘](https://pan.baidu.com/s/1Attd0pmh-a8Bm9AV95nrvg?pwd=9999) 分发，提取码 **9999**，按包内说明选择档位和安装方式。知识包提供散包超市，ATM10、BMC2、Create-Delight-Remake 三个整合包合集，以及原版中文、英文资料包，可按需挑选；包信息和导入方式见 [知识包目录](docs/DOWNLOADS.zh-CN.md#知识包获取)。
+语音包通过 [百度网盘](https://pan.baidu.com/s/1Attd0pmh-a8Bm9AV95nrvg?pwd=9999) 分发，提取码 **9999**，按包内说明选择档位和安装方式。知识包提供散包超市，勇者之章3、ATM10、BMC2、Create-Delight-Remake 四个整合包合集，以及原版中文、英文资料包，可按需挑选；包信息和导入方式见 [知识包目录](docs/DOWNLOADS.zh-CN.md#知识包获取)。
 
 已有用户先查看 [升级、备份与回退](docs/UPGRADE.zh-CN.md)。使用在线模型前了解 [数据使用与分享边界](docs/DATA-USAGE.zh-CN.md)：本地知识中的相关片段也可能作为模型上下文发送到所配置的服务。
 

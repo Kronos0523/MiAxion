@@ -34,7 +34,7 @@ The new [Chapter of Yuusha 3 collection](https://github.com/Kronos0523/MiAxion/r
 | [Vanilla Minecraft — Chinese](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/minecraft_zh.zip) | Chinese reference material | Import the collection ZIP directly |
 | [Vanilla Minecraft — English](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.0/minecraft_en.zip) | English reference material | Import the collection ZIP directly |
 
-Pack counts are not mod counts. Coverage varies by content and version, and the two vanilla collections are not line-by-line translations. Modpacks may change recipes; current inventory and machine state still require game queries. See the [pack catalog](docs/DOWNLOADS.zh-CN.md#知识包获取) and [file sizes and SHA-256 hashes](docs/releases/knowledge-pack-files.json).
+Pack counts are not mod counts. Coverage varies by content and version, and the two vanilla collections are not line-by-line translations. Modpacks may change recipes; current inventory and machine state still require game queries. See the [pack catalog](docs/DOWNLOADS.zh-CN.md#知识包获取) and [size and SHA-256 for Chapter of Yuusha 3](docs/releases/0.2.71-assets.json), or the [file records for the six v0.2.0 downloads](docs/releases/knowledge-pack-files.json).
 
 Knowledge content is stored locally. If you use an online model, relevant retrieved passages may be sent to the service you configure. See [data use and sharing](docs/DATA-USAGE.zh-CN.md).
 
