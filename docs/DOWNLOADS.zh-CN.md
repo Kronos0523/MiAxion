@@ -57,17 +57,11 @@ SHA-256：`7888b35830a7ac6e3f70c6e4400079a40e0e5cff222e92544909c59e990d1953`。
 
 ## 基础 Bridge 要匹配实例
 
-本批模组使用 `MiAXion-JAR-collection.zip`，含 5 个基础 Bridge 和 9 个附属，约 42.00 MiB；[大小与 SHA-256 记录](releases/0.2.0-mod-archive.json)。[下载模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/MiAXion-JAR-collection.zip)，解压后只安装匹配平台的 JAR。
+[下载 0.2.71 模组合集](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/MiAXion-JAR-collection.zip)（42.12 MiB，含 5 个基础 Bridge 和 9 个附属）。使用东方女仆附属时，请选择 Forge 1.20.1，安装 Bridge 0.1.32 或以上版本（合集内为 0.1.35），并另装东方女仆本体 1.5.0。
 
-| Minecraft | 加载器 | 正式附件状态 |
-|---|---|---|
-| 1.20.1 | Forge | Bridge 0.1.31，JEI 附属 0.1.3；已包含在模组合集 |
-| 1.20.1 | Fabric | Bridge 0.1.26，REI 附属 0.1.13；已包含在模组合集 |
-| 1.21.1 | Fabric | Bridge 0.1.25，JEI 附属 0.1.3；已包含在模组合集 |
-| 1.21.1 | NeoForge | Bridge 0.1.27，JEI 0.1.10、Ars 0.1.3、Iron 0.1.5、Mekanism 0.1.2 附属；已包含在模组合集 |
-| 26.3 | NeoForge | Bridge 0.1.13，JEI 附属 0.1.4；已包含在模组合集 |
+校验下载时，请在[本版 SHA256SUMS.txt](https://github.com/Kronos0523/MiAxion/releases/download/v0.2.71/SHA256SUMS.txt) 中找到 `MiAXion-JAR-collection.zip` 对应的一行，与本地 ZIP 的 SHA-256 比对。
 
-完整文件名、加载器及前置版本见 [Bridge 与附属清单](releases/0.2.71.zh-CN.md)。
+解压后，按实例的 Minecraft 版本和加载器在[本版组件清单](https://github.com/Kronos0523/MiAxion/releases/tag/v0.2.71#附件校验与来源)中找到对应的基础 Bridge 和所需附属，只将匹配的 JAR 放入实例的 `mods` 目录。
 
 平台适配范围不等于所有附属在每端都有相同能力。下载前查看实际附件说明；不要将五个平台的 JAR 一起安装，也不要用改名方式适配不同版本。
 
